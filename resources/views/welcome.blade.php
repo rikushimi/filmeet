@@ -1,7 +1,5 @@
 @extends('layouts.app')
-    @if (Auth::check())
-     @include('commons.navbar')
-    @endif
+  
 
 @section('content')
     @if (Auth::check())
