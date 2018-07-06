@@ -1,12 +1,11 @@
 @extends('layouts.app')
     @if (Auth::check())
-    @include('commons.navbar')
+     @include('commons.navbar')
     @endif
-@section('content')
 
+@section('content')
     @if (Auth::check())
         <?php $user = Auth::user(); ?>
-        
     @else
     <div class="center jumbotron">
         <div class="text-center">
