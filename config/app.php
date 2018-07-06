@@ -107,6 +107,12 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+    
+    'providers' => array(
+    // other service providers
+
+    'Tmdb\Laravel\TmdbServiceProvider',
+     ),
 
     /*
     |--------------------------------------------------------------------------
@@ -163,11 +169,11 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+       
         /*
          * Package Service Providers...
          */
-
+        
         /*
          * Application Service Providers...
          */
@@ -176,6 +182,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+        \Kryptonit3\TMDBLaravel\TMDBServiceProvider::class,
 
     ],
 
@@ -228,6 +236,9 @@ return [
         
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        
+        
+        
 
     ],
 
