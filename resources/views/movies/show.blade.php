@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@include('commons.navbar')
 @section('content')
               <div class="movie1">
                 <div class="col-md-3 col-sm-4 col-xs-12">
