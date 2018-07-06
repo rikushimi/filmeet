@@ -6,6 +6,7 @@
 @section('content')
     @if (Auth::check())
         <?php $user = Auth::user(); ?>
+        <p>申し訳ありませんがページが表示できませんのでお戻りください</p>
     @else
     <div class="center jumbotron">
         <div class="text-center">
