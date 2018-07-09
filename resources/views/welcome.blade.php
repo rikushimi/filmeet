@@ -1,9 +1,14 @@
 @extends('layouts.app')
+<<<<<<< HEAD
    
+=======
+  
+>>>>>>> 14796d1912777ef592d377d80de70a3271b4fef4
 
 @section('content')
     @if (Auth::check())
         <?php $user = Auth::user(); ?>
+        <p>申し訳ありませんがページが表示できませんのでお戻りください</p>
     @else
     <div class="center jumbotron">
         <div class="text-center">

@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function movies()
+    {
+        return $this->belongsToMany(Movie::class,'user_movies','user_id','movie_id')->withTimestamps();
+    }
 }
