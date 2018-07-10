@@ -10,6 +10,6 @@ class Movie extends Model
     
     public function users()
     {
-        return $this->belongsToMany(User::class,'user_movies','movie_id','user_id')->withTimestamps();
+        return $this->belongsToMany(User::class,'user_movie','movie_id','user_id')->withTimestamps();
     }
 }

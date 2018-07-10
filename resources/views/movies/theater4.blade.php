@@ -9,6 +9,7 @@
  <div class = "movie">
      <img src="https://image.tmdb.org/t/p/w500{{ $image4}} ">
      {{$title4}}
+     @include('button.want_button',['movie'=>$movie])
      <br><br><br><br><br><br>
  </div>
  

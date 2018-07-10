@@ -11,7 +11,7 @@
      {{$title}}
      <br><br><br><br><br><br>
  </div>
- 
+ @include('button.want_button',['movie'=>$movie])
  <div class ="theater"> 
   {!! link_to_route('time.get','渋谷TOHOシネマズ') !!}
   <br><br>

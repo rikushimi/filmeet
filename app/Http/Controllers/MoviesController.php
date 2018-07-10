@@ -30,6 +30,7 @@ class MoviesController extends Controller
     public function show()
     {   
         //the greatest showman
+        $code = 316029;
         $search = tmdb()->getMovie(316029);
         $image = $search -> getPoster();
         $title = $search ->getTitle();
@@ -55,6 +56,7 @@ class MoviesController extends Controller
         $title4 = $search4 ->getTitle();
         //$overview = $search -> getOverview();
          return view('movies.show',[
+             'code' => $code,
              'search' => $search,
              'title' => $title,
              'image' => $image,
