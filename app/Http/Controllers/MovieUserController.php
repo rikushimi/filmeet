@@ -15,32 +15,10 @@ class MovieUserController extends Controller
          $search = tmdb()->getMovie($code);
         
          $name = $search -> getTitle();
-        // $search1 = tmdb()->getMovie(293660);
-        // $search2 = tmdb()->getMovie(343668);
-        // $search3 = tmdb()->getMovie(348350);
-        // $search4 = tmdb()->getMovie(315635);
-        
-        // if($mid){
-        //     $code = $search->getId();
-        //     $name = $search->getTitle();
-        // }elseif($mid1){
-        //     $code = $search1->getId();
-        //     $name = $search1->getTitle();
-        // }elseif($search2){
-        //     $code = $search2->getId();
-        //     $name = $search2->getTitle();
-        // }elseif($search3){            
-        //     $code = $search3->getId();
-        //     $name = $search3->getTitle();
-        // }else{
-        //     $code = $search4->getId();
-        //     $name = $search4->getTitle();
-        // }
-        
+
         //db ni aru ka check
         // nakereba hozon 
         // name ga hituyou
-        
         
         $movie = Movie::firstOrCreate([
             'code' => $code,
@@ -53,29 +31,7 @@ class MovieUserController extends Controller
 
     public function dont_want(Request $request) {   
         
-        /*$search  = tmdb()->getMovie(316029);
-        $search1 = tmdb()->getMovie(293660);
-        $search2 = tmdb()->getMovie(343668);
-        $search3 = tmdb()->getMovie(348350);
-        $search4 = tmdb()->getMovie(315635);
-        
-        if($search){
-            $code = $search->getId();
-            $name = $search->getTitle();
-        }elseif($search1){
-            $code = $search1->getId();
-            $name = $search1->getTitle();
-        }elseif($search2){
-            $code = $search2->getId();
-            $name = $search2->getTitle();
-        }elseif($search3){            
-            $code = $search3->getId();
-            $name = $search3->getTitle();
-        }else{
-            $code = $search4->getId();
-            $name = $search4->getTitle();
-        }
-        */
+       
         $code = $request->code;
         $search = tmdb()->getMovie($code);
         
