@@ -1,19 +1,121 @@
-.container {
-  max-width: none !important;
-  width: 970px;
+/*welcomepage*/
+a:link { color: #000000; }
+a:visited { color: #000000; }
+a:hover { color: #000000; }
+a:active { color: #000000; }
+a:link {text-decoration:none;}
+
+#title {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    font-size: 130px;
+   
+}
+header{
+   background-color:#FFF;
+   border-top: 2px solid #333;
+   border-bottom: 2px solid #333;
+   height:10%;
+   padding-bottom:30px;
 }
 
+h2 {
+    font-family: 'Cinzel', serif;
+    margin-top: 300px;
+    
+}
+
+#main{
+  background: url('welcome2.jpg') center center no-repeat ;
+}
+
+
+.button1 {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  margin-top: 60px;
+}
+.button1::before,
+.button1::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button1,
+.button1::before,
+.button1::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button1 {
+  position: relative;
+  z-index: 2;
+  
+  border: 2px solid #333;
+  color: #333;
+  line-height: 48px;
+}
+.button1::after {
+  top: 4px;
+  left: 4px;
+  width: 188px;
+  height: 42px;
+  border: 2px solid #333;
+  opacity: 0;
+}
+.button1:hover::after {
+  opacity: 1;
+}
+
+.container {
+  max-width: none !important;
+  
+  
+}
+
+/*navbarの設定*/
+.navbar-brand {
+    font-family: 'Allura', cursive;
+    font-size: 50px;
+    margin-top:20px;
+}
+
+.nav-design {
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+
+/*showblade（映画一覧）*/
+#showpage{
+  background-color:#000000;
+}
 
 .movie-box{
     
     margin-bottom: 15px;
-	display: -webkit-flex;
-	display: flex;
+    margin-top: 50px;
+  	display: -webkit-flex;
+  	display: flex;
     
 }
 .movie-box > div {
     position: relative;
-    height: 293px;
+    
 }
 .movie-box-image {
     position: absolute;
@@ -21,7 +123,7 @@
     width: 100%;
     height: auto;
 }
-.movie-box-title {
+.movie-box-image {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -30,15 +132,195 @@
     width: 100%;
     text-align: center;
     background-color: rgba(0,0,0, 0.2);
-    color: #fff;
+    color: white;
+    text-decoration: none;
 }
-.movie-box > div:hover .movie-box-title {
-    display: block;
+.movie-box .movie-box-image {
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+filter: grayscale(100%);
 }
-.movie-box-title span {
+.movie-box .movie-box-image:hover {
+-webkit-filter: grayscale(0%);
+-moz-filter: grayscale(0%);
+-o-filter: grayscale(0%);
+-ms-filter: grayscale(0%);
+filter: grayscale(0%);
+}
+.movie-box-image span {
     position: absolute;
     top: 50%;
     left: 0;
     width: 100%;
+}
+
+.top {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    font-size: 100px;
+}
+
+.button1 {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  margin-top: 60px;
+}
+.button1::before,
+.button1::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button1,
+.button1::before,
+.button1::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button1 {
+  position: relative;
+  z-index: 2;
+  
+  border: 2px solid #333;
+  color: #333;
+  line-height: 48px;
+}
+.button1::after {
+  top: 4px;
+  left: 4px;
+  width: 188px;
+  height: 42px;
+  border: 2px solid #333;
+  opacity: 0;
+}
+.button1:hover::after {
+  opacity: 1;
+}
+
+/*loginpage*/
+
+#loginButton{
+    margin-top :30px;
+    width: 188px;
+    height: 42px;
+    border: 2px solid #333;
+    background: rgba(255,255,255,0.5);
+}
+
+#newuser{
+     margin-top :30px;
+}
+
+.row {
+  margin-top :150px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#title2 {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    font-size: 80px;
+   
+}
+
+#title3 {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    font-size: 80px;
+}
+
+
+
+label {
+  margin-top: 9px;
+}
+
+input[type="text"] {  
+    padding: 0px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    color: #333333;
+}
+
+.form-control:focus {
+	boder-color:#ffffff;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.0), 0 0 8px rgba(0,0,0,.0); 
+  box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(0,0,0,.0); 
+}
+
+
+.form-control {
+    color: #FFF;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.0);
+    box-shadow: inset 0 px 0px rgba(0,0,0,.0);
+    -webkit-transition: border-color ease-in-out .0s,-webkit-box-shadow ease-in-out .0s;
+    -o-transition: border-color ease-in-out .0s,box-shadow ease-in-out .0s;
+    transition: border-color ease-in-out .0s,box-shadow ease-in-out .0s;
+}
+
+
+
+/*映画館ぺーじ*/
+#eiga-ichiran{
+  background-color:#000000;
+}
+.eiga-title{
+    font-family: 'Allura', cursive;
+    position: center;
+    top: 10%;
+    width: 100%;
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+    color:#FFF;
+    margin-top:30px;
+}
+.eiga-image{
+    float:left;
+}
+
+.eiga-kan{
+    margin-top:5%;
+    float:right;
+    margin-right:10%;
+    font-size:140%;
+}
+
+.eiga-kan a{/*リンクされた文字*/
+    color:#FFF;
+    font-style:normal;
+    
+}
+.eiga-kan a{/*未訪問のリンク*/
+    color:#FFF;
+    font-style:normal;
+    
+}
+.eiga-kan a{/*訪問後のリンク*/
+    color:#FFF;
     
 }

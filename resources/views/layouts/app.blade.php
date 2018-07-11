@@ -12,15 +12,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
+         
+         
+
+         <!-- google font -->
+         <link href="https://fonts.googleapis.com/css?family=Allura%7CArimo%7CCinzel%7CCookie%7CCrimson+Text%7CGaegu%7CJulius+Sans+One%7CLobster%7COpen+Sans%7CSource+Serif+Pro%7CQuicksand%7CSatisfy" rel="stylesheet">
+         
+         
          <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+         
+         <link href="{{ secure_asset('css/slick.css') }}" rel="stylesheet">
     </head>
     <body>
       
            @include('commons.navbar')
+           
+          
         <div class="container">
             @include('commons.error_messages')
 
             @yield('content')
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{{ secure_asset('js/slick.min.js') }}"></script>
+        <script src="{{ secure_asset('js/style.js') }}"></script>
     </body>
 </html>
