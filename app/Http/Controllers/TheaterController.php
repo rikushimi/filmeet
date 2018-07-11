@@ -26,7 +26,6 @@ class TheaterController extends Controller
         //
     }
 
-
     public function show()
     {   
         //the greatest showman
@@ -50,7 +49,7 @@ class TheaterController extends Controller
            ]);
     }
     
-    public function show1()
+     public function show1()
     {   
         //dead pool
         $search1 = tmdb()->getMovie(293660);
@@ -134,7 +133,7 @@ class TheaterController extends Controller
            ]);
     }
 
-
+    
 
     public function edit($id)
     {
