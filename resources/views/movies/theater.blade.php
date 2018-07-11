@@ -7,7 +7,7 @@
  <!--The Greatest Showman-->
  
  <div class = "movie">
-     <img src="https://image.tmdb.org/t/p/w500{{ $image}} ">
+     <img src="https://image.tmdb.org/t/p/w500{{$image}} ">
      {{$title}}
      <br><br><br><br><br><br>
  </div>
