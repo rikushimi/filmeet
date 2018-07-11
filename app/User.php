@@ -29,8 +29,9 @@ class User extends Authenticatable
 
     public function movies()
     {
-        return $this->belongsToMany(Movie::class,'user_movie','user_id','movie_id')->withTimestamps();
+        return $this->belongsToMany(Movie::class, 'user_movie', 'user_id', 'movie_id')->withTimestamps();
     }
+    
     
     public function want($movieId){
         

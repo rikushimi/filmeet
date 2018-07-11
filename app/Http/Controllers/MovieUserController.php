@@ -15,6 +15,7 @@ class MovieUserController extends Controller
          $search = tmdb()->getMovie($code);
         
          $name = $search -> getTitle();
+         $image = $search -> getPoster();
 
         //db ni aru ka check
         // nakereba hozon 
@@ -23,10 +24,20 @@ class MovieUserController extends Controller
         $movie = Movie::firstOrCreate([
             'code' => $code,
             'name' =>$name, 
+            'image' =>$image,
             ]); 
         \Auth::user()->want($movie->id);
+        
+        //見たいボタン押した人表示
+        $movie = Movie::find($movie->id);
+        $want_users = $movie->users;
          
-        return redirect()->back();
+        return view('movies.time',[
+             'name' => $name,
+             'image' => $image,
+             'movie' => $movie,
+             'want_users' => $want_users,
+           ]);
     }
 
     public function dont_want(Request $request) {   
@@ -36,9 +47,12 @@ class MovieUserController extends Controller
         $search = tmdb()->getMovie($code);
         
         $name = $search -> getTitle();
+        $image = $search -> getPoster();
+        
         $movie = Movie::firstOrCreate([
             'code' =>$code,
             'name' =>$name, 
+            'image' =>$image,
             ]); 
         
         $movieId = $movie->id;

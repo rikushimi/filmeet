@@ -39,6 +39,9 @@ class TheaterController extends Controller
         $image = $search -> getPoster();
         $title = $search ->getTitle();
         
+
+         
+        
        return view('movies.theater',[
              'movie' => $movie,
              'search' => $search,
