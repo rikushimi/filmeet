@@ -22,7 +22,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 //thater一覧
 Route::group(['middleware' => ['auth']], function () {
-   Route::get('theater', 'TheaterController@show')->name('theater.get');
+   Route::get('theater{code}', 'TheaterController@show')->name('theater.get');
    Route::get('theater1', 'TheaterController@show1')->name('theater1.get');
    Route::get('theater2', 'TheaterController@show2')->name('theater2.get');
    Route::get('theater3', 'TheaterController@show3')->name('theater3.get');
@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 //want機能
-Route::group(['middleware' => ['auth']], function ($mid = 'jack') {
+Route::group(['middleware' => ['auth']], function () {
     Route::resource('movies', 'MoviesController', ['only' => ['create', 'show']]);
     Route::post('want', 'MovieUserController@want')->name('movie_user.want');
     Route::delete('want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
