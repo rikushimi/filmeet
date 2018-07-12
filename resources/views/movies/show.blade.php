@@ -6,14 +6,14 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
 
                          <img src="https://image.tmdb.org/t/p/w500{{ $image}} " class="movie-box-image">
-                          <span> {!! link_to_route('theater.get', $image) !!}</span>
+                           {!! link_to_route('theater.get', $image) !!}
                          
                 </div>
               
                 <div class="col-md-3 col-sm-4 col-xs-12">
 
                          <img src="https://image.tmdb.org/t/p/w500{{ $image1}} " class="movie-box-image">
-                          <span>{!! link_to_route('theater1.get', $image1) !!}</span>
+                          {!! link_to_route('theater1.get', $image1) !!}
                          
                 </div>
               
