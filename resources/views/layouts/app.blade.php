@@ -16,7 +16,8 @@
          
 
          <!-- google font -->
-         <link href="https://fonts.googleapis.com/css?family=Allura%7CArimo%7CCinzel%7CCookie%7CCrimson+Text%7CGaegu%7CJulius+Sans+One%7CLobster%7COpen+Sans%7CSource+Serif+Pro%7CQuicksand%7CSatisfy" rel="stylesheet">
+
+         <link href="https://fonts.googleapis.com/css?family=Allura|Arimo|Cinzel|Cookie|Crimson+Text|Gaegu|Julius+Sans+One|Lobster|Open+Sans|Source+Serif+Pro|Quicksand|Satisfy" rel="stylesheet">
          
          
          <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">

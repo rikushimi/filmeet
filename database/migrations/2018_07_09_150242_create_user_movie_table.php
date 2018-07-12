@@ -17,6 +17,8 @@ class CreateUserMovieTable extends Migration
             
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('movie_id')->references('id')->on('movies');
+            
+            $table->unique(['user_id','movie_id']);
         });
     }
 

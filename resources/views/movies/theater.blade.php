@@ -1,31 +1,24 @@
-<body id="eiga-ichiran">
+ <body id="eiga-ichiran">
 @extends('layouts.app')
-
-
 
 @section('content')
 
- <!--The Greatest Showman-->
  <div class = "eiga-title">
-     {{$title}}
+     {{$title}}<br>{{$tag}}
+     
  </div>
  
+ 
  <div class = "eiga-image">
- <img src="https://image.tmdb.org/t/p/w500%7B%7B$image%7D%7D ">
+ <img src="https://image.tmdb.org/t/p/w500{{$poster}}">
+  @include('button.want_button',['code'=>$code])
  </div>
  
 
  <div class ="eiga-kan"> 
-  {!! link_to_route('time.get','渋谷TOHOシネマズ') !!}
-  <br><br>
-  {!! link_to_route('time.get','新宿TOHOシネマズ') !!}
-  <br><br>
-  {!! link_to_route('time.get','新宿ピカデリー') !!}
-  <br><br>
-  {!! link_to_route('time.get','日比谷TOHOシネマズ') !!}
-  <br><br>
-  {!! link_to_route('time.get','六本木TOHOシネマズ') !!}
-   @include('button.want_button',['movie'=>$movie])
+ {{$overview}}<br>
+ {{$release}}
  </div>
 @endsection
  </body>
+
