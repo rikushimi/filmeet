@@ -4,44 +4,13 @@
 @section('content')
              <div class="movie-box clearfix">
                 <div class="col-md-3 col-sm-4 col-xs-12">
-
-                         <img src="https://image.tmdb.org/t/p/w500{{ $image}} " class="movie-box-image">
-                           {!! link_to_route('theater.get', $image) !!}
-                         
-                </div>
-              
-                <div class="col-md-3 col-sm-4 col-xs-12">
-
-                         <img src="https://image.tmdb.org/t/p/w500{{ $image1}} " class="movie-box-image">
-                          {!! link_to_route('theater1.get', $image1) !!}
-                         
-                </div>
-              
-                <div class="col-md-3 col-sm-4 col-xs-12">
-
-                         <img src="https://image.tmdb.org/t/p/w500{{ $image2}} " class="movie-box-image">
-                          <span>{!! link_to_route('theater2.get', $image2) !!}</span>
-                         
+                     @foreach($movies as $movie)
+                        
+                        <a href="{{ action('TheaterController@show') }}"><img src="https://image.tmdb.org/t/p/w500{{$movie->getPoster()}} " class="movie-box-image"><br>
+                     
+                     @endforeach
                  </div>
-              
-                <div class="col-md-3 col-sm-4 col-xs-12">
-
-                         <img src="https://image.tmdb.org/t/p/w500{{ $image3}} " class="movie-box-image">
-                          <span>{!! link_to_route('theater3.get', $image3) !!}</span>
-                         
-                </div>
-
-              
-                <div class="col-md-3 col-sm-4 col-xs-12">
-
-                         <img src="https://image.tmdb.org/t/p/w500{{ $image4}} " class="movie-box-image">
-                          <span>{!! link_to_route('theater4.get', $image4) !!}</span>
-                         
-                </div>
-              </div>
-              
-
-
-
+            </div>
+            
 @endsection
-</body>
+

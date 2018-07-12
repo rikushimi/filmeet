@@ -118,13 +118,13 @@ h2 {
     
 }
 .movie-box-image {
-    
 
     width: 100%;
     height: auto;
 }
-.movie-box-image {
-    
+
+
+.movie-box-title {
     top: 0;
     bottom: 0;
     z-index: 2;

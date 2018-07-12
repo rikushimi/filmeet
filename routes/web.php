@@ -36,6 +36,13 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('time2', 'TimeController@show2')->name('time2.get');
    Route::get('time3', 'TimeController@show3')->name('time3.get');
    Route::get('time4', 'TimeController@show4')->name('time4.get');
-    
+});
+
+//want機能
+Route::group(['middleware' => ['auth']], function ($mid = 'jack') {
+    Route::resource('movies', 'MoviesController', ['only' => ['create', 'show']]);
+    Route::post('want', 'MovieUserController@want')->name('movie_user.want');
+    Route::delete('want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
+    Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
 
