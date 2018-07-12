@@ -5,20 +5,23 @@
 
 
 <div class="row">
-    <div class="col-xs-offset-3 col-xs-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">会員登録</div>
+            <div class="text-center">
+            <h1 id="title3">Sign up</h1>
+            </div>
+    <div class="col-xs-offset-3 col-xs-6">   
      
-                 <div class="panel-body">
+     <div class="register">
+                    <div class="panel-body">
                      {!! Form::open(['route' => 'signup.post']) !!}
                      
                      <div class="form-group">
-                        {!! Form::label('name', '名前') !!}
+                        {!! Form::label('name', 'Name') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
+                    
+                    
                      <div class="form-group">
-                         <label for="userid" class="col-md-4 control-label">User ID</label>
-        
+                        {!! Form::label('userid', 'User ID') !!}
                
                          <input id="userid" type="text" class="form-control" name="userid" value="{{ old('userid') }}" required>
         
@@ -30,23 +33,31 @@
                      </div>
                      
                     <div class="form-group">
-                        {!! Form::label('password', ' パスワード') !!}
-                        {!! Form::password('password', ['class' => 'form-control']) !!}
+                        {!! Form::label('password', 'Password') !!}
+                        <input id="password" type="text" class="form-control" name="password" value="{{ old('password') }}" required>
+                        
                     </div>
 
                     <div class="form-group">
-                        {!! Form::label('password_confirmation', ' パスワード（確認）') !!}
-                        {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
+                        {!! Form::label('password_confirmation', ' Password (confirm) ') !!}
+                        <input id="password" type="text" class="form-control" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
                     </div>
+                    
+                    
+                    
                      <div class="text-right">
-                        {!! Form::submit('登録する', ['class' => 'btn btn-success']) !!}
+                        {!! Form::submit('Legister',  ['id' => "loginButton"]) !!}
                     </div>
+                    
+    </div>
+                    
+                    
                     
                     {!! Form::close() !!}
                      
                 </div>
     
-        </div>
+        
    </div> 
 </div>
 

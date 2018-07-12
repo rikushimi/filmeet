@@ -1,3 +1,5 @@
+
+<body id="showpage">
 @extends('layouts.app')
 @section('content')
              <div class="movie-box clearfix">
@@ -11,3 +13,4 @@
             </div>
             
 @endsection
+

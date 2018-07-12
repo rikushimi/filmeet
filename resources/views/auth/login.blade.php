@@ -2,18 +2,21 @@
 
 @section('content')
     <div class="text-center">
-        <h1>Log in</h1>
+        <h1 id="title2">Log in</h1>
     </div>
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+    
 
             {!! Form::open(['route' => 'login.post']) !!}
+                
                 <div class="form-group">
+                    <div class="col-md-4">
+                    {!! Form::label('userid', 'UserID') !!}
+                    </div>
                 
-                    <label for="userid" class="col-md-4 control-label">User ID</label>
-                
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <input id="userid" type="text" class="form-control" name="userid" value="{{ old('userid') }}" required autofocus>
                 
                         @if ($errors->has('userid'))
@@ -23,16 +26,29 @@
                         @endif
                     </div>
                 </div>
-
+               
                 <div class="form-group">
+                     <div class="col-md-4">
                     {!! Form::label('password', 'Password') !!}
-                    {!! Form::password('password', ['class' => 'form-control']) !!}
+                    </div>
+                     <div class="col-md-8">
+                     <input id="password" type="text" class="form-control" name="password" value="{{ old('password') }}" required>
+                    </div>
                 </div>
-
-                {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) !!}
+                
+                <div class="text-right">
+                {!! Form::submit('Log in', ['id' => "loginButton"]) !!}
+                </div>
+                
+                <div class="text-center">
+                <p id="newuser">New user?      {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
+                </div>
+                
+                
             {!! Form::close() !!}
 
-            <p>New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
+            
         </div>
     </div>
+    
 @endsection
