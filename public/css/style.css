@@ -84,7 +84,6 @@ h2 {
   max-width: none !important;
   
   
-<<<<<<< HEAD
 }
 
 /*navbarの設定*/
@@ -94,17 +93,6 @@ h2 {
     margin-top:20px;
 }
 
-=======
-}
-
-/*navbarの設定*/
-.navbar-brand {
-    font-family: 'Allura', cursive;
-    font-size: 50px;
-    margin-top:20px;
-}
-
->>>>>>> 20c38d22692babfd7527d3ec60dbc131ec55e702
 .nav-design {
     font-family: 'Arimo', sans-serif;
     font-size: 15px;
@@ -134,14 +122,9 @@ h2 {
     height: auto;
     size: 500%;
 }
-<<<<<<< HEAD
-.movie-box-image {
-   
-=======
 
 
 .movie-box-title {
->>>>>>> 20c38d22692babfd7527d3ec60dbc131ec55e702
     top: 0;
     bottom: 0;
     z-index: 2;
