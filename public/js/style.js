@@ -1,4 +1,5 @@
-$('.movie-box').slick({
+$('.masa').slick({
+  
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
@@ -11,6 +12,11 @@ $('.movie-box').slick({
   pauseOnHover: true,
   // 自動再生時にドットにマウスオンで一時停止するかどうか
   pauseOnDotsHover: true,
+  
+  prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+  nextArrow: '<button class="slide-arrow next-arrow"></button>',
+  
+ 
   
   responsive: [
     {
@@ -33,4 +39,3 @@ $('.movie-box').slick({
     }
   ]
 });
-
