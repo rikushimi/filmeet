@@ -16,13 +16,11 @@
     height: 293px;
 }
 .movie-box-image {
-    position: absolute;
 
     width: 100%;
     height: auto;
 }
 .movie-box-title {
-    position: absolute;
     top: 0;
     bottom: 0;
     z-index: 2;
