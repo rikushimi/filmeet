@@ -2,7 +2,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('show.get');
 });
 
 //sign up
@@ -23,20 +23,9 @@ Route::group(['middleware' => ['auth']], function () {
 //thater一覧
 Route::group(['middleware' => ['auth']], function () {
    Route::get('theater{code}', 'TheaterController@show')->name('theater.get');
-   Route::get('theater1', 'TheaterController@show1')->name('theater1.get');
-   Route::get('theater2', 'TheaterController@show2')->name('theater2.get');
-   Route::get('theater3', 'TheaterController@show3')->name('theater3.get');
-   Route::get('theater4', 'TheaterController@show4')->name('theater4.get');
 });
 
-//date一覧
-Route::group(['middleware' => ['auth']], function () {
-   Route::get('time', 'TimeController@show')->name('time.get');
-   Route::get('time1', 'TimeController@show1')->name('time1.get');
-   Route::get('time2', 'TimeController@show2')->name('time2.get');
-   Route::get('time3', 'TimeController@show3')->name('time3.get');
-   Route::get('time4', 'TimeController@show4')->name('time4.get');
-});
+;
 
 //want機能
 Route::group(['middleware' => ['auth']], function () {
