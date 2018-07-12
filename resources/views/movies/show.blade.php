@@ -46,8 +46,9 @@
                     <ul>
                        @foreach($movies as $movie)
                                <li>{{$movie->getTitle()}}</li>
-                                   <img src="https://image.tmdb.org/t/p/w500{{$movie->getPoster()}} " class="movie-box-image"><br>
+                                   <a href="{{ action('TheaterController@show') }}"><img src="https://image.tmdb.org/t/p/w500{{$movie->getPoster()}} " class="movie-box-image"></a><br>
                                    {{$movie->getOverview()}}<br>
+            
                        @endforeach        
                     </ul>
                 </div>
