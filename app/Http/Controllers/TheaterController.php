@@ -34,6 +34,7 @@ class TheaterController extends Controller
        $overview = $movie -> getOverview();
        $poster = $movie -> getPoster();
        $tag = $movie -> getTagline();
+       $release = $movie -> getMoviesReleaseDate();
       
        
        return view('movies.theater',[
@@ -43,7 +44,7 @@ class TheaterController extends Controller
              'poster' => $poster,
              'code' => $code,
              'tag' => $tag,
-            
+            'release' => $release,
            ]);
     }
     

@@ -17,6 +17,7 @@
 
  <div class ="eiga-kan"> 
  {{$overview}}<br>
+ {{$release}}
  </div>
 @endsection
  </body>
