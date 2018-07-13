@@ -12,30 +12,29 @@ class MovieUserController extends Controller
 
        
          $code = $request->code;
-         $search = tmdb()->getMovie($code);
+         $movie = tmdb()->getMovie($code);
         
-         $name = $search -> getTitle();
-         $image = $search -> getPoster();
+         $title = $movie -> getTitle();
+         $image = $movie -> getPoster();
 
         //db ni aru ka check
         // nakereba hozon 
         // name ga hituyou
         
-        $movie = Movie::firstOrCreate([
+        $stmovie = Movie::firstOrCreate([
             'code' => $code,
-            'name' =>$name, 
+            'name' =>$title, 
             'image' =>$image,
             ]); 
-        \Auth::user()->want($movie->id);
+        \Auth::user()->want($stmovie->id);
         
         //見たいボタン押した人表示
-        $movie = Movie::find($movie->id);
-        $want_users = $movie->users;
+        $search = Movie::find($stmovie->id);
+        $want_users = $search->users;
          
         return view('movies.time',[
-             'name' => $name,
+             'title' => $title,
              'image' => $image,
-             'movie' => $movie,
              'want_users' => $want_users,
            ]);
     }
@@ -44,19 +43,19 @@ class MovieUserController extends Controller
         
        
         $code = $request->code;
-        $search = tmdb()->getMovie($code);
+        $movie = tmdb()->getMovie($code);
         
-        $name = $search -> getTitle();
-        $image = $search -> getPoster();
+        $title = $movie -> getTitle();
+        $image = $movie -> getPoster();
         
-        $movie = Movie::firstOrCreate([
+        $stmovie = Movie::firstOrCreate([
             'code' =>$code,
-            'name' =>$name, 
+            'name' =>$title, 
             'image' =>$image,
             ]); 
         
-        $movieId = $movie->id;
-        $movieCode = $movie->code;
+        $movieId = $stmovie->id;
+        $movieCode = $stmovie->code;
         
         if (\Auth::user()->is_wanting($movieCode)) {
             $movieId = Movie::where('code', $movieCode)->first()->id;
