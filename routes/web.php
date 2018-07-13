@@ -2,7 +2,7 @@
 
 
 Route::get('/', function () {
-    return view('show.get');
+    return view('welcome');
 });
 
 //sign up

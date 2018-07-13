@@ -34,13 +34,13 @@
                      
                     <div class="form-group">
                         {!! Form::label('password', 'Password') !!}
-                        <input id="password" type="text" class="form-control" name="password" value="{{ old('password') }}" required>
+                        <input id="password" type="password" class="form-control" name="password" value="{{ old('password') }}" required>
                         
                     </div>
 
                     <div class="form-group">
                         {!! Form::label('password_confirmation', ' Password (confirm) ') !!}
-                        <input id="password" type="text" class="form-control" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
+                        <input id="password1" type="password" class="form-control" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
                     </div>
                     
                     
