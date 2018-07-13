@@ -366,6 +366,17 @@ input[type="text"] {
     color: #333333;
 }
 
+input[type="password"] {  
+    padding: 0px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    color: #333333;
+}
+
+
 .form-control:focus {
 	boder-color:#ffffff;
   -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.0), 0 0 8px rgba(0,0,0,.0); 
@@ -440,4 +451,15 @@ input[type="text"] {
 
 .timelist{
   color: #FFF;
+}
+
+
+#wantButton{
+  
+  background-color:green;
+  color:red;
+}
+
+#unwantButton{
+  color:pink;
 }

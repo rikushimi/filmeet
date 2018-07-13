@@ -14,6 +14,8 @@
   @include('button.want_button',['code'=>$code])
  </div>
  
+ 
+ 
 
  <div class ="eiga-kan"> 
  {{$overview}}<br>
