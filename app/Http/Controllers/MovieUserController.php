@@ -32,6 +32,7 @@ class MovieUserController extends Controller
              'title' => $title,
              'image' => $image,
              'want_users' => $want_users,
+             'tag'=> $tag,
            ]);
     }
 

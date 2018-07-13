@@ -4,7 +4,9 @@
 
 @section('content')
  <div class = "movie">
-{{$title}}<br> <img src="https://image.tmdb.org/t/p/w500{{$image}}">
+<p class=p1>{{$title}}</p><br>
+ <p class=p2>{{$tag}}</p><br>
+<img src="https://image.tmdb.org/t/p/w500{{$image}}">
 </div>
 
 <div class="panel-body">

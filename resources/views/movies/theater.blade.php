@@ -3,9 +3,9 @@
 
 @section('content')
 
- <div class = "eiga-title">
-     <p1>{{$title}}</p1><br>
-     <p2>{{$tag}}</p2>
+ <div class = "watchlist">
+     <p class=P1>{{$title}}</p><br>
+     <p class=p2>{{$tag}}</p>
  </div>
  
  <div class = "eiga-image">
@@ -16,7 +16,7 @@
  
 
  <div class ="eiga-kan"> 
- <p1>{{$overview}}</p><br>
+ <p class="p1">{{$overview}}<br>
  {{$release}}</p>
  </div>
  
