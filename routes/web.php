@@ -35,3 +35,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
 
+//プロフィール
+Route::group(['middleware' => ['auth']], function () {
+   Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
+});
+

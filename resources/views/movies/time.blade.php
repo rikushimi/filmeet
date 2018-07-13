@@ -14,7 +14,7 @@
    <div class=want_users>
      @foreach ($want_users as $user)
       <ul>
-        <li>{{ $user->name }}</li>
+        <li><a href="{{ url('profile'). $user->id}}">{{$user->name}}</a></li>
       </ul>
      @endforeach
    </div>

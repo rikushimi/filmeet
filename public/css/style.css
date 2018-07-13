@@ -365,7 +365,6 @@ input[type="text"] {
     border-bottom: 1px solid #333;
     color: #333333;
 }
-
 input[type="password"] {  
     padding: 0px;
     outline: 0;
@@ -375,7 +374,6 @@ input[type="password"] {
     border-bottom: 1px solid #333;
     color: #333333;
 }
-
 
 .form-control:focus {
 	boder-color:#ffffff;
@@ -396,7 +394,7 @@ input[type="password"] {
 
 
 
-/*映画館ぺーじ*/
+/*theaterblade*/
 #eiga-ichiran{
   background-color:#000000;
 }
@@ -414,35 +412,41 @@ input[type="password"] {
   
 }
 
-
+.eiga-title p2{
+    font-size:140%;
+    color:#FFF;
+    margin-top: 10%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-family:  'Cinzel', serif;
+　　font-style: oblique;
+}
 
 .eiga-image{
     float:left;
-    margin-top: 50px;
-    
+    width: 50%;
+    margin-top: 5%;
 }
 
-.eiga-kan{
-    margin-top:5%;
-    float:right;
-    margin-right:10%;
+.eiga-kan p1{
     font-size:140%;
+    color:#FFF;
+    margin-top: 20%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-family: 'Crimson Text', serif;
+　　
 }
 
-.eiga-kan a{/*リンクされた文字*/
-    color:#FFF;
-    font-style:normal;
+.eiga-kan {
+    float:right;
+    width: 50%;
+    margin-top: 6%;
     
 }
-.eiga-kan a{/*未訪問のリンク*/
-    color:#FFF;
-    font-style:normal;
-    
-}
-.eiga-kan a{/*訪問後のリンク*/
-    color:#FFF;
-    
-}
+
+
+
 
 /*time-blade*/
 #time-blade{
@@ -454,12 +458,11 @@ input[type="password"] {
 }
 
 
-#wantButton{
-  
-  background-color:green;
-  color:red;
-}
-
-#unwantButton{
-  color:pink;
+#want-button{
+    margin-top :30px;
+    width: 188px;
+    height: 42px;
+    border: 2px solid #FFF;
+    background: rgba(0,0,0,0);
+    color: #FFF;
 }

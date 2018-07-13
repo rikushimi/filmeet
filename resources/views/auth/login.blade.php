@@ -33,7 +33,7 @@
                     {!! Form::label('password', 'Password') !!}
                     </div>
                      <div class="col-md-8">
-                     <input id="password2" type="password" class="form-control" name="password" value="{{ old('password') }}" required>
+                     <input id="password" type="password" class="form-control" name="password" value="{{ old('password') }}" required>
                     </div>
                 </div>
                 
