@@ -1,3 +1,4 @@
+<body id="register-page">
 @extends('layouts.app')
 
 @section('content')
@@ -45,7 +46,7 @@
                     
                     
                      <div class="text-right">
-                        {!! Form::submit('Legister',  ['id' => "loginButton"]) !!}
+                        {!! Form::submit('Register',  ['id' => "loginButton"]) !!}
                     </div>
                     
     </div>
@@ -62,3 +63,4 @@
 
 
 @endsection
+</body>

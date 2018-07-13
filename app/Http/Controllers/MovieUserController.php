@@ -9,40 +9,46 @@ class MovieUserController extends Controller
 {   
     public function want(Request $request)
     {  
-
-       
          $code = $request->code;
-         $search = tmdb()->getMovie($code);
+         $movie = tmdb()->getMovie($code);
         
-         $name = $search -> getTitle();
-
-        //db ni aru ka check
-        // nakereba hozon 
-        // name ga hituyou
-        
-        $movie = Movie::firstOrCreate([
+         $title = $movie -> getTitle();
+         $image = $movie -> getPoster();
+ 
+         $stmovie = Movie::firstOrCreate([
             'code' => $code,
-            'name' =>$name, 
+            'name' => $title,
+            'image' => $image,
             ]); 
-        \Auth::user()->want($movie->id);
+        
+        \Auth::user()->want($stmovie->id);
+        
+        //見たいボタン押した人表示
+        $search = Movie::find($stmovie->id);
+        
+        $want_users = $search->users;
          
-        return redirect()->back();
+        return view('movies.time',[
+             'title' => $title,
+             'image' => $image,
+             'want_users' => $want_users,
+           ]);
     }
 
     public function dont_want(Request $request) {   
         
        
         $code = $request->code;
-        $search = tmdb()->getMovie($code);
+        $movie = tmdb()->getMovie($code);
         
-        $name = $search -> getTitle();
-        $movie = Movie::firstOrCreate([
+        $title = $movie -> getTitle();
+        $stmovie = Movie::firstOrCreate([
             'code' =>$code,
-            'name' =>$name, 
+            'title' =>$title, 
             ]); 
         
-        $movieId = $movie->id;
-        $movieCode = $movie->code;
+        $movieId = $stmovie->id;
+        $movieCode = $stmovie->code;
         
         if (\Auth::user()->is_wanting($movieCode)) {
             $movieId = Movie::where('code', $movieCode)->first()->id;
