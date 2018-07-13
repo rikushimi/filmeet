@@ -52,6 +52,7 @@ class MovieUserController extends Controller
             'code' =>$code,
             'name' =>$title, 
             'image' =>$image,
+
             ]); 
         
         $movieId = $stmovie->id;

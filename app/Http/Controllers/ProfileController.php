@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Vendor\Tmdb;
+use App\User;
 use Illuminate\Http\Request;
 
-class MoviesController extends Controller
+
+class ProfileController extends Controller
 {
-   
-    
+
     public function index()
     {
-       //
+        //
     }
 
 
@@ -26,17 +26,15 @@ class MoviesController extends Controller
         //
     }
 
-	
-    public function show()
-    {       
-            $movies =tmdb()->getNowPlayingMovies();
-            //dd($movies[0]);
-             return view('movies.show',[
-                 'movies' => $movies,
-                 ]);
-        
-    }
 
+    public function show($id)
+    {  
+       $user = User::find($id);
+        
+       return view('users.profile',[
+              'user' => $user,    
+           ]);
+    }
 
     public function edit($id)
     {
