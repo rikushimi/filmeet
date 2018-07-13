@@ -1,3 +1,4 @@
+<body id="login-page">
 @extends('layouts.app')
 
 @section('content')
@@ -52,3 +53,4 @@
     </div>
     
 @endsection
+</body>

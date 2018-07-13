@@ -1,11 +1,9 @@
+<body id="time-blade">
 @extends('layouts.app')
 
 
 @section('content')
- 
-  <!--The Greatest Showman-->
- 
-<div class = "movie">
+ <div class = "movie">
 {{$title}}<br> <img src="https://image.tmdb.org/t/p/w500{{$image}}">
 </div>
 
@@ -22,3 +20,4 @@
    </div>
 </div>
 @endsection
+

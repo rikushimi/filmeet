@@ -1,9 +1,11 @@
 @extends('layouts.app')
 @section('content')
+
+ <p id="nowplaying">Now playing movies</p>
+ 
              <div class="movie-box clearfix">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="masa clearfix">
-                       
                        @foreach($movies as $movie)
                                   <span>
                                    <a href="{{ url('theater/'). $movie->getId()}}">
@@ -13,8 +15,5 @@
                   </div>
                 </div>
               </div>
-              
-           
-               
-            
 @endsection
+</body>
