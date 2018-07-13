@@ -44,7 +44,7 @@ class MovieUserController extends Controller
         $title = $movie -> getTitle();
         $stmovie = Movie::firstOrCreate([
             'code' =>$code,
-            'title' =>$title, 
+            'name' =>$title, 
             ]); 
         
         $movieId = $stmovie->id;

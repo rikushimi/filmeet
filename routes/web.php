@@ -2,7 +2,7 @@
 
 
 Route::get('/', function () {
-    return view('show.get');
+    return view('welcome');
 });
 
 //sign up
@@ -33,5 +33,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('want', 'MovieUserController@want')->name('movie_user.want');
     Route::delete('want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
     Route::resource('users', 'UsersController', ['only' => ['show']]);
+});
+
+//プロフィール
+Route::group(['middleware' => ['auth']], function () {
+   Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
 });
 
