@@ -39,4 +39,3 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth']], function () {
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
 });
-

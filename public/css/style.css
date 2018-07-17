@@ -47,6 +47,7 @@ h2 {
   line-height: 54px;
   outline: none;
   margin-top: 60px;
+  font-family: 'Quicksand', sans-serif;
 }
 .button1::before,
 .button1::after {
@@ -93,7 +94,7 @@ h2 {
 
 /*navbarの設定*/
 .nav>li>a{
-    font-family: 'Crimson Text', serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
 }
 .nav>li>a:focus, .nav>li>a:hover {
@@ -141,7 +142,7 @@ h2 {
 }
 
 .nav-design {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     margin-top: 20px;
 }
@@ -273,6 +274,7 @@ transition: all 0.1s linear;
   line-height: 54px;
   outline: none;
   margin-top: 60px;
+  font-family: 'Quicksand', sans-serif;
 }
 .button1::before,
 .button1::after {
@@ -527,6 +529,20 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
 }
 
 /*profile-blade*/
+
+#left
+        {
+         width:300px;
+         height:600px;
+         float: left;
+        }
+#right
+        {
+         width:840px;
+         height:600px;
+         float: left;
+        }
+
 #profile-blade{
   background-color:#000000;
 }
@@ -541,6 +557,7 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
     margin-top:30px;
     padding:0 0 0.5em 0.7em;
     border-bottom: 1px solid #FFF;
+    
 }
 
 .profie-image>img{
@@ -548,21 +565,21 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   width: 250px;
   height: 250px;
   object-fit: cover;
-  float: left;
+  /*float: left;*/
 }
 .user-name {
   color:#FFF;
   font-size: 30px;
   font-family: 'Crimson Text', serif;
-  margin-top: -3%;
-  float: left;
-  margin-top: 280px;
-  margin-left: -180px;
+  margin-top: -10%;
+  /*float: left;*/
+  /*margin-top: 280px;*/
+  /*margin-left: -180px;*/
 }
 .comment{
-  float:right;
+/*  float:right;*/
   margin-right: 550px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .comment1{
@@ -586,22 +603,22 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
 
 
 .comment1:after {
-content: "";
-width:250%;
-height:4px;
-position: absolute;
-left: 0;
-bottom: 0;
-background: linear-gradient(to right, #FF69B4, rgba(255,255,255,0) 100%);
+    content: "";
+    width:250%;
+    height:4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
 }
 .comment2:after {
-content: "";
-width:250%;
-height:4px;
-position: absolute;
-left: 0;
-bottom: 0;
-background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+    content: "";
+    width:250%;
+    height:4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
 }
 
 .comment1-text{
@@ -617,5 +634,40 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
     font-family: 'Crimson Text', serif;
     padding: .5em;
     position: relative;
+}
+
+#menu {
+  width: 600px;
+  height: 45px;
+  padding: 0;
+  margin-top: 70px;
+  list-style-type: none;
+  background: rgba(0,0,0,0);
+  border-left: 1px solid #FF69B4;
+}
+#menu li {
+  width: 20%;
+  float: left;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  border-right: 1px solid #FF69B4;
+}
+
+#menu li a {
+  width: auto;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 12px 0;
+  text-decoration: none;
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#menu li a:hover {
+  background: #FF69B4;
 }
 
