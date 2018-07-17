@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2  public/
+web: vendor/bin/kriptnit3/tmdb-laravel/src/tmdb/heroku-php-apache2  public/
