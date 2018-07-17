@@ -32,7 +32,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('movies', 'MoviesController', ['only' => ['create', 'show']]);
     Route::post('want', 'MovieUserController@want')->name('movie_user.want');
     Route::delete('want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
-    Route::resource('users', 'UsersController', ['only' => ['show']]);
+    //使ってない
+    // Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
 
 //プロフィール
