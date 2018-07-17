@@ -14,6 +14,7 @@ class MovieUserController extends Controller
         
          $title = $movie -> getTitle();
          $image = $movie -> getPoster();
+         $tag = $movie -> getTagline();
  
          $stmovie = Movie::firstOrCreate([
             'code' => $code,
@@ -32,6 +33,7 @@ class MovieUserController extends Controller
              'title' => $title,
              'image' => $image,
              'want_users' => $want_users,
+             'tag' => $tag,
            ]);
     }
 

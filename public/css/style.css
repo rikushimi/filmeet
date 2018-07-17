@@ -93,9 +93,8 @@ h2 {
 
 /*navbarの設定*/
 .nav>li>a{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Crimson Text', serif;
     font-size: 20px;
-    
 }
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
@@ -106,6 +105,7 @@ h2 {
     -ms-transform: scale(1.1);
 }
 
+    
 .dropdown-menu{
     background-color: rgba(0, 0, 0, 0);
 }
@@ -141,7 +141,7 @@ h2 {
 }
 
 .nav-design {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Crimson Text', serif;
     font-size: 15px;
     margin-top: 20px;
 }
@@ -400,7 +400,7 @@ input[type="password"] {
 #eiga-ichiran{
   background-color:#000000;
 }
-.eiga-title{
+.eiga-title-mein{
     
     position: center;
     top: 10%;
@@ -414,11 +414,11 @@ input[type="password"] {
   
 }
 
-.eiga-title p2{
+.eiga-title-tag{
     font-size:140%;
     color:#FFF;
-    margin-top: 10%;
-    margin-right: 5%;
+    margin-top: -2%;
+    margin-left: 3%;
     font-size: 30px;
     font-family:  'Cinzel', serif;
 　　font-style: oblique;
@@ -427,18 +427,24 @@ input[type="password"] {
 .eiga-image{
     float:left;
     width: 50%;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
-.eiga-kan p1{
+.eiga-overview{
     font-size:140%;
     color:#FFF;
-    margin-top: 20%;
+    margin-top: -15%;
     margin-right: 5%;
     font-size: 30px;
     font-family: 'Crimson Text', serif;
 　　
 }
+.eiga-overview:first-letter {
+margin-right: .1em;
+font-size: 2em;
+color: #FF69B4;
+}
+
 
 .eiga-kan {
     float:right;
@@ -466,4 +472,149 @@ input[type="password"] {
     border: 2px solid #FFF;
     background: rgba(0,0,0,0);
     color: #FFF;
+}
+
+
+.want_users{
+    font-size:140%;
+    color:#FFF;
+    margin-top: 10%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-family:  'Cinzel', serif;
+　　font-style: oblique;
+}
+.want_users>ul>li>a {
+    font-size:140%;
+    color:#FFF;
+    margin-top: 10%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+　　font-style: oblique;
+　　list-style: none;
+}
+.want_users>ul {
+    list-style: none;
+}
+
+
+.watchlist {
+    float:right;
+    width: 50%;
+    margin-top: 6%;
+    
+}
+
+.watchlist-p1{
+    font-size:140%;
+    color:#FFF;
+    margin-top: -10%;
+    margin-left: 50px;
+    font-size: 30px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+.watchlist-p1:after {
+content: "";
+width:100%;
+height:4px;
+position: absolute;
+left: 0;
+bottom: 0;
+background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+}
+
+/*profile-blade*/
+#profile-blade{
+  background-color:#000000;
+}
+
+.profile-title{
+    position: center;
+    top: 10%;
+    width: 100%;
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+    color:#FFF;
+    margin-top:30px;
+    padding:0 0 0.5em 0.7em;
+    border-bottom: 1px solid #FFF;
+}
+
+.profie-image>img{
+  margin-top: 5%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  float: left;
+}
+.user-name {
+  color:#FFF;
+  font-size: 30px;
+  font-family: 'Crimson Text', serif;
+  margin-top: -3%;
+  float: left;
+  margin-top: 280px;
+  margin-left: -180px;
+}
+.comment{
+  float:right;
+  margin-right: 550px;
+  margin-top: 50px;
+}
+
+.comment1{
+    
+    color:#FFF;
+    margin-top: -3%;
+    font-size: 25px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+.comment2{
+    
+    color:#FFF;
+    margin-top: -15%;
+    font-size: 25px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+
+
+.comment1:after {
+content: "";
+width:250%;
+height:4px;
+position: absolute;
+left: 0;
+bottom: 0;
+background: linear-gradient(to right, #FF69B4, rgba(255,255,255,0) 100%);
+}
+.comment2:after {
+content: "";
+width:250%;
+height:4px;
+position: absolute;
+left: 0;
+bottom: 0;
+background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+}
+
+.comment1-text{
+    color:#FFF;
+    font-size: 15px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+.comment2-text{
+    color:#FFF;
+    font-size: 15px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
 }

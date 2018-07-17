@@ -7,8 +7,8 @@
 
 
  <div class = "eiga-title">
-     <p1>{{$title}}</p1><br>
-     <p2>{{$tag}}</p2>
+     <p class="eiga-title-mein">{{$title}}</p><br>
+     <p class="eiga-title-tag">{{$tag}}</p>
  </div>
  
  <div class = "eiga-image">
@@ -17,7 +17,7 @@
  
 
  <div class ="eiga-kan"> 
- <p1>{{$overview}}</p><br>
+ <p class="eiga-overview">{{$overview}}<br>
  {{$release}}</p>
  </div>
  
