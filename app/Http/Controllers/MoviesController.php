@@ -29,7 +29,12 @@ class MoviesController extends Controller
 	
     public function show()
     {       
+        var_dump('test A');
+        
             $movies =tmdb()->getNowPlayingMovies();
+            
+            var_dump('test B');
+            exit;
             //dd($movies[0]);
              return view('movies.show',[
                  'movies' => $movies,
