@@ -21,7 +21,7 @@ class MovieUserController extends Controller
         // nakereba hozon 
         // name ga hituyou
         
-        $stmovie = Movie::firstOrCreate([
+        
          $overview = $movie -> getOverview();
          $poster = $movie -> getPoster();
          $tag = $movie -> getTagline();
