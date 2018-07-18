@@ -12,6 +12,7 @@
          <p class="user-name"><br>{{$user->name}} / F / 22</p>
  </div>
 
+
  <div id="right">
         <div class="comment">
             <p class="comment1">Favorite Movies </p>
@@ -27,7 +28,8 @@
           <li><a href="#">My Movies</a></li>
           <li><a href="#">chat</a></li>
         </div>
-        
+        @include('users.users', ['users' => $users])
+        <br><br><br>
         <div id="edit_button">
           <a href="{{route('profile.edit', Auth::id())}}">edit</a>
         </div>
