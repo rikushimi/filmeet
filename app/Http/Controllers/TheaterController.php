@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Movie;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 
 class TheaterController extends Controller
@@ -35,7 +35,24 @@ class TheaterController extends Controller
        $poster = $movie -> getPoster();
        $tag = $movie -> getTagline();
        $release = $movie ->  getMovieReleaseDate();
-
+       $stmovie = Movie::first(); 
+      
+      if(Auth::user()->is_wanting($code)){    
+      
+           $search = Movie::find($stmovie->id);
+           $want_users = $search->users;
+           
+           return view('movies.theater',[
+             'movie' => $movie,
+             'title' => $title,
+             'overview'=> $overview,
+             'poster' => $poster,
+             'code' => $code,
+             'tag' => $tag,
+             'release' => $release,
+             'want_users'=> $want_users,
+               ]);
+        }           
        
        return view('movies.theater',[
              'movie' => $movie,
