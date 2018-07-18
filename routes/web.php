@@ -30,8 +30,8 @@ Route::group(['middleware' => ['auth']], function () {
 //want機能
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('movies', 'MoviesController', ['only' => ['create', 'show']]);
-    Route::post('want', 'MovieUserController@want')->name('movie_user.want');
-    Route::delete('want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
+    Route::post('/want', 'MovieUserController@want')->name('movie_user.want');
+    Route::delete('/want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
     Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
 
@@ -40,3 +40,10 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
 });
 
+//申請機能
+Route::group(['middleware' => 'auth'], function () {
+        Route::post('/follow', 'MovieUserController@store')->name('user.follow');
+        Route::delete('/unfollow', 'MovieUserController@destroy')->name('user.unfollow');
+        Route::get('followings', 'MovieUserController@followings')->name('users.followings');
+        Route::get('followers', 'MovieUserController@followers')->name('users.followers');
+});

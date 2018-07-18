@@ -1,8 +1,6 @@
  <body id="eiga-ichiran">
 @extends('layouts.app')
 
-
-
 @section('content')
 
 
@@ -21,6 +19,21 @@
  <div class ="eiga-kan"> 
  {{$overview}}<br>
  {{$release}}
+ 
+ @if(Auth::user()->is_wanting($code))
+ <div class ="want_users">
+   @foreach ($want_users as $user)
+      <ul>
+        <li><a href="{{ url('profile'). $user->id}}">{{$user->name}}</a>
+        </li>
+      </ul>
+       @include('button.follow_button',['code'=>$code,'user' => $user])
+          
+   @endforeach
  </div>
+@endif 
+ </div>
+ 
+
 @endsection
  </body>

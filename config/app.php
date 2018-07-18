@@ -185,6 +185,7 @@ return [
         
         \Kryptonit3\TMDBLaravel\TMDBServiceProvider::class,
 
+
     ],
 
     /*
