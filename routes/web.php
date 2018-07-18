@@ -37,5 +37,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 //プロフィール
 Route::group(['middleware' => ['auth']], function () {
+
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
+   Route::get('profile_edit/{id}', 'ProfileController@edit')->name('profile.edit');
 });

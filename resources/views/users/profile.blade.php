@@ -6,10 +6,10 @@
 
  <div id ="left">
          <div class = "profie-image">
-         <img src="Zak.jpg">
+         <img src={{ secure_asset('Zak.jpg') }}>
          </div>
         
-         <p class="user-name"><br>{{$user->name}}</p>
+         <p class="user-name"><br>{{$user->name}} / F / 22</p>
  </div>
 
 
@@ -28,6 +28,11 @@
           <li><a href="#">FavoriteMovie</a></li>
           <li><a href="#">chat</a></li>
         </div>
+        
+        <div id="edit_button">
+          <a href="{{route('profile.edit', Auth::id())}}">edit</a>
+        </div>
+        
  </div>
 
 

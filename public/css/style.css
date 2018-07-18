@@ -571,7 +571,8 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   color:#FFF;
   font-size: 30px;
   font-family: 'Crimson Text', serif;
-  margin-top: -10%;
+  line-height: 30px;
+  margin-top: 10px;
   /*float: left;*/
   /*margin-top: 280px;*/
   /*margin-left: -180px;*/
@@ -671,3 +672,70 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   background: #FF69B4;
 }
 
+#edit_button {
+  margin-top :50px;
+  margin-left: 200px;
+  width: 188px;
+  height: 42px;
+  border: 1px solid #FFF;
+  background: rgba(0,0,0,0);
+  color: #FFF;
+  
+}
+#edit_button a{
+  color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+
+input[type="number"] {  
+    padding: 0px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    color: #333333;
+    width: 75px;
+}
+
+input[type="radio"] {  
+    padding: 0px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    color: #333333;
+}
+
+.P-register{
+   background-color: #FFF;
+   margin-top: 50px;
+   width: 900px;
+   height: 400px;
+   padding: 50px;
+   margin-left: 100px;
+   padding-top: -5px;
+}
+
+#update_button {
+  margin-top :30px;
+  margin-left: 450px;
+  width: 188px;
+  height: 42px;
+  border: 1px solid #FFF;
+  background: rgba(0,0,0,0);
+  color: #FFF;
+  
+}
+#update_button a{
+  color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
