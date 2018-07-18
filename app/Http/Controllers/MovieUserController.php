@@ -18,7 +18,6 @@ class MovieUserController extends Controller
          $poster = $movie -> getPoster();
          $tag = $movie -> getTagline();
          $release = $movie ->  getMovieReleaseDate();
-         
          $stmovie = Movie::firstOrCreate([
             'code' => $code,
             'name' => $title,

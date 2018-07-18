@@ -37,8 +37,11 @@ Route::group(['middleware' => ['auth']], function () {
 
 //プロフィール
 Route::group(['middleware' => ['auth']], function () {
+
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
+   Route::get('profile_edit/{id}', 'ProfileController@edit')->name('profile.edit');
 });
+
 
 //申請機能
 Route::group(['middleware' => 'auth'], function () {
@@ -47,3 +50,4 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('followings', 'MovieUserController@followings')->name('users.followings');
         Route::get('followers', 'MovieUserController@followers')->name('users.followers');
 });
+
