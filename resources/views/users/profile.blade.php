@@ -1,7 +1,40 @@
+<body id="profile-blade">
 @extends('layouts.app')
 @section('content')
+ 
+ <p class="profile-title">Profile</p>
+
+ <div id ="left">
+         <div class = "profie-image">
+         <img src={{ secure_asset('Zak.jpg') }}>
+         </div>
+        
+         <p class="user-name"><br>{{$user->name}} / F / 22</p>
+ </div>
 
 
-<p><br>{{$user->name}}</p>
+ <div id="right">
+        <div class="comment">
+            <p class="comment1">Favorite Movies </p>
+               <p class="comment1-text">the greatest showman</p><br><br><br>
+            <p class="comment2">Comment </p>
+               <p class="comment2-text">I like movie very much! Shall we go to theater?</p>
+        </div>
+        
+        <div id="menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">I like</a></li>
+          <li><a href="#">Request</a></li>
+          <li><a href="#">FavoriteMovie</a></li>
+          <li><a href="#">chat</a></li>
+        </div>
+        
+        <div id="edit_button">
+          <a href="{{route('profile.edit', Auth::id())}}">edit</a>
+        </div>
+        
+ </div>
+
 
 @endsection
+</body>

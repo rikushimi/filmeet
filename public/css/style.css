@@ -47,6 +47,7 @@ h2 {
   line-height: 54px;
   outline: none;
   margin-top: 60px;
+  font-family: 'Quicksand', sans-serif;
 }
 .button1::before,
 .button1::after {
@@ -95,7 +96,6 @@ h2 {
 .nav>li>a{
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    
 }
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
@@ -106,6 +106,7 @@ h2 {
     -ms-transform: scale(1.1);
 }
 
+    
 .dropdown-menu{
     background-color: rgba(0, 0, 0, 0);
 }
@@ -141,7 +142,7 @@ h2 {
 }
 
 .nav-design {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     margin-top: 20px;
 }
@@ -273,6 +274,7 @@ transition: all 0.1s linear;
   line-height: 54px;
   outline: none;
   margin-top: 60px;
+  font-family: 'Quicksand', sans-serif;
 }
 .button1::before,
 .button1::after {
@@ -400,7 +402,7 @@ input[type="password"] {
 #eiga-ichiran{
   background-color:#000000;
 }
-.eiga-title{
+.eiga-title-mein{
     
     position: center;
     top: 10%;
@@ -414,11 +416,11 @@ input[type="password"] {
   
 }
 
-.eiga-title .p2{
+.eiga-title-tag{
     font-size:140%;
     color:#FFF;
-    margin-top: 10%;
-    margin-right: 5%;
+    margin-top: -2%;
+    margin-left: 3%;
     font-size: 30px;
     font-family:  'Cinzel', serif;
 　　font-style: oblique;
@@ -427,22 +429,24 @@ input[type="password"] {
 .eiga-image{
     float:left;
     width: 50%;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
-.eiga-kan .p1{
+.eiga-overview{
     font-size:140%;
     color:#FFF;
-    margin-top: 20%;
+    margin-top: -15%;
     margin-right: 5%;
     font-size: 30px;
     font-family: 'Crimson Text', serif;
+　　
+}
+.eiga-overview:first-letter {
+margin-right: .1em;
+font-size: 2em;
+color: #FF69B4;
 }
 
-.eiga-kan .p1:first-letter{
-  font-size:100px;
-  color:blue;
-}
 
 .eiga-kan {
     float:right;
@@ -473,3 +477,265 @@ input[type="password"] {
 }
 
 
+.want_users{
+    font-size:140%;
+    color:#FFF;
+    margin-top: 10%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-family:  'Cinzel', serif;
+　　font-style: oblique;
+}
+.want_users>ul>li>a {
+    font-size:140%;
+    color:#FFF;
+    margin-top: 10%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+　　font-style: oblique;
+　　list-style: none;
+}
+.want_users>ul {
+    list-style: none;
+}
+
+
+.watchlist {
+    float:right;
+    width: 50%;
+    margin-top: 6%;
+    
+}
+
+.watchlist-p1{
+    font-size:140%;
+    color:#FFF;
+    margin-top: -10%;
+    margin-left: 50px;
+    font-size: 30px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+.watchlist-p1:after {
+content: "";
+width:100%;
+height:4px;
+position: absolute;
+left: 0;
+bottom: 0;
+background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+}
+
+/*profile-blade*/
+
+#left
+        {
+         width:300px;
+         height:600px;
+         float: left;
+        }
+#right
+        {
+         width:840px;
+         height:600px;
+         float: left;
+        }
+
+#profile-blade{
+  background-color:#000000;
+}
+
+.profile-title{
+    position: center;
+    top: 10%;
+    width: 100%;
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+    color:#FFF;
+    margin-top:30px;
+    padding:0 0 0.5em 0.7em;
+    border-bottom: 1px solid #FFF;
+    
+}
+
+.profie-image>img{
+  margin-top: 5%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  /*float: left;*/
+}
+.user-name {
+  color:#FFF;
+  font-size: 30px;
+  font-family: 'Crimson Text', serif;
+  line-height: 30px;
+  margin-top: 10px;
+  /*float: left;*/
+  /*margin-top: 280px;*/
+  /*margin-left: -180px;*/
+}
+.comment{
+/*  float:right;*/
+  margin-right: 550px;
+  margin-top: 20px;
+}
+
+.comment1{
+    
+    color:#FFF;
+    margin-top: -3%;
+    font-size: 25px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+.comment2{
+    
+    color:#FFF;
+    margin-top: -15%;
+    font-size: 25px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+
+
+.comment1:after {
+    content: "";
+    width:250%;
+    height:4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+}
+.comment2:after {
+    content: "";
+    width:250%;
+    height:4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+}
+
+.comment1-text{
+    color:#FFF;
+    font-size: 15px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+.comment2-text{
+    color:#FFF;
+    font-size: 15px;
+    font-family: 'Crimson Text', serif;
+    padding: .5em;
+    position: relative;
+}
+
+#menu {
+  width: 600px;
+  height: 45px;
+  padding: 0;
+  margin-top: 70px;
+  list-style-type: none;
+  background: rgba(0,0,0,0);
+  border-left: 1px solid #FF69B4;
+}
+#menu li {
+  width: 20%;
+  float: left;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  border-right: 1px solid #FF69B4;
+}
+
+#menu li a {
+  width: auto;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 12px 0;
+  text-decoration: none;
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#menu li a:hover {
+  background: #FF69B4;
+}
+
+#edit_button {
+  margin-top :50px;
+  margin-left: 200px;
+  width: 188px;
+  height: 42px;
+  border: 1px solid #FFF;
+  background: rgba(0,0,0,0);
+  color: #FFF;
+  
+}
+#edit_button a{
+  color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+
+input[type="number"] {  
+    padding: 0px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    color: #333333;
+    width: 75px;
+}
+
+input[type="radio"] {  
+    padding: 0px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    color: #333333;
+}
+
+.P-register{
+   background-color: #FFF;
+   margin-top: 50px;
+   width: 900px;
+   height: 400px;
+   padding: 50px;
+   margin-left: 100px;
+   padding-top: -5px;
+}
+
+#update_button {
+  margin-top :30px;
+  margin-left: 450px;
+  width: 188px;
+  height: 42px;
+  border: 1px solid #FFF;
+  background: rgba(0,0,0,0);
+  color: #FFF;
+  
+}
+#update_button a{
+  color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}

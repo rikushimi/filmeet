@@ -29,7 +29,7 @@ class MoviesController extends Controller
 	
     public function show()
     {       
-            $movies =tmdb()->nowPlayingMovies();
+            $movies =tmdb()->getNowPlayingMovies();
             //dd($movies[0]);
              return view('movies.show',[
                  'movies' => $movies,
