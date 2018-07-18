@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
-{
+{   
     use Notifiable;
 
     /**
@@ -73,4 +73,59 @@ class User extends Authenticatable
         }
          
     }
+    
+    //申請機能
+    
+    public function followings()
+    {
+        return $this->belongsToMany(User::class, 'user_follow','user_id','follow_id')->withPivot('code')->withTimestamps();
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'user_follow', 'follow_id', 'user_id')->withPivot('code')->withTimestamps();
+    }
+    
+     public function which_movies(Request $request)
+    {
+        $code = $request;
+        return $this->followings()->where('code', $code);
+    }
+    
+     public function follow($id,$code)
+    {   
+        $exist = $this->is_following($id);
+        
+        if ($exist) {
+
+            return false;
+        } else {
+
+            $this->followings()->attach($id, ['code' => $code]);
+        
+            return true;
+ 
+        }
+    }
+
+    public function unfollow($id,$code)
+    {
+        // Is the user already "want"?
+        $exist = $this->is_following($id);
+        if ($exist) {
+            // remove "want"
+            \DB::delete("DELETE FROM user_follow WHERE user_id = ? AND follow_id = ? AND code = $code", [$this->id, $id]);
+            return true;
+            
+        } else {
+            // do nothing
+            return false;
+        }
+    }
+
+    public function is_following($userId)
+    {    
+         return $this->followings()->where('follow_id', $userId)->exists();
+    }
+    
 }

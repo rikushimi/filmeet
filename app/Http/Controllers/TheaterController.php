@@ -35,6 +35,7 @@ class TheaterController extends Controller
        $poster = $movie -> getPoster();
        $tag = $movie -> getTagline();
        $release = $movie ->  getMovieReleaseDate();
+
        
         //$image = $search -> getPoster();
         //$title = $search ->getTitle();
