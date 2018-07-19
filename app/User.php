@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Request;
 
 class User extends Authenticatable
 {   
@@ -94,7 +95,7 @@ class User extends Authenticatable
     
      public function follow($id,$code)
     {   
-        $exist = $this->is_following($id);
+        $exist = $this->is_following($id,$code);
         
         if ($exist) {
 
@@ -111,7 +112,7 @@ class User extends Authenticatable
     public function unfollow($id,$code)
     {
         // Is the user already "want"?
-        $exist = $this->is_following($id);
+        $exist = $this->is_following($id,$code);
         if ($exist) {
             // remove "want"
             \DB::delete("DELETE FROM user_follow WHERE user_id = ? AND follow_id = ? AND code = $code", [$this->id, $id]);
@@ -123,9 +124,14 @@ class User extends Authenticatable
         }
     }
 
-    public function is_following($userId)
+    public function is_following($userId,$code)
     {    
-         return $this->followings()->where('follow_id', $userId)->exists();
+         $user = User::find($userId);
+         return $this->followings()->where('follow_id', $userId)->where('code', $code)->exists();
     }
+
+   
+    
+    
     
 }

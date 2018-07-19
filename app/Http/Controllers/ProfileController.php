@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Movie;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -30,9 +31,11 @@ class ProfileController extends Controller
     public function show($id)
     {  
        $user = User::find($id);
+
+        //menu      
        $count_followings = $user->followings()->count();
        $count_followers = $user->followers()->count();
-        
+       
        return view('users.profile',[
               'user' => $user,  
               'count_followings' => $count_followings,
@@ -99,4 +102,21 @@ class ProfileController extends Controller
         return view('users.followers', $data);
     }
 
+    public function mymovies($id)
+    {
+        $user = User::find($id);
+        $movies = $user->movies()->paginate(5);
+        
+        
+        $data=[
+           'user' => $user,
+           'movies' => $movies,
+        ];
+        
+         $data += $this->counts($user); 
+        
+    return view('users.mymovies', $data);
+    }
+
 }
+
