@@ -12,40 +12,18 @@ class MovieUserController extends Controller
 
        
          $code = $request->code;
-         $movie = tmdb()->getMovie($code);
-        
-         $title = $movie -> getTitle();
-         $image = $movie -> getPoster();
-
-        //db ni aru ka check
-        // nakereba hozon 
-        // name ga hituyou
-        
-        
-         $overview = $movie -> getOverview();
-         $poster = $movie -> getPoster();
-         $tag = $movie -> getTagline();
-         $release = $movie ->  getMovieReleaseDate();
+         $movie = tmdb()-> getMovie($code);
+         $title = $movie-> getTitle();
+         $image = $movie-> getPoster();
+    
          $stmovie = Movie::firstOrCreate([
             'code' => $code,
             'name' =>$title, 
             'image' =>$image,
             ]); 
         \Auth::user()->want($stmovie->id);
-        //見たいボタン押した人表示
-        $search = Movie::find($stmovie->id);
-        $want_users = $search->users;
-         
-        return 
-        view('movies.theater',[
-             'title' => $title,
-             'poster' => $poster,
-             'want_users' => $want_users,
-             'code' => $code,
-             'overview'=> $overview,
-             'tag' => $tag,
-             'release' => $release,
-           ]);
+
+        return redirect()->route('theater.get', ['code' => $code]);
     }
 
     public function dont_want(Request $request) {   
@@ -55,12 +33,7 @@ class MovieUserController extends Controller
         $movie = tmdb()->getMovie($code);
         $title = $movie -> getTitle();
         $image = $movie -> getPoster();
-        $overview = $movie -> getOverview();
-        $poster = $movie -> getPoster();
-        $tag = $movie -> getTagline();
-        $release = $movie ->  getMovieReleaseDate();
-
-        
+    
         $stmovie = Movie::firstOrCreate([
             'code' =>$code,
             'name' =>$title, 
@@ -70,25 +43,13 @@ class MovieUserController extends Controller
         
         $movieId = $stmovie->id;
         $movieCode = $stmovie->code;
-        
-        $search = Movie::find($stmovie->id);
-        $want_users = $search->users;
-        
+
         if (\Auth::user()->is_wanting($movieCode)) {
             $movieId = Movie::where('code', $movieCode)->first()->id;
             \Auth::user()->dont_want($movieId);
         }
         
-        return 
-        view('movies.theater',[
-             'title' => $title,
-             'poster' => $poster,
-             'want_users' => $want_users,
-             'code' => $code,
-             'overview'=> $overview,
-             'tag' => $tag,
-             'release' => $release,
-           ]);
+        return redirect()->route('theater.get',['code'=>$code]);
     }
     
     public function store(Request $request)
@@ -96,28 +57,8 @@ class MovieUserController extends Controller
         \Auth::user()->follow($request->id,$request->code);
          
          $code = $request->code;
-         $movie = tmdb()->getMovie($code);
-         $title = $movie -> getTitle();
-         $image = $movie -> getPoster();
-         $overview = $movie -> getOverview();
-         $poster = $movie -> getPoster();
-         $tag = $movie -> getTagline();
-         $release = $movie ->  getMovieReleaseDate();
          
-         $stmovie = Movie::first(); 
-            
-         $search = Movie::find($stmovie->id);
-         $want_users = $search->users; 
-        
-         return view('movies.theater',[
-             'title' => $title,
-             'poster' => $poster,
-             'want_users' => $want_users,
-             'code' => $code,
-             'overview'=> $overview,
-             'tag' => $tag,
-             'release' => $release,
-           ]);;
+         return redirect()->route('theater.get',['code'=>$code]);
     }
     
     public function destroy(Request $request)
@@ -125,28 +66,8 @@ class MovieUserController extends Controller
         \Auth::user()->unfollow($request->id, $request->code);
         
          $code = $request->code;
-         $movie = tmdb()->getMovie($code);
-         $title = $movie -> getTitle();
-         $image = $movie -> getPoster();
-         $overview = $movie -> getOverview();
-         $poster = $movie -> getPoster();
-         $tag = $movie -> getTagline();
-         $release = $movie ->  getMovieReleaseDate();
-         
-         $stmovie = Movie::first(); 
-            
-         $search = Movie::find($stmovie->id);
-         $want_users = $search->users; 
-        
-         return view('movies.theater',[
-             'title' => $title,
-             'poster' => $poster,
-             'want_users' => $want_users,
-             'code' => $code,
-             'overview'=> $overview,
-             'tag' => $tag,
-             'release' => $release,
-           ]);
+
+         return redirect()->route('theater.get',['code'=>$code]);
     }
    
     

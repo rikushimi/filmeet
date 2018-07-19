@@ -14,3 +14,4 @@ class Movie extends Model
         return $this->belongsToMany(User::class, 'user_movie', 'movie_id', 'user_id')->withTimestamps();
     }
 }
+   
