@@ -14,11 +14,11 @@
                 <div class="nav-design">
                     <ul class="nav navbar-nav navbar-right">
                         @if (Auth::check())
-                            <li>{!! link_to_route('show.get','Show Movies')!!}</li>
+                            <li>{!! link_to_route('show.get','Movie List')!!}</li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{route('profile.get', Auth::id())}}">My profile</a></li>
+                                    <li><a href="{{route('profile.get',Auth::user()->id)}}">My profile</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
                                 </ul>

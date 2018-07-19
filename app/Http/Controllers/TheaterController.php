@@ -40,7 +40,7 @@ class TheaterController extends Controller
       if(Auth::user()->is_wanting($code)){    
       
            $search = Movie::find($stmovie->id);
-           $want_users = $search->users;
+           $want_users = $search->users()->paginate(10);
            
            return view('movies.theater',[
              'movie' => $movie,
