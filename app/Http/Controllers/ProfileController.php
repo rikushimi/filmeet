@@ -31,7 +31,6 @@ class ProfileController extends Controller
     public function show($id)
     {  
        $user = User::find($id);
-
         //menu      
        $count_followings = $user->followings()->count();
        $count_followers = $user->followers()->count();
@@ -101,7 +100,7 @@ class ProfileController extends Controller
 
         return view('users.followers', $data);
     }
-
+    
     public function mymovies($id)
     {
         $user = User::find($id);
@@ -117,6 +116,5 @@ class ProfileController extends Controller
         
     return view('users.mymovies', $data);
     }
-
 }
 

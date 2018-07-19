@@ -29,10 +29,9 @@
       @include('button.follow_button',['code'=>$code,'user' => $user])
     @endforeach
   </div>
-  
+ {!! $want_users->render() !!}
 @endif 
  </div>
- 
 
  </body>
 
