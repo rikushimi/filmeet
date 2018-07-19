@@ -19,8 +19,8 @@
             <p class="comment2">Comment </p>
                <p class="comment2-text">I like movie very much! Shall we go to theater?</p>
         </div>
- <div id="menu">
-           <li><a href="{{route('profile.get', Auth::id())}}">Profile</a></li>
+ <div class="menu">
+           <li><a href="{{route('profile.get',  ['id' => $user->id]) }}">Profile</a></li>
           @if (Auth::id() == $user->id)
               <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Like<span class="badge">{{ $count_followings }}</span></a></li>
           @endif
