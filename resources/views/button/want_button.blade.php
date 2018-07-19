@@ -1,16 +1,16 @@
 <div class="watch">
 
 @if (Auth::user()->is_wanting($code))
-    {!! Form::open(['route' => 'movie_user.dont_want', 'method' => 'delete']) !!}
+    {!! Form::open(['route' => 'movie_user.dont_want', 'method' => 'delete', 'class' => 'want-button']) !!}
         {!! Form::hidden('code',  $code) !!}
-        {!! Form::submit('Cancel',['id' => "want-button"])!!}
+        {!! Form::submit('Do not watch')!!}
     {!! Form::close() !!}
 </div>
 <div class="watch2">
 @else
-    {!! Form::open(['route' => 'movie_user.want']) !!}
+    {!! Form::open(['route' => 'movie_user.want','class' => 'want-button']) !!}
         {!! Form::hidden('code', $code) !!}
-        {!! Form::submit('Watch it!', ['id' => "want-button"]) !!}
+        {!! Form::submit('Watch it!') !!}
     {!! Form::close() !!}
 
 

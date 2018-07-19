@@ -5,12 +5,13 @@ a:hover { color: #000000; }
 a:active { color: #000000; }
 a:link {text-decoration:none;}
 
-
-body{
-    
+.container {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-#title {
+
+.title {
     font-family: 'Allura', cursive;
     position: absolute;
     top: 30%;
@@ -90,6 +91,22 @@ h2 {
   max-width: none !important;
   
   
+}
+
+.authwelcome{
+    text-align:center; 
+    margin-top: 25%;
+    
+}
+
+.enjoyfilmeet{
+    font-family: 'Allura', cursive;
+    font-size: 50px;
+}
+
+.toshowbalde{
+    font-size:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:30px;
 }
 
 /*navbarの設定*/
@@ -191,7 +208,7 @@ button{
 }
 /*ここまで*/
 
-#nowplaying{
+.nowplaying{
   
     position: center;
     top: 10%;
@@ -316,7 +333,7 @@ transition: all 0.1s linear;
 /*loginpage*/
 
 
-#loginButton{
+.loginButton{
     margin-top :30px;
     width: 188px;
     height: 42px;
@@ -324,7 +341,7 @@ transition: all 0.1s linear;
     background: rgba(255,255,255,0.5);
 }
 
-#newuser{
+.newuser{
      margin-top :30px;
 }
 
@@ -333,24 +350,7 @@ transition: all 0.1s linear;
   font-family: 'Quicksand', sans-serif;
 }
 
-#title2 {
-    font-family: 'Allura', cursive;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%;
-    font-size: 80px;
-   
-}
 
-#title3 {
-    font-family: 'Allura', cursive;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%;
-    font-size: 80px;
-}
 
 
 
@@ -402,6 +402,8 @@ input[type="password"] {
 #eiga-ichiran{
   background-color:#000000;
 }
+
+
 .eiga-title-mein{
     
     position: center;
@@ -426,17 +428,31 @@ input[type="password"] {
 　　font-style: oblique;
 }
 
+.left-the
+        {
+         width:530px;
+         height:1500px;
+         float: left;
+        }
+.right-the
+        {
+         width:610px;
+         height:1500px;
+         float: left;
+        }
+
+
 .eiga-image{
-    float:left;
-    width: 50%;
+   
     margin-top: 1%;
 }
 
 .eiga-overview{
     font-size:140%;
     color:#FFF;
-    margin-top: -15%;
-    margin-right: 5%;
+    margin-top: -3%;
+    padding-left: 4%;
+    padding-right: 4%;
     font-size: 30px;
     font-family: 'Crimson Text', serif;
 　　
@@ -447,28 +463,40 @@ font-size: 2em;
 color: #FF69B4;
 }
 
+.follow-button{
+  display: inline-block;
+  float: right;
+ 
+}
 
-.eiga-kan {
-    float:right;
-    width: 50%;
-    margin-top: 6%;
-    
+
+.follow-button input[type='submit']{
+    width: 180px;
+    height: 42px;
+    border:none;
+    background: rgba(0,0,0,0);
+    color: #FFF;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+}
+
+.follow-button:hover input[type='submit']{
+    border:none;
+    font-size: 17px;
+    border-bottom: solid 1px;
+    border-top:solid 1px;
 }
 
 
 
 
-/*time-blade*/
-#time-blade{
-  background-color:#000000;
-}
 
-.timelist{
-  color: #FFF;
-}
 
-#want-button{
+
+.want-button input[type='submit']{
     margin-top :30px;
+    margin-left: 28px;
     width: 188px;
     height: 42px;
     border: 2px solid #FFF;
@@ -500,13 +528,16 @@ color: #FF69B4;
     list-style: none;
 }
 
+.want_users>ul>li{
+    /*background: linear-gradient(to right,#a8edea 0%, #fed6e3 50%, rgba(255,255,255,0) 100%);*/
+    
+    margin-top: 30px;
+}
+
 
 .watchlist {
-    float:right;
     width: 100%;
     margin-top: 11%;
-    /*margin-left: -150px;*/
-    
 }
 
 .watchlist-p1{
@@ -520,33 +551,26 @@ color: #FF69B4;
     position: relative;
 }
 .watchlist-p1:after {
-content: "";
-width:100%;
-height:4px;
-position: absolute;
-left: 0;
-bottom: 0;
-background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
+    content: "";
+    width:100%;
+    height:4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
 }
 
-/*profile-blade*/
 
-#left
-        {
-         width:300px;
-         height:600px;
-         float: left;
-        }
-#right
-        {
-         width:840px;
-         height:600px;
-         float: left;
-        }
+
+
+
+/*profile-blade*/
 
 #profile-blade{
   background-color:#000000;
 }
+
+
 
 .profile-title{
     position: center;
@@ -561,12 +585,25 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
     
 }
 
+.left
+        {
+         width:300px;
+         height:600px;
+         float: left;
+        }
+.right
+        {
+         width:840px;
+         height:600px;
+         float: left;
+        }
+
 .profie-image>img{
   margin-top: 5%;
   width: 250px;
   height: 250px;
   object-fit: cover;
-  /*float: left;*/
+ 
 }
 .user-name {
   color:#FFF;
@@ -574,14 +611,12 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   font-family: 'Crimson Text', serif;
   line-height: 30px;
   margin-top: 10px;
-  /*float: left;*/
-  /*margin-top: 280px;*/
-  /*margin-left: -180px;*/
+  
 }
 .comment{
-/*  float:right;*/
+
   margin-right: 550px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .comment1{
@@ -638,16 +673,17 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
     position: relative;
 }
 
-#menu {
+.menu {
   width: 600px;
   height: 45px;
   padding: 0;
-  margin-top: 70px;
+  margin-top: 10px;
+  margin-left: 70px;
   list-style-type: none;
   background: rgba(0,0,0,0);
   border-left: 1px solid #FF69B4;
 }
-#menu li {
+.menu li {
   width: 20%;
   float: left;
   padding: 0;
@@ -657,7 +693,7 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   border-right: 1px solid #FF69B4;
 }
 
-#menu li a {
+.menu li a {
   width: auto;
   color: #FFF;
   font-size: 14px;
@@ -669,11 +705,11 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   font-family: 'Quicksand', sans-serif;
 }
 
-#menu li a:hover {
+.menu li a:hover {
   background: #FF69B4;
 }
 
-#edit_button {
+.edit_button {
   margin-top :50px;
   margin-left: 200px;
   width: 188px;
@@ -683,7 +719,7 @@ background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
   color: #FFF;
   
 }
-#edit_button a{
+.edit_button a{
   color: #FFF;
   text-align: center;
   display: flex;
@@ -723,7 +759,7 @@ input[type="radio"] {
    padding-top: -5px;
 }
 
-#update_button {
+.update_button {
   margin-top :30px;
   margin-left: 450px;
   width: 188px;
@@ -733,7 +769,7 @@ input[type="radio"] {
   color: #FFF;
   
 }
-#update_button a{
+.update_button a{
   color: #FFF;
   text-align: center;
   display: flex;
@@ -741,14 +777,4 @@ input[type="radio"] {
   padding-top: 10px;
 }
 
-#followbutton{
-    margin-top :30px;
-    width: 188px;
-    height: 42px;
-    border: 2px solid #FFF;
-    background: rgba(0,0,0,0);
-    color: #FFF;
-}
-.want_users>ul>li{
-    display: inline-block;
-}
+

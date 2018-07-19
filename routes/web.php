@@ -1,8 +1,7 @@
 <?php
 
-
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth']], function (){
+   Route::get('/', 'MoviesController@show');
 });
 
 //sign up
@@ -47,7 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => 'auth'], function () {
         Route::post('/follow', 'MovieUserController@store')->name('user.follow');
         Route::delete('/unfollow', 'MovieUserController@destroy')->name('user.unfollow');
-        Route::get('followings', 'MovieUserController@followings')->name('users.followings');
-        Route::get('followers', 'MovieUserController@followers')->name('users.followers');
+        Route::get('followings{id}', 'ProfileController@followings')->name('users.followings');
+        Route::get('followers{id}', 'ProfileController@followers')->name('users.followers');
 });
 

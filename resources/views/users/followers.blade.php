@@ -1,10 +1,11 @@
+@if (Auth::id() == $user->id)
 <body id="profile-blade">
 @extends('layouts.app')
 @section('content')
  
  <p class="profile-title">Profile</p>
 
- <div class="left">
+ <div class ="left">
          <div class = "profie-image">
          <img src={{ secure_asset('Zak.jpg') }}>
          </div>
@@ -12,8 +13,9 @@
          <p class="user-name"><br>{{$user->name}} / F / 22</p>
  </div>
 
+
  <div class="right">
-     　　 <div class="menu">
+         <div class="menu">
                <li><a href="{{route('profile.get', Auth::id())}}">Profile</a></li>
               @if (Auth::id() == $user->id)
                   <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Like<span class="badge">{{ $count_followings }}</span></a></li>
@@ -23,21 +25,18 @@
               @endif
               <li><a href="#">My Movies</a></li>
               <li><a href="#">chat</a></li>
-          </div>
-     
-          <div class="comment">
-             <p class="comment1">Favorite Movies </p>
-               <p class="comment1-text">the greatest showman</p><br><br><br>
-             <p class="comment2">Comment </p>
-               <p class="comment2-text">I like movie very much! Shall we go to theater?</p>
-          </div>
+        </div>
         
-         <div class="edit_button">
-            <a href="{{route('profile.edit', Auth::id())}}">edit</a>
-         </div>
+        
+        @include('users.users', ['users' => $users])
+        <br><br><br>
+        <div id="edit_button">
+          <a href="{{route('profile.edit', Auth::id())}}">edit</a>
+        </div>
         
  </div>
 
 
 @endsection
 </body>
+@endif
