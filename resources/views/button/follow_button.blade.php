@@ -1,15 +1,15 @@
 @if (Auth::id() != $user->id)
-    @if (Auth::user()->is_following($user->id,$code))
-        {!! Form::open(['route' => ['user.unfollow', $user->id], 'method' => 'delete']) !!}
+    @if (Auth::user()->is_following($user->id))
+        {!! Form::open(['route' => ['user.unfollow', $user->id], 'method' => 'delete', 'class' => 'follow-button']) !!}
             {!! Form::hidden('code',$code) !!}
             {!! Form::hidden('id',$user->id)!!}
-            {!! Form::submit('てかやっぱり見たくない', ['class' => "btn btn-danger btn-block"]) !!}
+            {!! Form::submit('Cancel' ) !!}
         {!! Form::close() !!}
     @else
-        {!! Form::open(['route' => ['user.follow', $user->id]]) !!}
+        {!! Form::open(['route' => ['user.follow', $user->id],  'class' => 'follow-button']) !!}
             {!! Form::hidden('code',$code) !!}
             {!! Form::hidden('id',$user->id)!!}
-            {!! Form::submit('共に見ましょう', ['class' => "btn btn-primary btn-block"]) !!}
+            {!! Form::submit('Shall we watch?') !!}
         {!! Form::close() !!}
     @endif
 @endif

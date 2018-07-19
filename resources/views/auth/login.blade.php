@@ -38,11 +38,11 @@
                 </div>
                 
                 <div class="text-right">
-                {!! Form::submit('Log in', ['id' => "loginButton"]) !!}
+                {!! Form::submit('Log in', ['class' => "loginButton"]) !!}
                 </div>
                 
                 <div class="text-center">
-                <p id="newuser">New user?      {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
+                <p class="newuser">New user?      {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
                 </div>
                 
                 

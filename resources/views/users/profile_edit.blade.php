@@ -35,8 +35,8 @@
                      
                 </div>
                 
-     <div id="update_button">
-                      <a href="{{route('profile.edit', Auth::id())}}">update</a>
+     <div class="update_button">
+                     <a href="{{route('profile.edit', Auth::id())}}">update</a>
     </div>
     
         
