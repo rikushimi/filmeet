@@ -34,13 +34,6 @@
           <li><a href="#">chat</a></li>
         </div>
         @include('users.users', ['users' => $users])
-        <br><br><br>
-        @if (Auth::id() == $user->id)
-            <div id="edit_button">
-              <a href="{{route('profile.edit', Auth::id())}}">edit</a>
-            </div>
-        @endif
-        
  </div>
 
 

@@ -31,12 +31,6 @@
           <li><a href="#">chat</a></li>
         </div>
          @include('users.movies', ['movies' => $movies])
-         <br><br><br>
-        <div id="edit_button">
-          <a href="{{route('profile.edit', Auth::id())}}">edit</a>
-        </div>
-        
-       
  </div>
 
 
