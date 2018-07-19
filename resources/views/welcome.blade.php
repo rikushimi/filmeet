@@ -1,16 +1,16 @@
 <body id="main">
 
 @extends('layouts.app')
-
-
 @section('content')
     @if (Auth::check())
+
         <div class="authwelcome">
         <?php $user = Auth::user(); ?>
         <p class=enjoyfilmeet>
             {!! link_to_route('show.get', 'Lets find your favorite moviews through filmeet!!', null) !!}</p>
         <p class="toshowbalde">↑click</p>
         </div>
+
     @else
     <div class="center">
         <div class="text-center">
