@@ -503,8 +503,9 @@ color: #FF69B4;
 
 .watchlist {
     float:right;
-    width: 50%;
-    margin-top: 6%;
+    width: 100%;
+    margin-top: 11%;
+    /*margin-left: -150px;*/
     
 }
 
@@ -738,4 +739,16 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
   padding-top: 10px;
+}
+
+#followbutton{
+    margin-top :30px;
+    width: 188px;
+    height: 42px;
+    border: 2px solid #FFF;
+    background: rgba(0,0,0,0);
+    color: #FFF;
+}
+.want_users>ul>li{
+    display: inline-block;
 }
