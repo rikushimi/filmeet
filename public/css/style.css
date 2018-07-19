@@ -350,7 +350,24 @@ transition: all 0.1s linear;
   font-family: 'Quicksand', sans-serif;
 }
 
+.title2 {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    font-size: 80px;
+   
+}
 
+.title3 {
+    font-family: 'Allura', cursive;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    font-size: 80px;
+}
 
 
 
