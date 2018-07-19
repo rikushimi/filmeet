@@ -1,5 +1,5 @@
 @if (Auth::id() != $user->id)
-    @if (Auth::user()->is_following($user->id))
+    @if (Auth::user()->is_following($user->id,$code))
         {!! Form::open(['route' => ['user.unfollow', $user->id], 'method' => 'delete']) !!}
             {!! Form::hidden('code',$code) !!}
             {!! Form::hidden('id',$user->id)!!}

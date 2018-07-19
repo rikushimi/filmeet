@@ -1,12 +1,9 @@
 <body id="main">
 
 @extends('layouts.app')
-
-
 @section('content')
     @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        <p>申し訳ありませんがページが表示できませんのでお戻りください</p>
+      <p><a href="{{ url('show')}}">gomimasa</a></p>
     @else
     <div class="center">
         <div class="text-center">

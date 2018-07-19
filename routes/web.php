@@ -1,8 +1,8 @@
 <?php
 
-Route::group(['middleware' => ['auth']], function (){
-   Route::get('/', 'MoviesController@show');
-});
+Route::get('/',function(){
+       return view('welcome');
+   });
 
 //sign up
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
