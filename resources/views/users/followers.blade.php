@@ -1,3 +1,4 @@
+@if (Auth::id() == $user->id)
 <body id="profile-blade">
 @extends('layouts.app')
 @section('content')
@@ -21,21 +22,29 @@
                <p class="comment2-text">I like movie very much! Shall we go to theater?</p>
         </div>
         
-        <div id="menu">
+         <div id="menu">
            <li><a href="{{route('profile.get', Auth::id())}}">Profile</a></li>
-          <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Like<span class="badge">{{ $count_followings }}</span></a></li>
-          <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Liked<span class="badge">{{ $count_followers }}</span></a></li>
-          <li><a href="#">My Movies</a></li>
+          @if (Auth::id() == $user->id)
+              <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Like<span class="badge">{{ $count_followings }}</span></a></li>
+          @endif
+          @if (Auth::id() == $user->id)
+              <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Liked<span class="badge">{{ $count_followers }}</span></a></li>
+          @endif
+          <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies<span class="badge"></a></li>
           <li><a href="#">chat</a></li>
         </div>
         @include('users.users', ['users' => $users])
         <br><br><br>
-        <div id="edit_button">
-          <a href="{{route('profile.edit', Auth::id())}}">edit</a>
-        </div>
+        @if (Auth::id() == $user->id)
+            <div id="edit_button">
+              <a href="{{route('profile.edit', Auth::id())}}">edit</a>
+            </div>
+        @endif
         
  </div>
 
 
 @endsection
 </body>
+
+@endif
