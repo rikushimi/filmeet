@@ -33,6 +33,10 @@
 @endif 
  </div>
  
+
+ </body>
+
   @include('button.want_button',['code'=>$code])
   @endsection
 </body>
+

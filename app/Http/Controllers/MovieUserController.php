@@ -9,6 +9,8 @@ class MovieUserController extends Controller
 {   
     public function want(Request $request)
     {  
+
+       
          $code = $request->code;
          $movie = tmdb()-> getMovie($code);
          $title = $movie-> getTitle();
@@ -16,10 +18,9 @@ class MovieUserController extends Controller
     
          $stmovie = Movie::firstOrCreate([
             'code' => $code,
-            'name' => $title,
-            'image' => $image,
+            'name' =>$title, 
+            'image' =>$image,
             ]); 
-        
         \Auth::user()->want($stmovie->id);
 
         return redirect()->route('theater.get', ['code' => $code]);
@@ -32,10 +33,12 @@ class MovieUserController extends Controller
         $movie = tmdb()->getMovie($code);
         $title = $movie -> getTitle();
         $image = $movie -> getPoster();
-        
+    
         $stmovie = Movie::firstOrCreate([
             'code' =>$code,
             'name' =>$title, 
+            'image' =>$image,
+
             ]); 
         
         $movieId = $stmovie->id;
@@ -67,34 +70,5 @@ class MovieUserController extends Controller
          return redirect()->route('theater.get',['code'=>$code]);
     }
    
-    public function followings($id)
-    {
-        $user = User::find($id);
-        $followings = $user->followings()->paginate(10);
-
-        $data = [
-            'user' => $user,
-            'users' => $followings,
-        ];
-
-        $data += $this->counts($user);
-
-        return view('users.followings', $data);
-    }
-
-    public function followers($id)
-    {
-        $user = User::find($id);
-        $followers = $user->followers()->paginate(10);
-
-        $data = [
-            'user' => $user,
-            'users' => $followers,
-        ];
-
-        $data += $this->counts($user);
-
-        return view('users.followers', $data);
-    }
-
+    
 }
