@@ -35,10 +35,10 @@ class TheaterController extends Controller
        $poster = $movie -> getPoster();
        $tag = $movie -> getTagline();
        $release = $movie ->  getMovieReleaseDate();
-       $stmovie = Movie::first(); 
-      
+
       if(Auth::user()->is_wanting($code)){    
-      
+           $stmovie = \DB::table('movies')->where('code',$code)->first(); 
+           
            $search = Movie::find($stmovie->id);
            $want_users = $search->users()->paginate(10);
            

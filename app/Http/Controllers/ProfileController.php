@@ -74,8 +74,8 @@ class ProfileController extends Controller
     {
         
         $user = User::find($id);
-        $followings = $user->followings()->paginate(10);
-
+        $followings = $user->followings()->paginate(10);;
+        
         $data = [
             'user' => $user,
             'users' => $followings,
@@ -90,12 +90,13 @@ class ProfileController extends Controller
     {
         $user = User::find($id);
         $followers = $user->followers()->paginate(10);
+        //$movies = $user->movies();
 
         $data = [
             'user' => $user,
             'users' => $followers,
+            //'movies' => $movies
         ];
-
         $data += $this->counts($user);
 
         return view('users.followers', $data);
