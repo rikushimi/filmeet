@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('movies', 'MoviesController', ['only' => ['create', 'show']]);
     Route::post('/want', 'MovieUserController@want')->name('movie_user.want');
     Route::delete('/want', 'MovieUserController@dont_want')->name('movie_user.dont_want');
-    Route::resource('users', 'UsersController', ['only' => ['show']]);
+   // Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
 
 //プロフィール
@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
 
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
    Route::get('profile_edit/{id}', 'ProfileController@edit')->name('profile.edit');
+   Route::put('profile_update', 'ProfileController@update')->name('profile.update');
    Route::get('followings{id}', 'ProfileController@followings')->name('users.followings');
    Route::get('followers{id}', 'ProfileController@followers')->name('users.followers');
    Route::get('mymovies{id}', 'ProfileController@mymovies')->name('mymovies.get');

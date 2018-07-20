@@ -43,25 +43,28 @@ class ProfileController extends Controller
         
     }
 
-    public function edit($id)
+    public function edit()
     {
-
-       $user = User::find($id);
-      
-        $count_followings = $user->followings()->count();
-        $count_followers = $user->followers()->count();
-        
-       return view('users.profile_edit',[
-              'user' => $user,  
-              'count_followings' => $count_followings,
-              'count_followers' => $count_followers,
+       $user = \Auth::user();
+       
+       return view('users.profile_edit', [
+           'user' => $user,
            ]);
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $user = \Auth::user();
+        
+        $user->age = $request->age;
+        $user->sex = $request->sex;
+        $user->favmovie = $request->favmovie;
+        $user->comment = $request->comment;
+        
+       $user->save();
+
+        return redirect()->route('profile.get', ['id' => $user->id]);
     }
 
 
