@@ -430,6 +430,7 @@ input[type="password"] {
     float:left;
     width: 50%;
     margin-top: 1%;
+    
 }
 
 .eiga-overview{
@@ -468,14 +469,26 @@ color: #FF69B4;
 }
 
 #want-button{
-    margin-top :30px;
+    margin-top:-200px;
+    margin-right:300px;
     width: 188px;
     height: 42px;
     border: 2px solid #FFF;
     background: rgba(0,0,0,0);
     color: #FFF;
+    float:right;
+    
 }
 
+#unwant-button{
+    width: 188px;
+    height: 42px;
+    border: 2px solid #FFF;
+    background: rgba(0,0,0,0);
+    color: #FFF;
+    margin-left: 1050px;
+}
+    
 
 .want_users{
     font-size:140%;
@@ -504,7 +517,7 @@ color: #FF69B4;
 .watchlist {
     float:right;
     width: 50%;
-    margin-top: 6%;
+    margin-top: 60px;
     
 }
 
@@ -512,7 +525,7 @@ color: #FF69B4;
     font-size:140%;
     color:#FFF;
     margin-top: -10%;
-    margin-left: 50px;
+    margin-left: 30px;
     font-size: 30px;
     font-family: 'Crimson Text', serif;
     padding: .5em;
@@ -738,4 +751,128 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
   padding-top: 10px;
+}
+
+#followbutton {
+    width: 180px;
+    height: 42px;
+    border:none;
+    background: rgba(0,0,0,0);
+    color: #FFF;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+}
+
+#followbutton:hover{
+    border:none;
+    font-size: 17px;
+    border-bottom: solid 1px white;
+    border-top:solid 1px white;
+}
+
+
+#unfollowbutton{
+    width: 180px;
+    height: 30px;
+    border: 2px solid #FFF;
+    background: rgba(0,0,0,0);
+    color: #FFF;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+}
+
+.want_users>ul>li>a{
+    font-size: 22px;
+    text-decoration: underline ;
+	text-decoration-color: red;
+} 
+
+.want_users>ul>li{
+    display: inline-block;
+    
+}
+
+
+.authwelcome{
+    text-align:center; 
+    margin-top: 18%;
+    
+}
+
+.enjoyfilmeet{
+  /*margin-right: 10px;*/
+  padding: 10px;
+  /*width: 600px;*/
+  height: 60px;
+  color: black;
+  list-style: none;
+  text-align: center;
+  line-height: 60px;
+  display: inline-block;
+  opacity: 0;  
+  font-family: 'Allura', cursive;
+  font-size:70px;
+}
+.authwelcome>ul{
+  padding-left: 0px;
+}
+
+
+
+.enjoyfilmeet:nth-child(1) {
+  -webkit-animation: example 5s ease 0.5s 1 forwards;
+  animation: example 5s ease 0.5s 1 forwards;
+   /*transition-duration: .7s;*/
+}
+.enjoyfilmeet:nth-child(2) {
+  -webkit-animation: example 5s ease 1s 1 forwards;
+  animation: example 5s ease 1s 1 forwards;
+   /*transition-duration: .7s;*/
+  
+}
+.enjoyfilmeet:nth-child(3) {
+  -webkit-animation: example 5s ease 1.5s 1 forwards;
+  animation: example 5s ease 1.5s 1 forwards;
+}
+
+.enjoyfilmeet:nth-child(4) {
+  -webkit-animation: example 5s ease 2s 1 forwards;
+  animation: example 5s ease 2s 1 forwards;
+}
+
+
+
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+    
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+    
+  }
+}
+
+
+
+a.toshowbalde {
+  display: block;
+  margin:auto;
+  position: relative;
+  z-index: 2;
+  width:250px;
+  color: pink;
+  overflow: hidden;
+  margin-top:50px;
+  font-size: 60px;
+  
+}
+a.toshowbalde:hover {
+  color: #dc143c;
+  
 }
