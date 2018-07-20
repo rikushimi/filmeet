@@ -2,9 +2,9 @@
 @extends('layouts.app')
 @section('content')
  
- <p class="profile-title">Profile</p>
+ <p class="profile-title">My Movies</p>
 
- <div id ="left">
+ <div class ="left">
          <div class = "profie-image">
          <img src={{ secure_asset('Zak.jpg') }}>
          </div>
@@ -12,13 +12,8 @@
          <p class="user-name"><br>{{$user->name}} / F / 22</p>
  </div>
 
- <div id="right">
-        <div class="comment">
-            <p class="comment1">Favorite Movies </p>
-               <p class="comment1-text">the greatest showman</p><br><br><br>
-            <p class="comment2">Comment </p>
-               <p class="comment2-text">I like movie very much! Shall we go to theater?</p>
-        </div>
+ <div class="right">
+       
  <div class="menu">
            <li><a href="{{route('profile.get',  ['id' => $user->id]) }}">Profile</a></li>
           @if (Auth::id() == $user->id)
