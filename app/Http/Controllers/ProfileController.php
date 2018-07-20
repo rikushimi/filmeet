@@ -74,11 +74,18 @@ class ProfileController extends Controller
     {
         
         $user = User::find($id);
-        $followings = $user->followings()->paginate(10);;
+        $followings = $user->followings()->paginate(10);
         
+        $followlist=\DB::table('user_follow')
+        ->join('users', 'users.id', '=' , 'user_follow.follow_id')
+        ->join('movies', 'movies.code', '=' , 'user_follow.code')
+        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image' ) 
+        ->where('user_follow.user_id', $id)->get();
+
         $data = [
             'user' => $user,
             'users' => $followings,
+            'friends' => $followlist,
         ];
 
         $data += $this->counts($user);
@@ -90,12 +97,18 @@ class ProfileController extends Controller
     {
         $user = User::find($id);
         $followers = $user->followers()->paginate(10);
-        //$movies = $user->movies();
+        
+        $followerlist=\DB::table('user_follow')
+        ->join('users', 'users.id', '=' , 'user_follow.user_id')
+        ->join('movies', 'movies.code', '=' , 'user_follow.code')
+        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image' ) 
+        ->where('user_follow.follow_id', $id)->get();
+
 
         $data = [
             'user' => $user,
             'users' => $followers,
-            //'movies' => $movies
+            'friends' => $followerlist,
         ];
         $data += $this->counts($user);
 
@@ -106,6 +119,7 @@ class ProfileController extends Controller
     {
         $user = User::find($id);
         $movies = $user->movies()->paginate(5);
+        
         
         
         $data=[

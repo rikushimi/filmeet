@@ -1,8 +1,10 @@
 @if (Auth::id() == $user->id)
+
+
 <body id="profile-blade">
 @extends('layouts.app')
 @section('content')
- 
+
  <p class="profile-title">Profile</p>
 
  <div class ="left">
