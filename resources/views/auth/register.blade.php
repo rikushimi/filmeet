@@ -46,7 +46,7 @@
                     
                     
                      <div class="text-right">
-                        {!! Form::submit('Register',  ['id' => "loginButton"]) !!}
+                        {!! Form::submit('Register',  ['class' => "loginButton"]) !!}
                     </div>
                     
     </div>

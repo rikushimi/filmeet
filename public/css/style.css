@@ -483,27 +483,43 @@ color: #FF69B4;
 .follow-button{
   display: inline-block;
   float: right;
- 
+  margin-top: 7px;
+  margin-bottom: 10px;
 }
 
 
+/*.follow-button span {*/
+/*display:inline-block;*/
+/*transition: .5s*/
+/*}*/
+/*.follow-button:hover span {*/
+/*transform: rotateX(360deg);*/
+/*}*/
+
+
 .follow-button input[type='submit']{
+    background:  #EC407A;
+    transition: .5s;
+　　overflow: hidden;
     width: 180px;
     height: 42px;
+    display: block;
     border:none;
-    background: rgba(0,0,0,0);
-    color: #FFF;
     font-size: 20px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
+    border-radius: 4px;
+　　
 }
 
 .follow-button:hover input[type='submit']{
     border:none;
     font-size: 17px;
-    border-bottom: solid 1px;
-    border-top:solid 1px;
+    transform: rotateX(360deg);
+    /*border-bottom: solid 1px;*/
+    /*border-top:solid 1px;*/
 }
+
 
 
 
@@ -513,19 +529,21 @@ color: #FF69B4;
 
 .want-button input[type='submit']{
     margin-top :30px;
-    margin-left: 28px;
+    margin-left: 200px;
     width: 188px;
     height: 42px;
     border: 2px solid #FFF;
     background: rgba(0,0,0,0);
     color: #FFF;
+    font-family: 'Quicksand', sans-serif;
 }
+
 
 
 .want_users{
     font-size:140%;
     color:#FFF;
-    margin-top: 10%;
+    /*margin-top: 2%;*/
     margin-right: 5%;
     font-size: 30px;
     font-family:  'Cinzel', serif;
@@ -541,20 +559,34 @@ color: #FF69B4;
 　　font-style: oblique;
 　　list-style: none;
 }
+
+.want_users>ul>li>a:hover{
+    color:#87CEFA;
+}
+
 .want_users>ul {
     list-style: none;
 }
 
 .want_users>ul>li{
     /*background: linear-gradient(to right,#a8edea 0%, #fed6e3 50%, rgba(255,255,255,0) 100%);*/
-    
+    /*padding-bottom: -30px;*/
     margin-top: 30px;
+}
+.want_users>ul>li:after {
+    content: "";
+    width:100%;
+    height:4px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #FFF, rgba(255,255,255,0) 100%);
 }
 
 
 .watchlist {
     width: 100%;
-    margin-top: 11%;
+    margin-top: 14%;
+    margin-left: 20px;
 }
 
 .watchlist-p1{
@@ -564,20 +596,11 @@ color: #FF69B4;
     margin-left: 50px;
     font-size: 30px;
     font-family: 'Crimson Text', serif;
-    padding: .5em;
     position: relative;
+    
+    display: block;
+    width: 410px;
 }
-.watchlist-p1:after {
-    content: "";
-    width:100%;
-    height:4px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
-}
-
-
 
 
 
@@ -695,7 +718,7 @@ color: #FF69B4;
   height: 45px;
   padding: 0;
   margin-top: 10px;
-  margin-left: 70px;
+  margin-left: 10px;
   list-style-type: none;
   background: rgba(0,0,0,0);
   border-left: 1px solid #FF69B4;

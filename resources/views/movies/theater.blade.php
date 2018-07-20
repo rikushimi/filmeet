@@ -27,7 +27,7 @@
    <div class ="want_users">
     <ul>
       @foreach ($want_users as $user)
-      <li class="clearfix">
+      <li class="username clearfix">
         <a href="{{ url('profile'). $user->id}}">{{$user->name}}</a>
         @include('button.follow_button',['code'=>$code,'user' => $user])
       </li>
