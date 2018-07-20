@@ -480,7 +480,7 @@ font-size: 2em;
 color: #FF69B4;
 }
 
-.follow-button{
+.follow-button1{
   display: inline-block;
   float: right;
   margin-top: 7px;
@@ -488,16 +488,7 @@ color: #FF69B4;
 }
 
 
-/*.follow-button span {*/
-/*display:inline-block;*/
-/*transition: .5s*/
-/*}*/
-/*.follow-button:hover span {*/
-/*transform: rotateX(360deg);*/
-/*}*/
-
-
-.follow-button input[type='submit']{
+.follow-button1 input[type='submit']{
     background:  #EC407A;
     transition: .5s;
 　　overflow: hidden;
@@ -512,7 +503,7 @@ color: #FF69B4;
 　　
 }
 
-.follow-button:hover input[type='submit']{
+.follow-button1:hover input[type='submit']{
     border:none;
     font-size: 17px;
     transform: rotateX(360deg);
@@ -520,6 +511,36 @@ color: #FF69B4;
     /*border-top:solid 1px;*/
 }
 
+.follow-button2{
+  display: inline-block;
+  float: right;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}
+
+
+.follow-button2 input[type='submit']{
+    background:  #33CCFF;
+    transition: .5s;
+　　overflow: hidden;
+    width: 180px;
+    height: 42px;
+    display: block;
+    border:none;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    border-radius: 4px;
+　　
+}
+
+.follow-button2:hover input[type='submit']{
+    border:none;
+    font-size: 17px;
+    transform: rotateX(360deg);
+    /*border-bottom: solid 1px;*/
+    /*border-top:solid 1px;*/
+}
 
 
 
