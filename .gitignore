@@ -2,6 +2,10 @@
 /public/hot
 /public/storage
 /storage/*.key
+<<<<<<< HEAD
+
+=======
+>>>>>>> 548c378968f5f6aeaf725954926f6a67f5ca856d
 /.idea
 /.vagrant
 Homestead.json

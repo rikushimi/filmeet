@@ -1,4 +1,4 @@
- <body id="eiga-ichiran">
+<body id="eiga-ichiran">
 @extends('layouts.app')
 
 @section('content')
@@ -8,38 +8,40 @@
      <p class="eiga-title-tag">{{$tag}}</p>
  </div>
  
- <div class = "eiga-image">
- <img src="https://image.tmdb.org/t/p/w500{{$poster}}">
- </div>
-
-
  
-@if(Auth::user()->is_wanting($code))
- <div class ="watchlist"> 
-  <p class="watchlist-p1">List of people who wanna watch it</p>
+
+ <div class ="left-the">
+         <div class = "eiga-image">
+         <img src="https://image.tmdb.org/t/p/w500{{$poster}}">
+         </div>
  </div>
-  
-  <div class ="want_users">
-    @foreach ($want_users as $user)
-      <ul>
-        <li><a href="{{ url('profile'). $user->id}}">{{$user->name}}</a></li>
-        <li>@include('button.follow_button',['code'=>$code,'user' => $user])</li>
-      </ul>
-    @endforeach
-    
-    @else
-    <div class = "eiga-kan"> 
+
+
+ <div class="right-the">
+
+ @include('button.want_button',['code'=>$code])
+ @if(Auth::user()->is_wanting($code))
+   <div class ="watchlist"> 
+     <p class="watchlist-p1">List of people who wanna watch it</p>
+   </div>
+        
+   <div class ="want_users">
+    <ul>
+      @foreach ($want_users as $user)
+      <li class="username clearfix">
+        <a href="{{ url('profile'). $user->id}}">{{$user->name}}</a>
+        @include('button.follow_button',['code'=>$code,'user' => $user])
+      </li>
+       @endforeach
+    </ul>
+   </div> 
+ @else
+ 
     <p class ="eiga-overview"> 
-    {{$overview}}<br>
-    {{$release}}
+      {{$overview}}<br>
+      {{$release}}
     </p>
-    </div>
-    
-  </div>
-  
-@endif 
+ @endif 
+    @endsection
  </div>
- 
-  @include('button.want_button',['code'=>$code])
-  @endsection
 </body>

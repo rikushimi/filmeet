@@ -6,7 +6,7 @@
 
 <div class="row">
             <div class="text-center">
-            <h1 id="title3">Sign up</h1>
+            <h1 class="title3">Sign up</h1>
             </div>
     <div class="col-xs-offset-3 col-xs-6">   
      
@@ -46,7 +46,7 @@
                     
                     
                      <div class="text-right">
-                        {!! Form::submit('Register',  ['id' => "loginButton"]) !!}
+                        {!! Form::submit('Register',  ['class' => "loginButton"]) !!}
                     </div>
                     
     </div>

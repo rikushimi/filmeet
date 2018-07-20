@@ -1,9 +1,8 @@
 <?php
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',function(){
+       return view('welcome');
+   });
 
 //sign up
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
@@ -40,6 +39,9 @@ Route::group(['middleware' => ['auth']], function () {
 
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
    Route::get('profile_edit/{id}', 'ProfileController@edit')->name('profile.edit');
+   Route::get('followings{id}', 'ProfileController@followings')->name('users.followings');
+   Route::get('followers{id}', 'ProfileController@followers')->name('users.followers');
+   Route::get('mymovies{id}', 'ProfileController@mymovies')->name('mymovies.get');
 });
 
 
@@ -47,7 +49,5 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => 'auth'], function () {
         Route::post('/follow', 'MovieUserController@store')->name('user.follow');
         Route::delete('/unfollow', 'MovieUserController@destroy')->name('user.unfollow');
-        Route::get('followings', 'MovieUserController@followings')->name('users.followings');
-        Route::get('followers', 'MovieUserController@followers')->name('users.followers');
 });
 
