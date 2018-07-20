@@ -1,16 +1,29 @@
 <body id="main">
+    
 
 @extends('layouts.app')
+
+
 @section('content')
+
     @if (Auth::check())
-
-        <div class="authwelcome">
+    <div class="authwelcome">
         <?php $user = Auth::user(); ?>
-        <p class=enjoyfilmeet>
-            {!! link_to_route('show.get', 'Lets find your favorite moviews through filmeet!!', null) !!}</p>
-        <p class="toshowbalde">↑click</p>
-        </div>
-
+        <ul>
+        <li class="enjoyfilmeet">Lets</li>
+        <li class="enjoyfilmeet">get</li>
+        <li class="enjoyfilmeet">it</li>
+        <li class="enjoyfilmeet">started.</li>
+        </ul>
+        
+        <p>
+            <a class="toshowbalde" href="{{url('show')}}"> <span class="glyphicon glyphicon-glyphicon glyphicon-heart"></span></a>
+            
+            
+            
+            <!--{!! link_to_route('show.get', 'start✔', null) !!}-->
+        </p>
+     </div>
     @else
     <div class="center">
         <div class="text-center">
