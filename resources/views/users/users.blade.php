@@ -1,15 +1,13 @@
-
-
 @if (count($users) > 0)
 <ul class="media-list">
-   
+
     
-@foreach ($users as $user)
+@foreach ($friends as $user)
     <li class="media">
         <div class="media-body">
             <div>
-                {{ $user->name}}
-               {!! link_to_route('profile.get', 'View profile', ['id' => $user->id]) !!}
+                {!! link_to_route('profile.get', $user->name, ['id' => $user->id]) !!}    
+                {{$user->moviename}}
             </div>
         </div>
     </li>

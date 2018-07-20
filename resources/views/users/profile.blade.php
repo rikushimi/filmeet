@@ -9,7 +9,7 @@
          <img src={{ secure_asset('Zak.jpg') }}>
          </div>
         
-         <p class="user-name"><br>{{$user->name}} / F / 22</p>
+         <p class="user-name"><br>{{$user->name}} /age: {{$user->age}}  / {{$user->sex}} </p>
  </div>
 
  <div class="right">
@@ -30,14 +30,15 @@
           
     <div class="comment">
         <p class="comment1">Favorite Movies </p>
-        <p class="comment1-text">the greatest showman</p><br><br><br>
-        <p class="comment2">Comment </p>
-        <p class="comment2-text">I like movie very much! Shall we go to theater?</p>
+        <p class="comment1-text">{!! nl2br(e( $user->favmovie )) !!}</p><br><br><br>
+        <p class="comment2">Comment</p>
+        <p class="comment2-text">{!! nl2br(e( $user->comment )) !!}</p>
+        
     </div>
-
+    <br><br>
         @if (Auth::id() == $user->id)
             <div class="edit_button">
-              <a href="{{route('profile.edit', Auth::id())}}">edit</a>
+              <a href="{{route('profile.edit',  ['id' => $user->id])}}">edit</a>
             </div>
         @endif
  </div>

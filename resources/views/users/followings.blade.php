@@ -1,8 +1,10 @@
 @if (Auth::id() == $user->id)
+
+
 <body id="profile-blade">
 @extends('layouts.app')
 @section('content')
- 
+
  <p class="profile-title">Profile</p>
 
  <div class ="left">
@@ -10,7 +12,7 @@
          <img src={{ secure_asset('Zak.jpg') }}>
          </div>
         
-         <p class="user-name"><br>{{$user->name}} / F / 22</p>
+         <p class="user-name"><br>{{$user->name}} /age: {{$user->age}}  / {{$user->sex}} </p>
  </div>
 
 
