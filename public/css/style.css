@@ -1042,25 +1042,25 @@ animation:fuwafuwa 1s infinite linear alternate;
     display:inline-block;
     width: 890px;
     float:left;
-    margin-top: 30px;
+    margin-top: 40px;
     
 }
 
+/*mymovies.blade*/
 .mymovies-image{
     display:inline-block;
     margin-bottom: 10px;
 }
 
 
-.mymovies-image>span>img{
+.mymovies-image>span>a>img{
     display: inline-block;
     width: 250px;
     height: 350px;
-    float:center;
     color:white;
 }
 
-.mymovies-image>span>img:hover{
+.mymovies-image>span>a>img:hover{
         -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
