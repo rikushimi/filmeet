@@ -5,10 +5,8 @@
 @foreach ($friends as $user)
     <li class="media">
         <div class="media-body">
-            <div>
-                {!! link_to_route('profile.get', $user->name, ['id' => $user->id]) !!}    
                 {{$user->moviename}}
-            </div>
+                <a href="{{url('profile'.$user->id)}}">{{$user->name}}</a>
         </div>
     </li>
 @endforeach

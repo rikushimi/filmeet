@@ -1,15 +1,16 @@
 @if (count($movies) > 0)
-<ul class="media-list">
+<div class="mymovies clearfix">
 @foreach ($movies as $movie)
 <?php $user = $movie->user; ?>
-    <li class="media">
-        <div class="media-body">
-            <div>
-                <li><img src="https://image.tmdb.org/t/p/w500{{$movie->image}}">{{$movie->name}}</li>
+
+    <!--<div class="mymovies clearfix">-->
+        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+            <div class="mymovies-image clearfix">
+                <span><img src="https://image.tmdb.org/t/p/w500{{$movie->image}}"></span>
+            </div>
+@endforeach
             </div>
         </div>
-    </li>
-@endforeach
-</ul>
+    </div>
 {!! $movies->render() !!}
 @endif
