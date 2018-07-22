@@ -5,7 +5,7 @@
     <li class="media">
         <div class="media-body">
             <div>
-                <li><img src="https://image.tmdb.org/t/p/w500{{$movie->image}}">{{$movie->name}}</li>
+                <li><a href="{{url('match'.$movie->code)}}"><img src="https://image.tmdb.org/t/p/w500{{$movie->image}}">{{$movie->name}}</a></li>
             </div>
         </div>
     </li>

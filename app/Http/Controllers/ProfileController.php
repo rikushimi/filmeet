@@ -134,5 +134,50 @@ class ProfileController extends Controller
         
     return view('users.mymovies', $data);
     }
-}
+    
+    public function match($code){
+      
+      //映画情報
+      $movie = tmdb()-> getMovie($code);
+      $title = $movie-> getTitle();
+      $image = $movie-> getPoster();
+      //自分のID
+      $myId = \Auth::id();
+      $user = User::find($myId);
+      //フォローしている人
+      $follows =\DB::table('user_follow')
+               ->where('code',$code)
+               ->where('user_id',$myId)
+               ->select('follow_id')->get(); 
+      $matches = array();           
 
+        
+        if($follows){
+          foreach($follows as $follow){
+          //フォローしている人のID
+           $followID = $follow->follow_id;
+           $myId = \Auth::id();    
+           //相互フォロー関係の人のID
+           $matchId = \DB::table('user_follow')
+                      ->where('code',$code)
+                      ->where('user_id',$followID)
+                      ->where('follow_id',$myId)
+                      ->select('user_id')->get();
+           
+             foreach($matchId as $id){
+                 $match = User::find($id->user_id);
+                 array_push($matches,$match);
+                 
+             }
+          }
+        }
+        return view('users.match',[
+              'matches' => $matches,
+              'title' => $title,
+              'image' => $image,
+              'user'  => $user,
+            ]);
+       
+   }
+
+}
