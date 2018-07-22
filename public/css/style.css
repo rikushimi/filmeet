@@ -920,7 +920,36 @@ input[type="radio"] {
   animation: example 5s ease 2s 1 forwards;
 }
 
+/*match.blade*/
+.match-left{
+ width:360px;
+ height:600px;
+ float: left;
+}
 
+.match-center{
+ width:350px;
+ height:600px;
+ float: left;
+}
+
+.match-right{
+ width:400px;
+ height:600px;
+ float: right;
+}
+
+.match-right>p{
+ color: white;
+ font-size: 30px;
+}
+.match-movies>img{
+  margin-top: 5%;
+  margin-right:0%;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
 
 
 @-webkit-keyframes example {

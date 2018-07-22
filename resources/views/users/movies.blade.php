@@ -2,15 +2,11 @@
 <div class="mymovies clearfix">
 @foreach ($movies as $movie)
 <?php $user = $movie->user; ?>
-
-    <!--<div class="mymovies clearfix">-->
-        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
-            <div class="mymovies-image clearfix">
-                <span><img src="https://image.tmdb.org/t/p/w500{{$movie->image}}"></span>
-            </div>
+  <div class="mymovies-image clearfix">
+      <span><a href="{{url('match'.$movie->code)}}"><img src="https://image.tmdb.org/t/p/w500{{$movie->image}}">{{$movie->name}}</a></span>
+  </div>
 @endforeach
-            </div>
-        </div>
-    </div>
+</div>
+
 {!! $movies->render() !!}
 @endif
