@@ -23,6 +23,7 @@
  @if(Auth::user()->is_wanting($code))
    <div class ="watchlist"> 
      <p class="watchlist-p1">List of people who wanna watch it</p>
+     <p class="watchlist-p2">Click their name below to see their profiles and send them requests.</p>
    </div>
         
    <div class ="want_users">

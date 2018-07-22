@@ -9,7 +9,7 @@
          <img src={{ secure_asset('Zak.jpg') }}>
          </div>
         
-         <p class="user-name"><br>{{$user->name}} / F / 22</p>
+         <p class="user-name"><br>{{$user->name}} /age: {{$user->age}}  / {{$user->sex}} </p>
  </div>
 
  <div class="right">
