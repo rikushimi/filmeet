@@ -25,9 +25,8 @@
            <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies<span class="badge"></a></li>
           <li><a href="#">chat</a></li>
         </div>
-         @include('users.movies', ['movies' => $movies])
  </div>
-
+         @include('users.movies', ['movies' => $movies])
 
 @endsection
 </body>
