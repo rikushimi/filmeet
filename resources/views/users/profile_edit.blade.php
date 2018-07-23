@@ -43,9 +43,9 @@
                     <textarea id="comment" type="text" wrap="soft" cols="110" rows="3" name="comment"  placeholder="Write you sel-introduction!"value="{{ $user->comment }}"></textarea>
                 </div>
             </div>
-            <div class="update_button">
+            
               {!! Form::submit('update',['class' => "update_button"]) !!}
-            </div>
+          
 
           
     </div>
