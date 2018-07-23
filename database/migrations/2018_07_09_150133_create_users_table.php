@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('userid');
             $table->string('password');
-            $table->integer('age')->unsigned()->nullable()->default(null);
+            $table->integer('age')->nullable()->default(null);
             $table->string('sex')->nullable()->default(null);
             $table->string('favmovie')->nullable()->default(null);
             $table->string('comment')->nullable()->default(null);
