@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Movie;
 use App\User;
 use Illuminate\Http\Request;
-
+use Validator;
 
 class ProfileController extends Controller
 {
@@ -62,8 +62,21 @@ class ProfileController extends Controller
         $user->favmovie = $request->favmovie;
         $user->comment = $request->comment;
         
-       $user->save();
+        $user->save();
+       
+       $validator = Validator::make($request->all(), [
+        'age' => 'numeric|between:0,150',
+        'favmovie' => 'max:50',
+        'comment' => 'max:140',
+    ]);
 
+    // バリデーションエラーだった場合
+        if ($validator->fails()) {
+        return redirect('profile_edit/error')
+            ->withErrors($validator)
+            ->withInput();
+        }
+    
         return redirect()->route('profile.get', ['id' => $user->id]);
     }
 

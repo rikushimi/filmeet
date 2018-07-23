@@ -15,8 +15,13 @@
         <li class="enjoyfilmeet">it</li>
         <li class="enjoyfilmeet">started.</li>
         </ul>
+
         <p>
             <a class="toshowbalde" href="{{url('show')}}"> <span class="glyphicon glyphicon-glyphicon glyphicon-heart"></span></a>
+            
+            
+            
+            <!--{!! link_to_route('show.get', 'start✔', null) !!}-->
         </p>
      </div>
      
