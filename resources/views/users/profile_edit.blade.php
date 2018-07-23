@@ -33,9 +33,8 @@
                         <input id="comment" type="text" class="form-control" name="comment" value="{{ $user->comment }}">
                     </div>
     </div>
-                    <div class="update_button">
-                        {!! Form::submit('update') !!}
-                    </div>
+                    {!! Form::submit('update',['class' => "update_button"]) !!}
+                   
                     {!! Form::close() !!}
                      
                 </div>

@@ -685,69 +685,68 @@ color: #FF69B4;
 .user-name {
   color:#FFF;
   font-size: 30px;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Quicksand', sans-serif;
   line-height: 30px;
   margin-top: 10px;
   
 }
+.user-age{
+    color:pink;
+    font-family: 'Quicksand', sans-serif;
+}
+.user-sex{
+    color:pink;
+    font-family: 'Quicksand', sans-serif;
+}
+.user-detail{
+    color:#FFF;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 30px;
+}
 .comment{
 
-  margin-right: 550px;
+  margin-right: 480px;
   margin-top: 50px;
 }
 
 .comment1{
     
-    color:#FFF;
+    color: #FFFF77;
     margin-top: -3%;
+    margin-bottom: -10px;
     font-size: 25px;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
 }
 .comment2{
     
-    color:#FFF;
+    color: #FFFF77;
     margin-top: -15%;
+    margin-bottom: -10px;
     font-size: 25px;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
 }
 
 
-.comment1:after {
-    content: "";
-    width:250%;
-    height:4px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
-}
-.comment2:after {
-    content: "";
-    width:250%;
-    height:4px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to right, #87CEFA, rgba(255,255,255,0) 100%);
-}
 
 .comment1-text{
     color:#FFF;
     font-size: 15px;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
+    width: 600px;
 }
 .comment2-text{
     color:#FFF;
     font-size: 15px;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
+    width: 880px;
 }
 
 .menu {
@@ -828,17 +827,18 @@ input[type="radio"] {
 
 .P-register{
    background-color: #FFF;
-   margin-top: 50px;
+   margin-top: 20px;
    width: 900px;
    height: 400px;
-   padding: 50px;
+   padding: 40px;
    margin-left: 100px;
    padding-top: -5px;
+   font-family: 'Quicksand', sans-serif;
 }
 
 .update_button {
-  margin-top :30px;
-  margin-left: 450px;
+  margin-top :78px;
+  margin-left: 300px;
   width: 188px;
   height: 42px;
   border: 1px solid #FFF;
@@ -955,19 +955,4 @@ animation:fuwafuwa 1s infinite linear alternate;
 100% {transform:translate(0, 0)rotate(3deg);} 
 }
 
-/*a.toshowbalde  {*/
-/*    -webkit-animation:buruburu 0.1s infinite linear alternate;*/
-/*    animation:buruburu 0.1s infinite linear alternate;*/
-/*}*/
 
-/*@-webkit-keyframes buruburu {*/
-/*    0% {-webkit-transform:translate(0, 0) rotate(-3deg);}*/
-/*    50% {-webkit-transform:translate(0, -1px) rotate(0deg);}*/
-/*    100% {-webkit-transform:translate(0, 0)rotate(3deg);}*/
-/*}*/
-
-/*@keyframes buruburu {*/
-/*    0% {transform:translate(0, 0) rotate(-3deg);}*/
-/*    50% {transform:translate(0, -1px) rotate(0deg);}*/
-/*    100% {transform:translate(0, 0)rotate(3deg);}*/
-/*}*/
