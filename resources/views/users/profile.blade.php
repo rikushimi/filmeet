@@ -6,7 +6,7 @@
 
  <div class="left">
          <div class = "profie-image">
-         <img src={{ secure_asset('Zak.jpg') }}>
+         <img src={{ secure_asset('none.jpg') }}>
          </div>
         
          <p class="user-name">{{$user->name}}</p><br>
