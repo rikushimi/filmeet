@@ -3,7 +3,8 @@
 @if (Auth::user()->is_wanting($code))
     {!! Form::open(['route' => 'movie_user.dont_want', 'method' => 'delete', 'class' => 'want-button']) !!}
         {!! Form::hidden('code',  $code) !!}
-        {!! Form::submit('Do not watch')!!}
+
+        {!! Form::submit('remove')!!}
     {!! Form::close() !!}
 </div>
 <div class="watch2">

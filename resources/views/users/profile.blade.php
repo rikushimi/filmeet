@@ -34,9 +34,10 @@
           
     <div class="comment">
         <p class="comment1">Favorite Movies </p>
-        <p class="comment1-text">{{$user->favmovie}}</p><br><br><br>
+        <p class="comment1-text">{!! nl2br(e( $user->favmovie )) !!}</p><br><br><br>
         <p class="comment2">Comment</p>
-        <p class="comment2-text">{{$user->comment}}</p>
+        <p class="comment2-text">{!! nl2br(e( $user->comment )) !!}</p>
+        
     </div>
     <br><br>
         @if (Auth::id() == $user->id)
