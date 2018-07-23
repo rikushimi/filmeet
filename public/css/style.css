@@ -1035,6 +1035,8 @@ animation:fuwafuwa 1s infinite linear alternate;
 .media-body>a{
     color:white;
 }
+
+/*mymovie*/
 .mymovies{
     margin-bottom: 15px;
     margin-top: 30px;
@@ -1052,18 +1054,53 @@ animation:fuwafuwa 1s infinite linear alternate;
 }
 
 
-.mymovies-image>span>img{
+.mymovies-image>span>a>img{
     display: inline-block;
     width: 250px;
     height: 350px;
-    float:center;
     color:white;
 }
 
-.mymovies-image>span>img:hover{
+.mymovies-image>span>a>img:hover{
         -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
 }
+
+/*paginationかざねに送るやつ*/
+.pagination{
+    margin-left:850px;
+}
+.pagination>.disabled>span{
+    color:white;
+    background-color: black;
+}
+
+.pagination>.disabled>span:hover{
+    color:black;
+}
+.pagination>.active>span{
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+.pagination>li>a{
+    color: white;
+    background-color: #0b0909;
+}
+
+.pagination>li>a>hover{
+    color:black;
+}
+
+.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: black;
+    cursor: default;
+    background-color: white;
+    border-color: #f7f8f9;
+}
+
