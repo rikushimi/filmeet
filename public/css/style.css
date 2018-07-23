@@ -295,6 +295,7 @@ transition: all 0.1s linear;
   outline: none;
   margin-top: 30px;
   font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
 }
 .button1::before,
 .button1::after {
@@ -336,14 +337,14 @@ transition: all 0.1s linear;
 
 /*loginpage*/
 #login-page{
-  background: url('toppage1.jpg') center center no-repeat;
+  background: url('toppage2.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 0;
 }
 
 #register-page{
-  background: url('toppage1.jpg') center center no-repeat;
+  background: url('toppage2.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 0;
