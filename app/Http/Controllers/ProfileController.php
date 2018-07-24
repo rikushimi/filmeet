@@ -104,8 +104,8 @@ class ProfileController extends Controller
         // ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
         // ->join('users', 'users.id', '=' , 'user_follow.follow_id')
         // ->join('movies', 'movies.code', '=' , 'user_follow.code')
-        // ->where('user_follow.user_id', $user->id)->get();
-        ->get();
+        ->where('user_follow.user_id', $user->id)->get();
+        // ->get();
   
        $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
        $url = $url->image_url;
