@@ -21,21 +21,7 @@
         </p>
         
      </div>
-     
-    <!-- <div class="explanation">-->
-    <!--     <div class="explanation1">-->
-    <!--        <p> welcome to filmeet</p> -->
-    <!--     </div>     -->
-    <!--         <div class="explanation2">-->
-    <!--             <p>-->
-    <!--                 Select movies you wanna watch and Find people you like.<br>-->
-    <!--                 Don't be shy!<br>-->
-    <!--                 Filmeets give you best matches!<br>-->
-    <!--                 First, fill out your profile to find your best movie buddies.<br>-->
-    <!--                 <a href="{{route('profile.get',Auth::user()->id)}}">Profile</a>-->
-    <!--             </p> -->
-    <!--        </div>    -->
-    <!--</div>   -->
+
     <div id="gray">
 　　</div>
 　　<div id="green">
@@ -44,19 +30,23 @@
             <p> Welcome to filmeet !</p> 
          </div>     
              <div class="explanation2">
-
-                 Select movies you wanna watch and Find people you like.<br>
-                 Don't be shy!<br>
-                 Filmeets give you best matches!<br><br>
-                 First, fill out your profile to find your best movie buddies.<br>
-                 
-                 <a href="{{route('profile.get',Auth::user()->id)}}">Profile<a></a>
-
+              <p>    
+                <p class=e2-1>
+                 Select movies you wanna watch and Find people you like.<br></p>
+                <p class=e2-2>
+                 Don't be shy!<br></p>
+                <p class=e2-3>
+                 Filmeets give you best matches!<br><br></p>
+                <p class=e2-4>
+                 First, fill out your profile to find your best movie buddies.<br></p>
+                 <a href="{{route('profile.get',Auth::user()->id)}}" class="prof">☛ PROFILE ☚</a><br><br>
+                <p class=e2-5>
+                 Or you can check Movie List!<br></p>
+                 <a href="{{url('show')}}" class="npm">☛ Now Playing Movies ☚</a><br>
+               </p>
             </div>    
     </div>   
-	<a href="#" class="abtn">
-		<div class="close"></div>
-	</a>
+
     </div>
     @else
     <div class="center">

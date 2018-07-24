@@ -21,8 +21,8 @@
             <div class="form-group">
             {!! Form::open(['url' => '/upload'.$id, 'method' => 'post', 'files' => true]) !!}
             {!! Form::label('file', 'Upload your image', ['class' => 'control-label']) !!}
-            {!! Form::file('file') !!}
-            {!! Form::submit('Upload', ['class' => 'btn btn-default']) !!}
+            {!! Form::file('file') !!}<br>
+            {!! Form::submit('Upload', ['class' => 'btn btn-default']) !!} 
             {!! Form::close() !!}
             </div>
         
@@ -49,7 +49,8 @@
 
                 <div class="form-group">
                     {!! Form::label('comment', 'Comment') !!}<br>
-                    <textarea id="comment" type="text" wrap="soft" cols="110" rows="3" name="comment"  placeholder="Write you sel-introduction!"value="{{ $user->comment }}"></textarea>
+                    <textarea id="comment" type="text" wrap="soft" cols="110" rows="3" name="comment" placeholder="Write your sel-intro and get your profile more attractive!" >{{ $user->comment }}</textarea>
+                    
                 </div>
             </div>
             

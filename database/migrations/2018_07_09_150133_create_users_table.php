@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->integer('age')->nullable()->default(null);
             $table->string('sex')->nullable()->default(null);
             $table->string('favmovie')->nullable()->default(null);
-            $table->string('comment')->nullable()->default(null);
+            $table->text('comment')->nullable()->default(null);
             $table->string('image_url')->nullable()->default(null);
             $table->rememberToken();
             $table->timestamps();
