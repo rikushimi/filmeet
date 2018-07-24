@@ -142,7 +142,7 @@ class ProfileController extends Controller
     public function mymovies($id)
     {
         $user = User::find($id);
-        $movies = $user->movies()->paginate(5);
+        $movies = $user->movies()->paginate(6);
         
         
         

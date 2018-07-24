@@ -4,11 +4,12 @@
 
 <p class="profile-title">Match list</p>
 
- <div class="match-left">
+ <div class="left">
          <div class = "profie-image">
          <img src={{ secure_asset('Zak.jpg') }}>
          </div>
          <p class="user-name"><br>{{$user->name}} / F / 22</p>
+ </div>
          <div class="right">
          <div class="menu">
           <li><a href="{{route('profile.get',  ['id' => $user->id]) }}">Profile</a></li>
@@ -21,8 +22,8 @@
 
           <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies/Matches<span class="badge"></a></li>
           <li><a href="#">chat</a></li>
-     </div>
-   </div>
+    　　　　 </div>
+   　　　　　</div>
      
   <div class="match-center">
     <div class="match-movies">  
@@ -30,7 +31,7 @@
     </div>
   </div>  
   
-  <div class="match-right">    
+  <div class="right">    
     @if($matches != null)
     <br><br>
      @foreach($matches as $match)
@@ -39,8 +40,9 @@
        <br>
      @endforeach
     @else
-     <br><br><br><br><br>
+     
      <p>Sorry....<br>You don't have any match</p>
+     
     @endif
     
   </div>
