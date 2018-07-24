@@ -465,13 +465,13 @@ input[type="password"] {
 .left-the
         {
          width:530px;
-         height:1500px;
+         height:800px;
          float: left;
         }
 .right-the
         {
          width:610px;
-         height:1500px;
+         height:800px;
          float: left;
         }
 
@@ -737,10 +737,12 @@ color: #FF69B4;
 .user-age{
     color:pink;
     font-family: 'Quicksand', sans-serif;
+    font-size:18px;
 }
 .user-sex{
     color:pink;
     font-family: 'Quicksand', sans-serif;
+    font-size:18px;
 }
 .user-detail{
     color:#FFF;
@@ -755,38 +757,42 @@ color: #FF69B4;
 
 .comment1{
     
-    color: #FFFF77;
+    color: white;
     margin-top: -3%;
     margin-bottom: -10px;
     font-size: 25px;
     font-family: 'Quicksand', sans-serif;
-    padding: .5em;
+    padding: 3px;
     position: relative;
+    border-bottom: dashed 1.5px pink;
 }
 .comment2{
-    
-    color: #FFFF77;
+    color: white;
     margin-top: -15%;
     margin-bottom: -10px;
     font-size: 25px;
     font-family: 'Quicksand', sans-serif;
-    padding: .5em;
+    padding: 3px;
     position: relative;
+    border-bottom: dashed 1.5px pink;
 }
 
 
 
 .comment1-text{
+    margin-top:15px;
     color:#FFF;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
     width: 600px;
 }
+
 .comment2-text{
+    margin-top:15px;
     color:#FFF;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
@@ -1135,4 +1141,8 @@ animation:fuwafuwa 1s infinite linear alternate;
     border-color: #f7f8f9;
 }
 
-
+.sorry{
+    color:white;
+    font-size:20px;
+    float:right;
+}
