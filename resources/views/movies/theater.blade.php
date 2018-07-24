@@ -34,12 +34,18 @@
        @endforeach
     </ul>
    </div> 
+   
+   <br><br>
+    <div class="edit_button">
+              <a href="{{route('show.get')}}">back to movie list</a>
+            </div>
  @else
  
     <p class ="eiga-overview"> 
       {{$overview}}<br>
       {{$release}}
     </p>
+
  @endif 
 
  </div>
