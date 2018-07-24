@@ -21,31 +21,34 @@
           @endif
 
           <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies/Matches<span class="badge"></a></li>
-          <li><a href="#">chat</a></li>
     　　　　 </div>
    　　　　　</div>
+   　　　　　
+   　　　　　
+   　　　<div class="peoplewatch">
+       <p>Your matches!!</p>
+       </div>　　
+       
+ <div class="whole">
      
-  <div class="match-center">
-    <div class="match-movies">  
+    <div class="matchimage">  
       <img src="https://image.tmdb.org/t/p/w500{{$image}}">
     </div>
+  
+    @if($matches != null)
+  <div class="peoplewatch1">  
+     @foreach($matches as $match)
+       <p>{{$match->name}}</p>
+     @endforeach
   </div>  
   
-  <div class="right">    
-    @if($matches != null)
-    <br><br>
-     @foreach($matches as $match)
-       <br>
-       <p>{{$match->name}}</p>
-       <br>
-     @endforeach
     @else
-     
-     <p>Sorry....<br>You don't have any match</p>
-     
+        <div class="sorry">
+          <p>Sorry....<br>You don't have any match</p>
+        </div>
+     </div>
     @endif
-    
-  </div>
+</div>    
 
 @endsection('content')
 </body>

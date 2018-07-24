@@ -416,13 +416,17 @@ animation:fuwafuwa 1s infinite linear alternate;
 @-webkit-keyframes fuwafuwa {
 0% {-webkit-transform:translate(0, 0) rotate(-5deg);}
 50% {-webkit-transform:translate(0, -10px) rotate(0deg);}
-100% {-webkit-transform:translate(0, 0)rotate(3deg);} 
+100% {-webkit-transform:translate(0, 0)rotate(3deg);}
+
 }
 
-  @keyframes fuwafuwa {
+
+
+@keyframes fuwafuwa {
 0% {transform:translate(0, 0) rotate(-5deg);}
 50% {transform:translate(0, -10px) rotate(0deg);}
-100% {transform:translate(0, 0)rotate(3deg);} 
+100% {transform:translate(0, 0)rotate(3deg);}
+
 }
 
 #gray {
@@ -457,6 +461,85 @@ animation:fuwafuwa 1s infinite linear alternate;
 #gray:target, #gray:target + #green {
 	display:			block;
 }
+
+
+.whole{
+    width:800px;
+    height: 600px;
+    float:right;
+    margin-right:100px;
+    margin-top: -10px;
+}
+
+
+.peoplewatch{
+    color: white;
+    font-size:30px;
+    font-family: 'Quicksand', sans-serif;
+    margin-right:50px;
+    width: 800px;
+    margin-left:640px;
+    display: block;
+    color:pink;
+    
+}
+
+
+.peoplewatch1{
+    color: white;
+    font-size:30px;
+    font-family: 'Quicksand', sans-serif;
+    width: 400px;
+    float:left;
+    display: block;
+    
+}
+
+.peoplewatch1>p{
+    color:white;
+    font-size:30px;
+    width:400px;
+    text-align: center;
+}
+
+.peoplewatch1>p>hover{
+    color:#87CEFA;
+}
+
+
+.sorry{
+    color: white;
+    font-size:20px;
+    width: 400px;
+    float:left;
+    display: block;
+    
+}
+
+.sorry>p{
+    color:white;
+    font-size:20px;
+    width:400px;
+    text-align: center;
+}
+
+
+.matchimage{
+    width:300px;
+    margin-right:0px;
+    display:inline-block;
+    float:left;
+}
+.matchimage>img{
+  margin-top: 6%;
+  margin-right:0%;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
 
 /*loginpage*/
 #login-page{
@@ -1017,7 +1100,7 @@ input[type="radio"] {
    background-color: #FFF;
    margin-top: 20px;
    width: 900px;
-   height: 400px;
+   height: 460px;
    padding: 40px;
    margin-left: 100px;
    padding-top: -5px;
@@ -1025,7 +1108,7 @@ input[type="radio"] {
 }
 
 .update_button {
-  margin-top :78px;
+  margin-top :40px;
   margin-left: 300px;
   width: 188px;
   height: 42px;
@@ -1115,8 +1198,14 @@ input[type="radio"] {
  color: white;
  font-size: 30px;
 }
+
+.match-movies{
+    width:800px;
+    margin-right:0px;
+    display:inline-block;
+}
 .match-movies>img{
-  margin-top: 5%;
+  margin-top: 6%;
   margin-right:0%;
   width: 300px;
   height: 400px;
@@ -1277,13 +1366,7 @@ input[type="radio"] {
     border-color: #f7f8f9;
 }
 
-<<<<<<< HEAD
-=======
-.sorry{
-    color:white;
-    font-size:20px;
-    float:right;
-}
+
 
 /*footer*/
 footer {
@@ -1308,4 +1391,4 @@ footer {
     color: grey;
 }
 
->>>>>>> 4e8d180aa69e480c67e53f2f34d16ea11218d854
+
