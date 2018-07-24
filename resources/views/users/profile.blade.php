@@ -9,7 +9,7 @@
      @if($url != null)        
         <img src="{{$url}}" alt="">
      @else    
-        <img src="#" alt=""> 
+        <img src="{{ secure_asset('profile.png') }}" alt=""> 
      @endif    
          </div>
         
