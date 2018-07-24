@@ -22,6 +22,7 @@
         <div class="menu">
            <li><a href="{{route('profile.get',  ['id' => $user->id]) }}">Profile</a></li>
 
+
             @if (Auth::id() == $user->id)
 
               <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Sent Requests<span class="badge">{{ $count_followings }}</span></a></li>
