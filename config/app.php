@@ -184,6 +184,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         
         \Kryptonit3\TMDBLaravel\TMDBServiceProvider::class,
+        
+        JD\Cloudder\CloudderServiceProvider::class,
 
 
     ],
@@ -237,6 +239,8 @@ return [
         
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        
+        'Cloudder' => 'JD\Cloudder\Facades\Cloudder'
         
         
         
