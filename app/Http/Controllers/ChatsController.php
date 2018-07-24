@@ -12,14 +12,31 @@ class ChatsController extends Controller
  
        $data = [];
         if (\Auth::check()) {
+            $chats = array();
+            $myId = \Auth::id();
             $user = \Auth::user();
-            $chats = $user->chats()->orderBy('created_at', 'desc')->paginate(10);
+            $chats = \DB::table('chats')
+                    ->Where(function ($query)use($id,$myId) {
+                          $query->where('user_id',$id)
+                                ->where('match_id',$myId);
+                      })
+                    ->orWhere(function ($query)use($myId,$id) {
+                          $query->where('user_id',$myId)
+                                ->where('match_id',$id);
+                            })
+                    ->orderby('created_at','asc')
+                    ->select('content','created_at','user_id','id')
+                    ->paginate(10);
+                    
             $chat_user = User::find($id);
+
+            
             $data = [
                 'user' => $user,
                 'chats' => $chats,
-                'chat_user'   => $chat_user,
+                'chat_user'  => $chat_user,
                 'id'  => $id,
+                'myId' => $myId,
             ];
             
             return view('users.chat', $data);

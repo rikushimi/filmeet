@@ -21,21 +21,7 @@
         </p>
         
      </div>
-     
-    <!-- <div class="explanation">-->
-    <!--     <div class="explanation1">-->
-    <!--        <p> welcome to filmeet</p> -->
-    <!--     </div>     -->
-    <!--         <div class="explanation2">-->
-    <!--             <p>-->
-    <!--                 Select movies you wanna watch and Find people you like.<br>-->
-    <!--                 Don't be shy!<br>-->
-    <!--                 Filmeets give you best matches!<br>-->
-    <!--                 First, fill out your profile to find your best movie buddies.<br>-->
-    <!--                 <a href="{{route('profile.get',Auth::user()->id)}}">Profile</a>-->
-    <!--             </p> -->
-    <!--        </div>    -->
-    <!--</div>   -->
+
     <div id="gray">
 　　</div>
 　　<div id="green">

@@ -192,6 +192,7 @@ class ProfileController extends Controller
              }
           }
         }
+        
         return view('users.match',[
               'matches' => $matches,
               'title' => $title,

@@ -15,13 +15,13 @@
             <h1>TimeLine</h1>
     
 
-            @if (count($chats) > 0)
-                @include('users.chats', ['chats' => $chats])
-            @endif
+            
+                @include('users.chats', ['chats' => $chats,'user' => $user,'chat_user'=>$chat_user])
+           
         </div>
         
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br >
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="col-xs-8">
     @if (Auth::id() == $user->id)
         {!! Form::open(['route' => 'chats.store']) !!}

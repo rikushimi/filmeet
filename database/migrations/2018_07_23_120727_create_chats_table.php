@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateChatsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+  
     public function up()
     {
         Schema::create('chats', function (Blueprint $table) {
