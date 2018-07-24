@@ -337,30 +337,90 @@ transition: all 0.1s linear;
     text-align:center;
     /*background-color:rgba(255,255,255,0.4);*/
     padding: 2px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: -10px;
-    
 }
 
 .explanation1{
     font-size:47px;
     color:black;
     font-family: 'Lobster', cursive;
+    animation: fadeIn 4s ease 0s 1 normal;
+    -webkit-animation: fadeIn 4s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    70% {opacity: 0}
+    100% {opacity: 1}
 }
 
-.explanation2{
-    font-size:20px;
-    color:black;
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.e2-1{
+    margin-bottom: 0px;
+    font-size:22px;
     font-family: 'Hind', sans-serif;
+    animation: fadeIn 5s ease 0s 1 normal;
+    -webkit-animation: fadeIn 5s ease 0s 1 normal;
 }
-.explanation2>p>a{
+.e2-2{
+    margin-bottom: 0px;
+    font-size:22px;
+    font-family: 'Hind', sans-serif;
+    animation: fadeIn 6s ease 0s 1 normal;
+    -webkit-animation: fadeIn 6s ease 0s 1 normal;
+}
+.e2-3{
+    margin-bottom: 0px;
+    font-size:22px;
+    font-family: 'Hind', sans-serif;
+    animation: fadeIn 7s ease 0s 1 normal;
+    -webkit-animation: fadeIn 7s ease 0s 1 normal;
+}
+.e2-4{
+    margin-bottom: 0px;
+    font-size:22px;
+    font-family: 'Hind', sans-serif;
+    animation: fadeIn 8s ease 0s 1 normal;
+    -webkit-animation: fadeIn 8s ease 0s 1 normal;
+}
+.e2-5{
+    margin-bottom: 0px;
+    font-size:22px;
+    font-family: 'Hind', sans-serif;
+    animation: fadeIn 10s ease 0s 1 normal;
+    -webkit-animation: fadeIn 10s ease 0s 1 normal;
+}
+.prof{
     font-size: 30px;
-   
+    color: #000;
+    animation: fadeIn 9s ease 0s 1 normal;
+    -webkit-animation: fadeIn 9s ease 0s 1 normal;
+}
+
+.prof:hover{
+    color: #FFF;
+}
+.npm{
+    font-size: 30px;
+    color: #000;
+    animation: fadeIn 11s ease 0s 1 normal;
+    -webkit-animation: fadeIn 11s ease 0s 1 normal;
+}
+.npm:hover{
+    color: #FFF;
 }
 
 
-.explanation2>p>a:before,
-.explanation2>p>a:after {
+
+
+#green:before,
+#green:after {
 position: absolute;
 left: 0;
 content: '';
@@ -368,12 +428,12 @@ width: 100%;
 height: 5px;
 box-sizing: border-box;
 }
-.explanation2>p>a:before {
+#green:before {
 top: 0;
 border-top: 3px solid #000;
 border-bottom: 1px solid #000;
 }
-.explanation2>p>a:after {
+#green:after {
 bottom: 0;
 border-top: 1px solid #000;
 border-bottom: 3px solid #000;
@@ -438,6 +498,18 @@ animation:fuwafuwa 1s infinite linear alternate;
 		/*opacity:			0.5;*/
 		z-index:			2;
 		display:			none;
+		position: fixed;
+		transform-origin: 50% 50%;
+        animation-name:big;
+        animation-duration:1.5s;
+}
+@keyframes big{
+  0%{
+    transform: scale(0);
+  }
+ 100%{
+    transform: scale(1);
+  }
 }
 #green {
 	    height:				431px;
@@ -449,7 +521,9 @@ animation:fuwafuwa 1s infinite linear alternate;
 	
 		z-index:			3;
 		display:			none;
-		
+	  　transform-origin: 50% 50%;
+        animation-name:big;
+        animation-duration:2.5s;	
 }
 .close {
 		padding:			15px;
