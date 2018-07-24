@@ -878,6 +878,11 @@ color: #FF69B4;
     margin-left: 30px;
     font-size: 28px;
 }
+.mymovies{
+    color:#FFF;
+    font-family: 'Quicksand', sans-serif;
+    font-size:20px;
+}
 .comment{
 
   margin-right: 480px;
@@ -925,7 +930,7 @@ color: #FF69B4;
 }
 
 .menu {
-  width: 600px;
+  width: 800px;
   height: 45px;
   padding: 0;
   margin-top: 10px;
@@ -1131,23 +1136,65 @@ input[type="radio"] {
 
 
 
-/*自分がライクした動画*/
-.media-list{
+/*自分がリクエスト送った人、送ってきた人*/
+.follow-list{
     text-align:center;
-    margin-right:1500px;
-    width:500px;
+    width:800px;
     margin-top:20px;
+    font-family: 'Quicksand', sans-serif;
+}
+.list-title1{
+    float: left;
+    width: 400px;
+    color: pink;
+    font-size: 22px;
+    border-bottom: solid 1px;
+    border-color: white;
 }
 
-
-.media-body{
-    color:white;
-    font-size:18px;
+.list-title2{
+    float: left;
+    width: 400px;
+    color: #87CEFA;
+    font-size: 22px;
+     border-bottom: solid 1px;
+    border-color: white;
 }
 
-.media-body>a{
-    color:white;
+.list-content1{
+      float: left;
+   width: 400px;
+   margin-top: 10px;
+   
 }
+.list-content2{
+      float: left;
+  width: 400px;
+   margin-top: 10px;
+}
+.list-content1>a{
+    float: left;
+    color: white;
+    width: 400px;
+    font-size: 20px;
+}
+
+.list-content2>a{
+    float: left;
+    color: white;
+    width: 400px;
+    font-size: 20px;
+
+}
+
+.list-content1>a:hover{
+  color: pink;
+}
+
+.list-content2>a:hover{
+  color: #87CEFA;
+}
+
 .mymovies{
     margin-bottom: 15px;
     margin-top: 30px;
@@ -1174,10 +1221,33 @@ input[type="radio"] {
 }
 
 .mymovies-image>span>a>img:hover{
-        -webkit-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
+}
+
+/*footer*/
+footer {
+    margin-top: 100px;
+    padding-top: 20px;
+    bottom: 0;
+    background-color: black;
+}
+.logo>img {
+    max-width: 200px;
+    margin-left: 470px;
+    height: auto;
+    
+}
+.logo>p{
+    color: grey;
+    float: right;
+    margin-top: 40px;
+}
+.copy-right{
+    text-align: center;
+    color: grey;
 }
 

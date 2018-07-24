@@ -45,6 +45,7 @@
          </div>     
              <div class="explanation2">
                  <p>
+
                      Select movies you wanna watch and Find people you like.<br>
                      Don't be shy!<br>
                      Filmeets give you best matches!<br><br>
@@ -53,6 +54,7 @@
                      Or you can see Movie List right now!<br>
                      <a href="{{url('show')}}">- Now Playing Movies -</a>
                  </p> 
+
             </div>    
     </div>   
 	<a href="#" class="abtn">
@@ -63,7 +65,7 @@
     <div class="center">
         <div class="text-center">
                  <h1 class="title">Filmeet</h1>
-                 <h2>Wanna meet new people through movies?</h2>
+                 <h2>Wanna find your best movie buddy?</h2>
                     <div class="button1">    
                         {!! link_to_route('signup.get', 'Sign up now!', null) !!}
                     </div>

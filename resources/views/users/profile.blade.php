@@ -6,7 +6,11 @@
 
  <div class="left">
          <div class = "profie-image">
-         <img src={{ secure_asset('none.jpg') }}>
+     @if($url != null)        
+        <img src="{{$url}}" alt="">
+     @else    
+        <img src="#" alt=""> 
+     @endif    
          </div>
         
          <p class="user-name">{{$user->name}}</p><br>

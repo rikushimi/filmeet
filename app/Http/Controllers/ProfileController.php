@@ -6,6 +6,7 @@ use App\Movie;
 use App\User;
 use Illuminate\Http\Request;
 use Validator;
+use JD\Cloudder\Facades\Cloudder;
 
 class ProfileController extends Controller
 {
@@ -34,21 +35,27 @@ class ProfileController extends Controller
         //menu      
        $count_followings = $user->followings()->count();
        $count_followers = $user->followers()->count();
-       
+                
+       $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
+       $url = $url->image_url;
        return view('users.profile',[
               'user' => $user,  
               'count_followings' => $count_followings,
               'count_followers' => $count_followers,
+              'url'   => $url,
+              
            ]);
         
     }
+    
 
-    public function edit()
+    public function edit($id)
     {
        $user = \Auth::user();
        
        return view('users.profile_edit', [
            'user' => $user,
+           'id' => $id,
            ]);
     }
 
@@ -95,11 +102,12 @@ class ProfileController extends Controller
         $followlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.follow_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
-        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image' ) 
+        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
         ->where('user_follow.user_id', $id)->get();
-
+  
+        
         $data = [
-            'user' => $user,
+            'user' => $user, 
             'users' => $followings,
             'friends' => $followlist,
         ];
@@ -117,7 +125,7 @@ class ProfileController extends Controller
         $followerlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.user_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
-        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image' ) 
+        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code' ) 
         ->where('user_follow.follow_id', $id)->get();
 
 
@@ -191,6 +199,25 @@ class ProfileController extends Controller
               'user'  => $user,
             ]);
        
+   }
+   
+   public function upload(Request $request, $id)
+   { 
+       Cloudder::upload($request->file('file'), null);
+       $url = Cloudder::getResult()['url'];
+       $user = \Auth::user();
+       $count_followings = $user->followings()->count();
+       $count_followers = $user->followers()->count();
+       
+        $user->image_url = $url;
+        $user->save();
+       
+       return view('users.profile',[
+           'url' => $url,
+           'user' => $user,
+           'count_followings' => $count_followings,
+           'count_followers' => $count_followers,
+           ]);
    }
 
 }
