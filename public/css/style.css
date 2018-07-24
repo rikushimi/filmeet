@@ -928,6 +928,7 @@ color: #FF69B4;
     padding: .5em;
     position: relative;
     width: 600px;
+    height: 50px;
 }
 
 .comment2-text{
@@ -938,6 +939,7 @@ color: #FF69B4;
     padding: .5em;
     position: relative;
     width: 880px;
+    height: 130px;
 }
 
 .menu {
@@ -977,7 +979,7 @@ color: #FF69B4;
 }
 
 .edit_button {
-  margin-top :50px;
+  margin-top :20px;
   margin-left: 200px;
   width: 188px;
   height: 42px;
@@ -1044,7 +1046,6 @@ input[type="radio"] {
   justify-content: center;
   padding-top: 10px;
 }
-
 
 
 .authwelcome{
