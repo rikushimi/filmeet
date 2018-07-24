@@ -105,11 +105,14 @@ class ProfileController extends Controller
         ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
         ->where('user_follow.user_id', $id)->get();
   
+       $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
+       $url = $url->image_url;
         
         $data = [
             'user' => $user, 
             'users' => $followings,
             'friends' => $followlist,
+            'url'=>$url,
         ];
 
         $data += $this->counts($user);

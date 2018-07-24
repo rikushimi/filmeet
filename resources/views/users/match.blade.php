@@ -4,13 +4,9 @@
 
 <p class="profile-title">Match list</p>
 
- <div class="left">
-         <div class = "profie-image">
-         <img src={{ secure_asset('Zak.jpg') }}>
-         </div>
-         <p class="user-name"><br>{{$user->name}} / F / 22</p>
- </div>
-         <div class="right">
+
+         
+        <div class="right">
          <div class="menu">
           <li><a href="{{route('profile.get',  ['id' => $user->id]) }}">Profile</a></li>
           @if (Auth::id() == $user->id)

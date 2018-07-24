@@ -11,8 +11,7 @@
      @else    
         <img src="{{ secure_asset('profile.png') }}" alt=""> 
      @endif    
-         </div>
-        
+ </div>
          <p class="user-name">{{$user->name}}</p><br>
          <p class="user-age">AGE
             <span class="user-detail">{{$user->age}}</span></p><br>
