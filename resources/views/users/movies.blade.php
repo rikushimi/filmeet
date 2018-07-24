@@ -8,6 +8,5 @@
   </div>
 @endforeach
 </div>
-
 {!! $movies->render() !!}
 @endif

@@ -588,13 +588,13 @@ input[type="password"] {
 .left-the
         {
          width:530px;
-         height:1500px;
+         height:800px;
          float: left;
         }
 .right-the
         {
          width:610px;
-         height:1500px;
+         height:800px;
          float: left;
         }
 
@@ -865,12 +865,16 @@ color: #FF69B4;
 .user-age{
     color:pink;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+
+    font-size:18px;
+
 }
 .user-sex{
     color:pink;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+
+    font-size:18px;
+
 }
 .user-detail{
     color:#FFF;
@@ -891,38 +895,42 @@ color: #FF69B4;
 
 .comment1{
     
-    color: #FFFF77;
+    color: white;
     margin-top: -3%;
     margin-bottom: -10px;
     font-size: 25px;
     font-family: 'Quicksand', sans-serif;
-    padding: .5em;
+    padding: 3px;
     position: relative;
+    border-bottom: dashed 1.5px pink;
 }
 .comment2{
-    
-    color: #FFFF77;
+    color: white;
     margin-top: -15%;
     margin-bottom: -10px;
     font-size: 25px;
     font-family: 'Quicksand', sans-serif;
-    padding: .5em;
+    padding: 3px;
     position: relative;
+    border-bottom: dashed 1.5px pink;
 }
 
 
 
 .comment1-text{
+    margin-top:15px;
     color:#FFF;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
     width: 600px;
 }
+
 .comment2-text{
+    margin-top:15px;
     color:#FFF;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     padding: .5em;
     position: relative;
@@ -940,7 +948,7 @@ color: #FF69B4;
   border-left: 1px solid #FF69B4;
 }
 .menu li {
-  width: 20%;
+  width: 25%;
   float: left;
   padding: 0;
   margin: 0;
@@ -1191,9 +1199,13 @@ input[type="radio"] {
   color: pink;
 }
 
+
+/*mymovie*/
+
 .list-content2>a:hover{
   color: #87CEFA;
 }
+
 
 .mymovies{
     margin-bottom: 15px;
@@ -1239,6 +1251,47 @@ input[type="radio"] {
   margin-left: 350px; 
   margin-right: 0px;
   float:center;
+
+/*paginationかざねに送るやつ*/
+.pagination{
+    margin-left:850px;
+}
+.pagination>.disabled>span{
+    color:white;
+    background-color: black;
+}
+
+.pagination>.disabled>span:hover{
+    color:black;
+}
+.pagination>.active>span{
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+.pagination>li>a{
+    color: white;
+    background-color: #0b0909;
+}
+
+.pagination>li>a>hover{
+    color:black;
+}
+
+.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: black;
+    cursor: default;
+    background-color: white;
+    border-color: #f7f8f9;
+}
+
+.sorry{
+    color:white;
+    font-size:20px;
+    float:right;
+}
 
 /*footer*/
 footer {
