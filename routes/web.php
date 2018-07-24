@@ -60,3 +60,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('chats', 'ChatsController', ['only' => ['store', 'destroy']]);
 });
 
+
+
+
+
