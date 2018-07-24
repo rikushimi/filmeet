@@ -334,6 +334,129 @@ transition: all 0.1s linear;
 .button1:hover::after {
   opacity: 1;
 }
+.explanation{
+    text-align:center;
+    /*background-color:rgba(255,255,255,0.4);*/
+    padding: 2px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    
+}
+
+.explanation1{
+    font-size:47px;
+    color:black;
+    font-family: 'Lobster', cursive;
+}
+
+.explanation2{
+    font-size:20px;
+    color:black;
+    font-family: 'Hind', sans-serif;
+}
+.explanation2>p>a{
+    font-size: 30px;
+   
+}
+
+
+.explanation2>p>a:before,
+.explanation2>p>a:after {
+position: absolute;
+left: 0;
+content: '';
+width: 100%;
+height: 5px;
+box-sizing: border-box;
+}
+.explanation2>p>a:before {
+top: 0;
+border-top: 3px solid #000;
+border-bottom: 1px solid #000;
+}
+.explanation2>p>a:after {
+bottom: 0;
+border-top: 1px solid #000;
+border-bottom: 3px solid #000;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+a.toshowbalde {
+  display: block;
+  margin:auto;
+  position: relative;
+  z-index: 2;
+  width:250px;
+  color: #dc143c;
+  overflow: hidden;
+  margin-top:50px;
+  font-size: 60px;
+  z-index:			1;
+}
+a.toshowbalde:hover {
+  color: pink;
+  
+}
+
+a.toshowbalde {
+-webkit-animation:fuwafuwa 1s infinite linear alternate;
+animation:fuwafuwa 1s infinite linear alternate;
+}
+
+@-webkit-keyframes fuwafuwa {
+0% {-webkit-transform:translate(0, 0) rotate(-5deg);}
+50% {-webkit-transform:translate(0, -10px) rotate(0deg);}
+100% {-webkit-transform:translate(0, 0)rotate(3deg);} 
+}
+
+  @keyframes fuwafuwa {
+0% {transform:translate(0, 0) rotate(-5deg);}
+50% {transform:translate(0, -10px) rotate(0deg);}
+100% {transform:translate(0, 0)rotate(3deg);} 
+}
+
+#gray {
+		position:			fixed;
+		top:				0;
+		left:				0;
+		height:				100%;
+		width:				100%;
+		background:         pink;
+		/*opacity:			0.5;*/
+		z-index:			2;
+		display:			none;
+}
+#green {
+	    height:				431px;
+		width:				1200px;
+	
+		position:			fixed;
+		top:				24%;
+		left:				10%;
+	
+		z-index:			3;
+		display:			none;
+		
+}
+.close {
+		padding:			15px;
+		color:				#333;
+		
+		display:			inline-block;
+}
+#gray:target, #gray:target + #green {
+	display:			block;
+}
 
 /*loginpage*/
 #login-page{
@@ -668,8 +791,13 @@ color: #FF69B4;
     position: relative;
     
     display: block;
-    width: 410px;
+    width: 430px;
+    /*background-color:rgba(255,255,255,0.3);*/
+    border-left: 5px solid #FFF;
+    padding-left: 10px;
 }
+
+
 
 .watchlist-p2{
     color:#FFF;
@@ -679,7 +807,7 @@ color: #FF69B4;
     font-family: 'Crimson Text', serif;
     position: relative;
     display: block;
-    width: 410px;
+    width: 480px;
 }
 
 
@@ -737,15 +865,18 @@ color: #FF69B4;
 .user-age{
     color:pink;
     font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 .user-sex{
     color:pink;
     font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 .user-detail{
     color:#FFF;
     font-family: 'Quicksand', sans-serif;
     margin-left: 30px;
+    font-size: 28px;
 }
 .comment{
 
@@ -996,56 +1127,9 @@ input[type="radio"] {
 
 
 
-a.toshowbalde {
-  display: block;
-  margin:auto;
-  position: relative;
-  z-index: 2;
-  width:250px;
-  color: #dc143c;
-  overflow: hidden;
-  margin-top:50px;
-  font-size: 60px;
-  
-}
-a.toshowbalde:hover {
-  color: pink;
-  
-}
-
-a.toshowbalde {
--webkit-animation:fuwafuwa 1s infinite linear alternate;
-animation:fuwafuwa 1s infinite linear alternate;
-}
-
-@-webkit-keyframes fuwafuwa {
-0% {-webkit-transform:translate(0, 0) rotate(-5deg);}
-50% {-webkit-transform:translate(0, -10px) rotate(0deg);}
-100% {-webkit-transform:translate(0, 0)rotate(3deg);} 
-}
-
-  @keyframes fuwafuwa {
-0% {transform:translate(0, 0) rotate(-5deg);}
-50% {transform:translate(0, -10px) rotate(0deg);}
-100% {transform:translate(0, 0)rotate(3deg);} 
-}
 
 
 
-/*theaterbladeの追加*/
-.explanation{
-    text-align:center;
-}
-
-.explanation1{
-    font-size:28px;
-    color:black;
-}
-
-.explanation2{
-    font-size:20px;
-    color:black;
-}
 
 /*自分がライクした動画*/
 .media-list{
