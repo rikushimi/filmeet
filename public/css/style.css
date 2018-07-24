@@ -284,7 +284,6 @@ transition: all 0.1s linear;
 
 
 /*welcomepage*/
-
 .button1 {
   display: inline-block;
   width: 200px;
@@ -940,6 +939,7 @@ color: #FF69B4;
     padding: .5em;
     position: relative;
     width: 600px;
+    height: 50px;
 }
 
 .comment2-text{
@@ -950,6 +950,7 @@ color: #FF69B4;
     padding: .5em;
     position: relative;
     width: 880px;
+    height: 130px;
 }
 
 .menu {
@@ -989,7 +990,7 @@ color: #FF69B4;
 }
 
 .edit_button {
-  margin-top :50px;
+  margin-top :20px;
   margin-left: 200px;
   width: 188px;
   height: 42px;
@@ -1056,7 +1057,6 @@ input[type="radio"] {
   justify-content: center;
   padding-top: 10px;
 }
-
 
 
 .authwelcome{
@@ -1126,7 +1126,7 @@ input[type="radio"] {
  float: right;
 }
 
-.match-right>p{
+.match-right>p>a{
  color: white;
  font-size: 30px;
 }
@@ -1256,7 +1256,25 @@ input[type="radio"] {
 }
 
 
+/*チャット機能*/
+.chat-author>p{
+   font-size:30px;
+   color: white;
+}
 
+.chatform-group{
+  margin-left: 350px; 
+  margin-right: 0px;
+  float:center;
+}
+
+.chat-left{
+    margin-right: 300px;
+}
+
+.chat-right{
+    margin-left: 400px;
+}
 /*paginationかざねに送るやつ*/
 .pagination{
     margin-left:850px;
@@ -1319,5 +1337,6 @@ footer {
 .copy-right{
     text-align: center;
     color: grey;
+
 }
 

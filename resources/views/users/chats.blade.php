@@ -1,38 +1,31 @@
-@if (Auth::id() == $user->id)
-<body id="profile-blade">
-@extends('layouts.app')
-@section('content')
- 
- <p class="profile-title">Profile</p>
 
- <div class ="left">
-         <div class = "profie-image">
-         <img src={{ secure_asset('Zak.jpg') }}>
-         </div>
-        
-         <p class="user-name"><br>{{$user->name}} / F / 22</p>
- </div>
+<ul class="media-list">
+  
+@foreach ($chats as $chat)
+  @if(Auth::id() == $chat->user_id)
+     <div class= 'chat-left'>  
+            <div class="chat-author">
+                {!! link_to_route('users.chat', $user->name, ['id' => $user->id]) !!} <span class="text-muted"> {{ $chat->created_at }}</span>
+            </div>
+            <div class="chat-contents">
+                <p>{!! nl2br(e($chat->content)) !!}</p>
+            </div>        
+                    {!! Form::open(['route' => ['chats.destroy', $chat->id], 'method' => 'delete']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                    {!! Form::close() !!}
+     </div> 
+  @else
+     <div class= 'chat-right'>
+            <div class="chat-author">
+                {!! link_to_route('users.chat', $chat_user->name, ['id' => $user->id]) !!} <span class="text-muted"> {{ $chat->created_at }}</span>
+            </div>
+            <div class="chat-contents">
+                <p>{!! nl2br(e($chat->content)) !!}</p>
+            </div>        
+     </div>
+  @endif
+@endforeach
+</ul>
 
+{!! $chats->render() !!}
 
- <div class="right">
-   
-         <div class="menu">
-           <li><a href="{{route('profile.get',  ['id' => $user->id]) }}">Profile</a></li>
-          @if (Auth::id() == $user->id)
-              <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Sent Requests<span class="badge"></span></a></li>
-          @endif
-          @if (Auth::id() == $user->id)
-              <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Recieved Requests<span class="badge"></span></a></li>
-          @endif
-          <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies/Matches<span class="badge"></a></li>
-          <li role="presentation" class="{{ Request::is('users/*/chats') ? 'active' : '' }}"><a href="{{ route('chats.get', ['id' => $user->id]) }}">Chats<span class="badge"></a></li>
-           @include('chats.index', ['chats' => $chats])
-        </div>
-        
-
- </div>
-
-
-@endsection
-</body>
-@endif

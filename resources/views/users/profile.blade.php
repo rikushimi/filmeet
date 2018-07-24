@@ -38,7 +38,6 @@
         <p class="comment2-text">{!! nl2br(e( $user->comment )) !!}</p>
         
     </div>
-    <br><br>
         @if (Auth::id() == $user->id)
             <div class="edit_button">
               <a href="{{route('profile.edit',  ['id' => $user->id])}}">edit</a>
