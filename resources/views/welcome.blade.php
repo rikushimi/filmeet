@@ -43,7 +43,7 @@
     <div class="center">
         <div class="text-center">
                  <h1 class="title">Filmeet</h1>
-                 <h2>Wanna meet new people through movies?</h2>
+                 <h2>Wanna find your best movie buddy?</h2>
                     <div class="button1">    
                         {!! link_to_route('signup.get', 'Sign up now!', null) !!}
                     </div>

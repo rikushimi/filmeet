@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','password','userid',   
+        'name','password','userid', 'image_url'  
     ];
 
     /**
@@ -129,6 +129,8 @@ class User extends Authenticatable
          $user = User::find($userId);
          return $this->followings()->where('follow_id', $userId)->where('code', $code)->exists();
     }
+    
+
 
    
     

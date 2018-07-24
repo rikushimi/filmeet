@@ -6,6 +6,7 @@ use App\Movie;
 use App\User;
 use Illuminate\Http\Request;
 use Validator;
+use JD\Cloudder\Facades\Cloudder;
 
 class ProfileController extends Controller
 {
@@ -34,21 +35,27 @@ class ProfileController extends Controller
         //menu      
        $count_followings = $user->followings()->count();
        $count_followers = $user->followers()->count();
-       
+                
+       $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
+       $url = $url->image_url;
        return view('users.profile',[
               'user' => $user,  
               'count_followings' => $count_followings,
               'count_followers' => $count_followers,
+              'url'   => $url,
+              
            ]);
         
     }
+    
 
-    public function edit()
+    public function edit($id)
     {
        $user = \Auth::user();
        
        return view('users.profile_edit', [
            'user' => $user,
+           'id' => $id,
            ]);
     }
 
@@ -192,6 +199,25 @@ class ProfileController extends Controller
               'user'  => $user,
             ]);
        
+   }
+   
+   public function upload(Request $request, $id)
+   { 
+       Cloudder::upload($request->file('file'), null);
+       $url = Cloudder::getResult()['url'];
+       $user = \Auth::user();
+       $count_followings = $user->followings()->count();
+       $count_followers = $user->followers()->count();
+       
+        $user->image_url = $url;
+        $user->save();
+       
+       return view('users.profile',[
+           'url' => $url,
+           'user' => $user,
+           'count_followings' => $count_followings,
+           'count_followers' => $count_followers,
+           ]);
    }
 
 }
