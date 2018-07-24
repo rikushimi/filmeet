@@ -6,29 +6,21 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateChatsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+  
     public function up()
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
             $table->string('content');
+            $table->integer('user_id')->unsigned()->index();
+            $table->integer('match_id')->unsigned()->index();
             $table->timestamps();
-
-            // Foreign key constraint
+            
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('match_id')->references('id')->on('users');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('chats');
