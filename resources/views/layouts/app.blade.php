@@ -37,4 +37,5 @@
         <script src="{{ secure_asset('js/slick.min.js') }}"></script>
         <script src="{{ secure_asset('js/style.js') }}"></script>
     </body>
+ 
 </html>

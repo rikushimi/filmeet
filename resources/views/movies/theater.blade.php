@@ -43,6 +43,10 @@
       {{$release}}
     </p>
  @endif 
-    @endsection
+
  </div>
+     @endsection
+ 
 </body>
+ 
+  

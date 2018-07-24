@@ -20,6 +20,7 @@
               
            
                
-            
+        @include('commons.footer')
+        
 @endsection
 </body>
