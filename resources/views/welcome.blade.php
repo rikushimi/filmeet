@@ -33,7 +33,9 @@
                  <p>
                  Select movies you wanna watch and Find people you like.<br>
                  Don't be shy!<br>
-                 Filmeet gives you best matches!<br>
+                 Filmeets give you best matches!<br><br>
+                 First, fill out your profile to find your best movie buddies.<br>
+                 <a href="{{route('profile.get',Auth::user()->id)}}">Profile<a></a>
                   </p> 
             </div>    
     </div>     

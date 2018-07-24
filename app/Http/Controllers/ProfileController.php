@@ -95,11 +95,12 @@ class ProfileController extends Controller
         $followlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.follow_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
-        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image' ) 
+        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
         ->where('user_follow.user_id', $id)->get();
-
+  
+        
         $data = [
-            'user' => $user,
+            'user' => $user, 
             'users' => $followings,
             'friends' => $followlist,
         ];
@@ -117,7 +118,7 @@ class ProfileController extends Controller
         $followerlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.user_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
-        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image' ) 
+        ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code' ) 
         ->where('user_follow.follow_id', $id)->get();
 
 
