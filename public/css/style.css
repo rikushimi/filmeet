@@ -966,7 +966,7 @@ input[type="radio"] {
  float: right;
 }
 
-.match-right>p{
+.match-right>p>a{
  color: white;
  font-size: 30px;
 }
@@ -1094,5 +1094,17 @@ animation:fuwafuwa 1s infinite linear alternate;
     -o-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
+}
+
+/*チャット機能*/
+.chat-author>p{
+   font-size:30px;
+   color: white;
+}
+
+.chatform-group{
+  margin-left: 350px; 
+  margin-right: 0px;
+  float:center;
 }
 

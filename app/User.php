@@ -129,8 +129,10 @@ class User extends Authenticatable
          $user = User::find($userId);
          return $this->followings()->where('follow_id', $userId)->where('code', $code)->exists();
     }
+    
+    public function chats()
+    {
+        return $this->hasMany(Chats::class);
+    }
 
-   
-    
-    
 }

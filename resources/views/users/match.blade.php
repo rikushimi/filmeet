@@ -23,7 +23,8 @@
     <br><br>
      @foreach($matches as $match)
        <br>
-       <p>{{$match->name}}</p>
+       
+       <p><a href="{{url('chats'.$match->id)}}">{{$match->name}}</a></p>
        <br>
      @endforeach
     @else

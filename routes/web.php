@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('theater{code}', 'TheaterController@show')->name('theater.get');
 });
 
-;
+
 
 //want機能
 Route::group(['middleware' => ['auth']], function () {
@@ -51,5 +51,11 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => 'auth'], function () {
         Route::post('/follow', 'MovieUserController@store')->name('user.follow');
         Route::delete('/unfollow', 'MovieUserController@destroy')->name('user.unfollow');
+});
+
+//チャット機能
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('chats{id}','ChatsController@show')->name('users.chat');
+    Route::resource('chats', 'ChatsController', ['only' => ['store', 'destroy']]);
 });
 
