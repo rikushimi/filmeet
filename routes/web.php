@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('followers{id}', 'ProfileController@followers')->name('users.followers');
    Route::get('mymovies{id}', 'ProfileController@mymovies')->name('mymovies.get');
    Route::get('match{code}','ProfileController@match')->name('match.get');
+   Route::post('upload{id}','ProfileController@upload');
 });
 
 

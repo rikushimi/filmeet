@@ -284,6 +284,7 @@ transition: all 0.1s linear;
 
 
 /*welcomepage*/
+
 .button1 {
   display: inline-block;
   width: 200px;
@@ -535,13 +536,13 @@ animation:fuwafuwa 1s infinite linear alternate;
 	display:			block;
 }
 
-
+/*matched list*/
 .whole{
     width:800px;
     height: 600px;
     float:right;
     margin-right:100px;
-    margin-top: -10px;
+    margin-top: 50px;
 }
 
 
@@ -557,26 +558,52 @@ animation:fuwafuwa 1s infinite linear alternate;
     
 }
 
-
 .peoplewatch1{
     color: white;
-    font-size:30px;
+    font-size:25px;
     font-family: 'Quicksand', sans-serif;
     width: 400px;
     float:left;
     display: block;
-    
-}
-
-.peoplewatch1>p{
-    color:white;
-    font-size:30px;
-    width:400px;
+    margin-left: 50px;
     text-align: center;
 }
 
-.peoplewatch1>p>hover{
+.matched-ppl>a{
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    font-size:25px;
+    width:200px;
+    text-align: center;
+    float: left;
+}
+.matched-ppl>a:hover{
     color:#87CEFA;
+}
+
+.matched-chat>a{
+    font-family: 'Quicksand', sans-serif;
+     color:white;
+    font-size:18px;
+    width:75px;
+    text-align: center;
+    float: left;
+}
+
+.chatbtn{
+    display: inline-block;
+    padding: 7px 20px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    transition: .4s;
+}
+
+.chatbtn:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
 }
 
 
@@ -610,9 +637,6 @@ animation:fuwafuwa 1s infinite linear alternate;
   height: 400px;
   object-fit: cover;
 }
-
-
-
 
 /*loginpage*/
 #login-page{
@@ -877,7 +901,6 @@ color: #FF69B4;
     font-family: 'Quicksand', sans-serif;
 }
 
-
 #unwant-button{
     width: 188px;
     height: 42px;
@@ -967,16 +990,6 @@ color: #FF69B4;
     width: 480px;
 }
 
-.edit_button {
-  margin-top :50px;
-  margin-left: 200px;
-  width: 188px;
-  height: 42px;
-  border: 1px solid #FFF;
-  background: rgba(0,0,0,0);
-  color: #FFF;
-  
-}
 
 
 /*profile-blade*/
@@ -1049,7 +1062,9 @@ color: #FF69B4;
     margin-left: 30px;
     font-size: 28px;
 }
-.mymovies{
+
+
+.mymovies>p{
     color:#FFF;
     font-family: 'Quicksand', sans-serif;
     font-size:20px;
@@ -1141,16 +1156,19 @@ color: #FF69B4;
 .menu li a:hover {
   background: #FF69B4;
 }
+.center{
+    width: 900px;
+}
 
 .edit_button {
   margin-top :20px;
   margin-left: 200px;
-  width: 188px;
+  width: 150px;
   height: 42px;
   border: 1px solid #FFF;
   background: rgba(0,0,0,0);
   color: #FFF;
-  
+  float: left;
 }
 .edit_button a{
   color: #FFF;
@@ -1158,6 +1176,24 @@ color: #FF69B4;
   display: flex;
   justify-content: center;
   padding-top: 10px;
+}
+
+.movie-link{
+    float: left;
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.movie-link>p>span{
+    color: white;
+    
+}
+
+.movie-link>p>a{
+    color: white;
+    font-size: 20px;
+   
 }
 
 
@@ -1186,8 +1222,7 @@ input[type="radio"] {
    background-color: #FFF;
    margin-top: 20px;
    width: 900px;
-
-   height: 460px;
+   height: 400px;
    padding: 40px;
    margin-left: 100px;
    padding-top: -5px;
@@ -1195,7 +1230,7 @@ input[type="radio"] {
 }
 
 .update_button {
-  margin-top :40px;
+  margin-top :78px;
   margin-left: 300px;
   width: 188px;
   height: 42px;
@@ -1280,18 +1315,12 @@ input[type="radio"] {
  float: right;
 }
 
-.match-right>p>a{
+.match-right>p{
  color: white;
  font-size: 30px;
 }
-
-.match-movies{
-    width:800px;
-    margin-right:0px;
-    display:inline-block;
-}
 .match-movies>img{
-  margin-top: 6%;
+  margin-top: 5%;
   margin-right:0%;
   width: 300px;
   height: 400px;
@@ -1416,25 +1445,7 @@ input[type="radio"] {
 }
 
 
-/*チャット機能*/
-.chat-author>p{
-   font-size:30px;
-   color: white;
-}
 
-.chatform-group{
-  margin-left: 350px; 
-  margin-right: 0px;
-  float:center;
-}
-
-.chat-left{
-    margin-right: 300px;
-}
-
-.chat-right{
-    margin-left: 400px;
-}
 /*paginationかざねに送るやつ*/
 .pagination{
     margin-left:850px;
@@ -1470,7 +1481,11 @@ input[type="radio"] {
     border-color: #f7f8f9;
 }
 
-
+.sorry{
+    color:white;
+    font-size:20px;
+    float:right;
+}
 
 /*footer*/
 footer {
@@ -1493,7 +1508,5 @@ footer {
 .copy-right{
     text-align: center;
     color: grey;
-
 }
-
 
