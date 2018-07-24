@@ -170,9 +170,9 @@ class ProfileController extends Controller
                ->where('code',$code)
                ->where('user_id',$myId)
                ->select('follow_id')->get(); 
+               
       $matches = array();           
 
-        
         if($follows){
           foreach($follows as $follow){
           //フォローしている人のID
@@ -192,6 +192,7 @@ class ProfileController extends Controller
              }
           }
         }
+        
         return view('users.match',[
               'matches' => $matches,
               'title' => $title,

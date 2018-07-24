@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('theater{code}', 'TheaterController@show')->name('theater.get');
 });
 
-;
+
 
 //want機能
 Route::group(['middleware' => ['auth']], function () {
@@ -40,7 +40,6 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('profile{id}', 'ProfileController@show')->name('profile.get');
    Route::get('profile_edit/{id}', 'ProfileController@edit')->name('profile.edit');
    Route::put('profile_update', 'ProfileController@update')->name('profile.update');
-   Route::post('upload{id}', 'ProfileController@upload')->name('profile.upload');
    Route::get('followings{id}', 'ProfileController@followings')->name('users.followings');
    Route::get('followers{id}', 'ProfileController@followers')->name('users.followers');
    Route::get('mymovies{id}', 'ProfileController@mymovies')->name('mymovies.get');
@@ -52,5 +51,11 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => 'auth'], function () {
         Route::post('/follow', 'MovieUserController@store')->name('user.follow');
         Route::delete('/unfollow', 'MovieUserController@destroy')->name('user.unfollow');
+});
+
+//チャット機能
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('chats{id}','ChatsController@show')->name('users.chat');
+    Route::resource('chats', 'ChatsController', ['only' => ['store', 'destroy']]);
 });
 
