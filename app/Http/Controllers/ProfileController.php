@@ -74,7 +74,7 @@ class ProfileController extends Controller
        $validator = Validator::make($request->all(), [
         'age' => 'numeric|between:0,150',
         'favmovie' => 'max:50',
-        'comment' => 'max:140',
+        'comment' => 'max:250',
     ]);
 
     // バリデーションエラーだった場合
@@ -105,11 +105,14 @@ class ProfileController extends Controller
         ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
         ->where('user_follow.user_id', $id)->get();
   
+       $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
+       $url = $url->image_url;
         
         $data = [
             'user' => $user, 
             'users' => $followings,
             'friends' => $followlist,
+            'url'=>$url,
         ];
 
         $data += $this->counts($user);
@@ -204,6 +207,8 @@ class ProfileController extends Controller
    
    public function upload(Request $request, $id)
    { 
+       
+       
        Cloudder::upload($request->file('file'), null);
        $url = Cloudder::getResult()['url'];
        $user = \Auth::user();
@@ -212,7 +217,19 @@ class ProfileController extends Controller
        
         $user->image_url = $url;
         $user->save();
-       
+        
+        /*エラーの時
+        $validator = Validator::make($request->all(), [
+        'image_url' => 'required|max:10000',
+    ]);
+
+    // バリデーションエラーだった場合
+        if ($validator->fails()) {
+        return redirect('profile_edit/error')
+            ->withErrors($validator)
+            ->withInput();
+        }*/
+
        return view('users.profile',[
            'url' => $url,
            'user' => $user,

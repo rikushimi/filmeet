@@ -11,8 +11,7 @@
      @else    
         <img src="{{ secure_asset('profile.png') }}" alt=""> 
      @endif    
-         </div>
-        
+ </div>
          <p class="user-name">{{$user->name}}</p><br>
          <p class="user-age">AGE
             <span class="user-detail">{{$user->age}}</span></p><br>
@@ -39,7 +38,6 @@
         <p class="comment2-text">{!! nl2br(e( $user->comment )) !!}</p>
         
     </div>
-    <br><br>
         @if (Auth::id() == $user->id)
             <div class="edit_button">
               <a href="{{route('profile.edit',  ['id' => $user->id])}}">edit</a>

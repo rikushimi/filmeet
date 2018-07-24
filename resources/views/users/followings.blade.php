@@ -7,17 +7,7 @@
 
  <p class="profile-title">Profile</p>
 
- <div class ="left">
-         <div class = "profie-image">
-         <img src={{ secure_asset('none.jpg') }}>
-         </div>
-        
-         <p class="user-name">{{$user->name}}</p><br>
-         <p class="user-age">AGE
-         <span class="user-detail">{{$user->age}}</span></p><br>
-         <p class="user-sex">SEX
-         <span class="user-detail">{{$user->sex}}</span></p>
- </div>
+
 
 
  <div class="right">
