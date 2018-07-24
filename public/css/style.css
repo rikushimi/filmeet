@@ -295,6 +295,7 @@ transition: all 0.1s linear;
   outline: none;
   margin-top: 30px;
   font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
 }
 .button1::before,
 .button1::after {
@@ -333,17 +334,140 @@ transition: all 0.1s linear;
 .button1:hover::after {
   opacity: 1;
 }
+.explanation{
+    text-align:center;
+    /*background-color:rgba(255,255,255,0.4);*/
+    padding: 2px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    
+}
+
+.explanation1{
+    font-size:47px;
+    color:black;
+    font-family: 'Lobster', cursive;
+}
+
+.explanation2{
+    font-size:20px;
+    color:black;
+    font-family: 'Hind', sans-serif;
+}
+.explanation2>p>a{
+    font-size: 30px;
+   
+}
+
+
+.explanation2>p>a:before,
+.explanation2>p>a:after {
+position: absolute;
+left: 0;
+content: '';
+width: 100%;
+height: 5px;
+box-sizing: border-box;
+}
+.explanation2>p>a:before {
+top: 0;
+border-top: 3px solid #000;
+border-bottom: 1px solid #000;
+}
+.explanation2>p>a:after {
+bottom: 0;
+border-top: 1px solid #000;
+border-bottom: 3px solid #000;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+a.toshowbalde {
+  display: block;
+  margin:auto;
+  position: relative;
+  z-index: 2;
+  width:250px;
+  color: #dc143c;
+  overflow: hidden;
+  margin-top:50px;
+  font-size: 60px;
+  z-index:			1;
+}
+a.toshowbalde:hover {
+  color: pink;
+  
+}
+
+a.toshowbalde {
+-webkit-animation:fuwafuwa 1s infinite linear alternate;
+animation:fuwafuwa 1s infinite linear alternate;
+}
+
+@-webkit-keyframes fuwafuwa {
+0% {-webkit-transform:translate(0, 0) rotate(-5deg);}
+50% {-webkit-transform:translate(0, -10px) rotate(0deg);}
+100% {-webkit-transform:translate(0, 0)rotate(3deg);} 
+}
+
+  @keyframes fuwafuwa {
+0% {transform:translate(0, 0) rotate(-5deg);}
+50% {transform:translate(0, -10px) rotate(0deg);}
+100% {transform:translate(0, 0)rotate(3deg);} 
+}
+
+#gray {
+		position:			fixed;
+		top:				0;
+		left:				0;
+		height:				100%;
+		width:				100%;
+		background:         pink;
+		/*opacity:			0.5;*/
+		z-index:			2;
+		display:			none;
+}
+#green {
+	    height:				431px;
+		width:				1200px;
+	
+		position:			fixed;
+		top:				24%;
+		left:				10%;
+	
+		z-index:			3;
+		display:			none;
+		
+}
+.close {
+		padding:			15px;
+		color:				#333;
+		
+		display:			inline-block;
+}
+#gray:target, #gray:target + #green {
+	display:			block;
+}
 
 /*loginpage*/
 #login-page{
-  background: url('toppage1.jpg') center center no-repeat;
+  background: url('toppage2.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 0;
 }
 
 #register-page{
-  background: url('toppage1.jpg') center center no-repeat;
+  background: url('toppage2.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -667,8 +791,13 @@ color: #FF69B4;
     position: relative;
     
     display: block;
-    width: 410px;
+    width: 430px;
+    /*background-color:rgba(255,255,255,0.3);*/
+    border-left: 5px solid #FFF;
+    padding-left: 10px;
 }
+
+
 
 .watchlist-p2{
     color:#FFF;
@@ -678,7 +807,7 @@ color: #FF69B4;
     font-family: 'Crimson Text', serif;
     position: relative;
     display: block;
-    width: 410px;
+    width: 480px;
 }
 
 
@@ -736,15 +865,23 @@ color: #FF69B4;
 .user-age{
     color:pink;
     font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 .user-sex{
     color:pink;
     font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 .user-detail{
     color:#FFF;
     font-family: 'Quicksand', sans-serif;
     margin-left: 30px;
+    font-size: 28px;
+}
+.mymovies{
+    color:#FFF;
+    font-family: 'Quicksand', sans-serif;
+    font-size:20px;
 }
 .comment{
 
@@ -793,7 +930,7 @@ color: #FF69B4;
 }
 
 .menu {
-  width: 600px;
+  width: 800px;
   height: 45px;
   padding: 0;
   margin-top: 10px;
@@ -995,74 +1132,69 @@ input[type="radio"] {
 
 
 
-a.toshowbalde {
-  display: block;
-  margin:auto;
-  position: relative;
-  z-index: 2;
-  width:250px;
-  color: #dc143c;
-  overflow: hidden;
-  margin-top:50px;
-  font-size: 60px;
-  
-}
-a.toshowbalde:hover {
-  color: pink;
-  
-}
-
-a.toshowbalde {
--webkit-animation:fuwafuwa 1s infinite linear alternate;
-animation:fuwafuwa 1s infinite linear alternate;
-}
-
-@-webkit-keyframes fuwafuwa {
-0% {-webkit-transform:translate(0, 0) rotate(-5deg);}
-50% {-webkit-transform:translate(0, -10px) rotate(0deg);}
-100% {-webkit-transform:translate(0, 0)rotate(3deg);} 
-}
-
-  @keyframes fuwafuwa {
-0% {transform:translate(0, 0) rotate(-5deg);}
-50% {transform:translate(0, -10px) rotate(0deg);}
-100% {transform:translate(0, 0)rotate(3deg);} 
-}
 
 
 
-/*theaterbladeの追加*/
-.explanation{
+
+/*自分がリクエスト送った人、送ってきた人*/
+.follow-list{
     text-align:center;
-}
-
-.explanation1{
-    font-size:28px;
-    color:black;
-}
-
-.explanation2{
-    font-size:20px;
-    color:black;
-}
-
-/*自分がライクした動画*/
-.media-list{
-    text-align:center;
-    margin-right:1500px;
-    width:500px;
+    width:800px;
     margin-top:20px;
+    font-family: 'Quicksand', sans-serif;
+}
+.list-title1{
+    float: left;
+    width: 400px;
+    color: pink;
+    font-size: 22px;
+    border-bottom: solid 1px;
+    border-color: white;
 }
 
-
-.media-body{
-    color:white;
-    font-size:18px;
+.list-title2{
+    float: left;
+    width: 400px;
+    color: #87CEFA;
+    font-size: 22px;
+     border-bottom: solid 1px;
+    border-color: white;
 }
 
-.media-body>a{
-    color:white;
+.list-content1{
+      float: left;
+   width: 400px;
+   margin-top: 10px;
+   
 }
+.list-content2{
+      float: left;
+  width: 400px;
+   margin-top: 10px;
+}
+.list-content1>a{
+    float: left;
+    color: white;
+    width: 400px;
+    font-size: 20px;
+}
+
+.list-content2>a{
+    float: left;
+    color: white;
+    width: 400px;
+    font-size: 20px;
+
+}
+
+.list-content1>a:hover{
+  color: pink;
+}
+
+.list-content2>a:hover{
+  color: #87CEFA;
+}
+
 .mymovies{
     margin-bottom: 15px;
     margin-top: 30px;
@@ -1089,12 +1221,13 @@ animation:fuwafuwa 1s infinite linear alternate;
 }
 
 .mymovies-image>span>a>img:hover{
-        -webkit-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
 }
+
 
 /*チャット機能*/
 .chat-author>p{
@@ -1106,5 +1239,28 @@ animation:fuwafuwa 1s infinite linear alternate;
   margin-left: 350px; 
   margin-right: 0px;
   float:center;
+
+/*footer*/
+footer {
+    margin-top: 100px;
+    padding-top: 20px;
+    bottom: 0;
+    background-color: black;
+}
+.logo>img {
+    max-width: 200px;
+    margin-left: 470px;
+    height: auto;
+    
+}
+.logo>p{
+    color: grey;
+    float: right;
+    margin-top: 40px;
+}
+.copy-right{
+    text-align: center;
+    color: grey;
+
 }
 

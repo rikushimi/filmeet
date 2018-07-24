@@ -1,3 +1,4 @@
+<p class='mymovies'>Click your movies below to see if you get macthes!</p>
 @if (count($movies) > 0)
 <div class="mymovies clearfix">
 @foreach ($movies as $movie)

@@ -16,14 +16,12 @@
          </div>
  </div>
 
-
  <div class="right-the">
 
  @include('button.want_button',['code'=>$code])
  @if(Auth::user()->is_wanting($code))
    <div class ="watchlist"> 
      <p class="watchlist-p1">List of people who wanna watch it</p>
-     <p class="watchlist-p2">Click their name below to see their profiles and send them requests.</p>
    </div>
         
    <div class ="want_users">
@@ -43,6 +41,10 @@
       {{$release}}
     </p>
  @endif 
-    @endsection
+
  </div>
+     @endsection
+ 
 </body>
+ 
+  

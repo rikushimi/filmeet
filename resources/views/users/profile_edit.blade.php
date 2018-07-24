@@ -16,8 +16,17 @@
                 </ul>
             </div>
             @endif
-        
+           
             <div class="R-panel-body">
+            <div class="form-group">
+            {!! Form::open(['url' => '/upload'.$id, 'method' => 'post', 'files' => true]) !!}
+            {!! Form::label('file', 'Upload your image', ['class' => 'control-label']) !!}
+            {!! Form::file('file') !!}
+            {!! Form::submit('Upload', ['class' => 'btn btn-default']) !!}
+            {!! Form::close() !!}
+            </div>
+        
+           
                 {!! Form::model($user, ['route' => ['profile.update'], 'method' => 'put']) !!}
  
                 <div class="form-group">
@@ -43,9 +52,9 @@
                     <textarea id="comment" type="text" wrap="soft" cols="110" rows="3" name="comment"  placeholder="Write you sel-introduction!"value="{{ $user->comment }}"></textarea>
                 </div>
             </div>
-            <div class="update_button">
+            
               {!! Form::submit('update',['class' => "update_button"]) !!}
-            </div>
+          
 
           
     </div>

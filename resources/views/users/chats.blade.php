@@ -1,3 +1,4 @@
+
 <ul class="media-list">
     
 @foreach ($chats as $chat)
@@ -20,3 +21,4 @@
 @endforeach
 </ul>
 {!! $chats->render() !!}
+
