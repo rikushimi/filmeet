@@ -7,6 +7,7 @@
             Username
         </div>
     </div>
+
     @if (count($friends) > 0)
       
             @foreach ($friends as $user)
@@ -19,7 +20,9 @@
                 </div>
            
             @endforeach
+
     
         {!! $friends->render() !!}
+
     @endif
  </div>

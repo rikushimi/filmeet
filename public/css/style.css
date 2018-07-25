@@ -1203,6 +1203,10 @@ color: #FF69B4;
     width: 900px;
 }
 
+.active{
+  background: #FF69B4;
+}
+
 .edit_button {
   margin-top :20px;
   margin-left: 200px;
