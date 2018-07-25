@@ -9,8 +9,6 @@ class MovieUserController extends Controller
 {   
     public function want(Request $request)
     {  
-
-       
          $code = $request->code;
          $movie = tmdb()-> getMovie($code);
          $title = $movie-> getTitle();
