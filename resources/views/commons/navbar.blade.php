@@ -16,6 +16,7 @@
                         @if (Auth::check())
                             <li>{!! link_to_route('show.get','Movie List')!!}</li>
                             <li class="dropdown">
+                                 <li><a href="{{route('mymovies.get',Auth::user()->id)}}">Match list</a></li>
                                     <li><a href="{{route('profile.get',Auth::user()->id)}}">My profile</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li>{!! link_to_route('logout.get', 'Logout') !!}</li>

@@ -192,6 +192,7 @@ class ProfileController extends Controller
     }
     
     public function match($code){
+     
       
       //映画情報
       $movie = tmdb()-> getMovie($code);
@@ -200,6 +201,9 @@ class ProfileController extends Controller
       //自分のID
       $myId = \Auth::id();
       $user = User::find($myId);
+       //カウント
+      $count_followings = $user->followings()->count();
+      $count_followers = $user->followers()->count();
       //フォローしている人
       $follows =\DB::table('user_follow')
                ->where('code',$code)
@@ -232,6 +236,8 @@ class ProfileController extends Controller
               'title' => $title,
               'image' => $image,
               'user'  => $user,
+              'count_followings' => $count_followings,
+              'count_followers' => $count_followers,
             ]);
        
    }
