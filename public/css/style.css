@@ -1064,11 +1064,7 @@ color: #FF69B4;
 }
 
 
-.mymovies>p{
-    color:#FFF;
-    font-family: 'Quicksand', sans-serif;
-    font-size:20px;
-}
+
 .comment{
 
   margin-right: 480px;
@@ -1156,7 +1152,7 @@ color: #FF69B4;
 .menu li a:hover {
   background: #FF69B4;
 }
-.center{
+.p-center{
     width: 900px;
 }
 
@@ -1222,7 +1218,7 @@ input[type="radio"] {
    background-color: #FFF;
    margin-top: 20px;
    width: 900px;
-   height: 400px;
+   height: 500px;
    padding: 40px;
    margin-left: 100px;
    padding-top: -5px;
@@ -1419,8 +1415,11 @@ input[type="radio"] {
     width: 890px;
     float:left;
     margin-top: 40px;
-    
+    color: white;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
 }
+
 
 /*mymovies.blade*/
 .mymovies-image{
