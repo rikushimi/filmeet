@@ -17,7 +17,7 @@
           <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Recieved Requests<span class="badge"></span></a></li>
           @endif
 
-          <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies/Matches<span class="badge"></a></li>
+          <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">Match List&nbsp;<span class="glyphicon glyphicon-heart"></a></a></li>
     　　　　 </div>
    　　　　　</div>
    　　　　　
@@ -35,6 +35,7 @@
     
   <div class="peoplewatch1">  
    <p>Let's start to chat with matched people and go to see the movie!</p>
+   
      @foreach($matches as $match)
 
        <br>
