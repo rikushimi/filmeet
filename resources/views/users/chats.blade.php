@@ -28,9 +28,7 @@
                  
               @endif
             @endforeach
-         {!! $chats->render() !!}   
         </div>
-        
     </div>
 
 </body>

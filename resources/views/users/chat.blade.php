@@ -26,6 +26,7 @@
     @endif
     
    </div>
+   {!! $chats->render() !!} 
   </center>
 @endsection
 </body>
