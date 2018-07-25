@@ -1,12 +1,14 @@
 <div class="follow-list">
-    <div class="list-title1 clearfix">
-        Movie name           
+    <div class="clearfix">
+        <div class="list-title1 clearfix">
+            Movie name           
+        </div>
+        <div class="list-title2 clearfix">
+            Username
+        </div>
     </div>
-    <div class="list-title2 clearfix">
-        Username
-    </div>
-    @if (count($users) > 0)
-        <div class="media-list">
+    @if (count($friends) > 0)
+      
             @foreach ($friends as $user)
             
                 <div class="list-content1">
@@ -17,7 +19,7 @@
                 </div>
            
             @endforeach
-        </div>
+    
         {!! $friends->render() !!}
     @endif
  </div>
