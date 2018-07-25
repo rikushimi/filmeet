@@ -35,13 +35,45 @@ class ProfileController extends Controller
         //menu      
        $count_followings = $user->followings()->count();
        $count_followers = $user->followers()->count();
-                
+       $count_match =0;
+       
+       $codes = \DB::table('movies')
+              ->select('code')->get();
+          
+       $myId = \Auth::id(); 
+       
+       foreach($codes as $code){
+           
+           $follows =\DB::table('user_follow')
+                   ->where('code',$code->code)
+                   ->where('user_id',$myId)
+                   ->select('follow_id')->get(); 
+    
+            if($follows){
+              foreach($follows as $follow){
+                 $followID = $follow->follow_id;
+          
+                 $matchId = \DB::table('user_follow')
+                           ->where('code',$code->code)
+                           ->where('user_id',$followID)
+                           ->where('follow_id',$myId)
+                           ->select('user_id')->get();
+       
+                 foreach($matchId as $mmid){
+                    $count_match++;
+                 }
+              }
+            }  
+       }
+    
        $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
        $url = $url->image_url;
+       
        return view('users.profile',[
               'user' => $user,  
               'count_followings' => $count_followings,
               'count_followers' => $count_followers,
+              'count_match' => $count_match,
               'url'   => $url,
               
            ]);
@@ -97,13 +129,13 @@ class ProfileController extends Controller
     {
         
         $user = User::find($id);
-        $followings = $user->followings()->paginate(10);
+        $followings = $user->followings();
         
         $followlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.follow_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
         ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
-        ->where('user_follow.user_id', $id)->get();
+        ->where('user_follow.user_id', $id)->paginate(10);
   
        $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
        $url = $url->image_url;
@@ -123,13 +155,13 @@ class ProfileController extends Controller
     public function followers($id)
     {
         $user = User::find($id);
-        $followers = $user->followers()->paginate(10);
+        $followers = $user->followers();
         
         $followerlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.user_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
         ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code' ) 
-        ->where('user_follow.follow_id', $id)->get();
+        ->where('user_follow.follow_id', $id)->paginate(10);
 
 
         $data = [
@@ -160,6 +192,7 @@ class ProfileController extends Controller
     }
     
     public function match($code){
+     
       
       //映画情報
       $movie = tmdb()-> getMovie($code);
@@ -168,6 +201,10 @@ class ProfileController extends Controller
       //自分のID
       $myId = \Auth::id();
       $user = User::find($myId);
+       //カウント
+      $count_followings = $user->followings()->count();
+      $count_followers = $user->followers()->count();
+      $count_match =0;
       //フォローしている人
       $follows =\DB::table('user_follow')
                ->where('code',$code)
@@ -191,7 +228,7 @@ class ProfileController extends Controller
              foreach($matchId as $id){
                  $match = User::find($id->user_id);
                  array_push($matches,$match);
-                 
+                 $count_match++;
              }
           }
         }
@@ -201,6 +238,9 @@ class ProfileController extends Controller
               'title' => $title,
               'image' => $image,
               'user'  => $user,
+              'count_followings' => $count_followings,
+              'count_followers' => $count_followers,
+              'count_match' => $count_match,
             ]);
        
    }

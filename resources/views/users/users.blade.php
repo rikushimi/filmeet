@@ -7,8 +7,9 @@
             Username
         </div>
     </div>
-    @if (count($users) > 0)
-       
+
+    @if (count($friends) > 0)
+      
             @foreach ($friends as $user)
             
                 <div class="list-content1">
@@ -19,7 +20,9 @@
                 </div>
            
             @endforeach
-       
-    {!! $users->render() !!}
+
+    
+        {!! $friends->render() !!}
+
     @endif
 </div>
