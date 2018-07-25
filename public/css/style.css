@@ -1463,8 +1463,6 @@ input[type="radio"] {
   color: pink;
 }
 
-.pagipagi
-
 /*mymovie*/
 
 .list-content2>a:hover{
@@ -1649,6 +1647,7 @@ footer {
     background-color: #EEEEEE;
     padding-top: 30px;
     border-radius: 15px;
+    height: 630px;
 }
 
 .chat-p-r {
