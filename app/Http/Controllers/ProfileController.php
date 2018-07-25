@@ -204,6 +204,7 @@ class ProfileController extends Controller
        //カウント
       $count_followings = $user->followings()->count();
       $count_followers = $user->followers()->count();
+      $count_match =0;
       //フォローしている人
       $follows =\DB::table('user_follow')
                ->where('code',$code)
@@ -227,6 +228,7 @@ class ProfileController extends Controller
              foreach($matchId as $id){
                  $match = User::find($id->user_id);
                  array_push($matches,$match);
+                 $count_match++;
              }
           }
         }
@@ -238,6 +240,7 @@ class ProfileController extends Controller
               'user'  => $user,
               'count_followings' => $count_followings,
               'count_followers' => $count_followers,
+              'count_match' => $count_match,
             ]);
        
    }
