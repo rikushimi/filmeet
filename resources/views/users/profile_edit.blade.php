@@ -17,14 +17,14 @@
             </div>
             @endif
            
-            <div class="R-panel-body">
-            <div class="form-group">
+        <div class="R-panel-body">
+           <div class="form-group">
             {!! Form::open(['url' => '/upload'.$id, 'method' => 'post', 'files' => true]) !!}
             {!! Form::label('file', 'Upload your image', ['class' => 'control-label']) !!}
             {!! Form::file('file') !!}<br>
             {!! Form::submit('Upload', ['class' => 'cutebutton']) !!} Please upload your pic first
             {!! Form::close() !!}
-            </div>
+           </div>
         
            
                 {!! Form::model($user, ['route' => ['profile.update'], 'method' => 'put']) !!}
