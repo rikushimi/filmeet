@@ -20,4 +20,4 @@
         </div>
         {!! $friends->render() !!}
     @endif
-</div>
+ </div>
