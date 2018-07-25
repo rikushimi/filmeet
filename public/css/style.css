@@ -1143,6 +1143,10 @@ color: #FF69B4;
   background: #FF69B4;
 }
 
+.active{
+  background: #FF69B4;
+}
+
 .edit_button {
   margin-top :20px;
   margin-left: 200px;
