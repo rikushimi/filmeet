@@ -7,8 +7,8 @@
             Username
         </div>
     </div>
-    @if (count($users) > 0)
-        <div class="media-list">
+    @if (count($friends) > 0)
+      
             @foreach ($friends as $user)
             
                 <div class="list-content1">
@@ -19,7 +19,7 @@
                 </div>
            
             @endforeach
-        </div>
+    
         {!! $friends->render() !!}
     @endif
 </div>
