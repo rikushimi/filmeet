@@ -6,8 +6,9 @@
 @section('content')
 
  <p class="profile-title">Profile</p>
-
-
+  
+ 　<div class="left">
+　</div>
 
 
  <div class="right">

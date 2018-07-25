@@ -3,7 +3,8 @@
 @section('content')
 
 <p class="profile-title">Match list</p>
-
+       　<div class="left">
+　      </div>
 
          
         <div class="right">

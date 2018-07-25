@@ -3,7 +3,10 @@
 @section('content')
  
   <p class="profile-title">My Movies</p>
-
+　
+　<div class="left">
+　</div>
+　
   <div class="right">
 
    <div class="menu">
