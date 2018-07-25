@@ -26,7 +26,7 @@
           @if (Auth::id() == $user->id)
           <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Sent Requests<span class="badge">{{ $count_followings }}</span></a></li>
           <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Recieved Requests<span class="badge">{{ $count_followers }}</span></a></li>
-          <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies/Matches<span class="badge"></a></li>
+          <li role="presentation" class="{{ Request::is('users/*/mymovies') ? 'active' : '' }}"><a href="{{ route('mymovies.get', ['id' => $user->id]) }}">My Movies/Matches&nbsp;<span class="glyphicon glyphicon-heart"></span></a></li>
           @endif
      </div>
 
@@ -38,11 +38,20 @@
         <p class="comment2-text">{!! nl2br(e( $user->comment )) !!}</p>
         
     </div>
+        <div class="center">
         @if (Auth::id() == $user->id)
             <div class="edit_button">
               <a href="{{route('profile.edit',  ['id' => $user->id])}}">edit</a>
             </div>
         @endif
+        <div class="movie-link">
+            <p>
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            
+            <a href="{{route('show.get')}}">Now Playwing Movies</a>
+            
+            </p>
+        </div>
  </div>
 
 

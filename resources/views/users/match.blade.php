@@ -3,7 +3,8 @@
 @section('content')
 
 <p class="profile-title">Match list</p>
-
+      <div class="left">
+     </div>
 
          
         <div class="right">
@@ -21,9 +22,7 @@
    　　　　　</div>
    　　　　　
    　　　　　
-   　　　<div class="peoplewatch">
-       <p>Your matches!!</p>
-       </div>　　
+   　　　
        
  <div class="whole">
      
@@ -33,19 +32,25 @@
 
 
     @if($matches != null)
+    
   <div class="peoplewatch1">  
+   <p>Let's start to chat with matched people and go to see the movie!</p>
      @foreach($matches as $match)
 
        <br>
-   
-       <p><a href="{{url('chats'.$match->id)}}">{{$match->name}}</a></p>
+       <div class="matched-ppl">
+           <a href="{{url('profile'.$user->id)}}">{{$match->name}}</a>
+       </div>
+       <div class="matched-chat">
+           <a href="{{url('chats'.$match->id)}}" class="chatbtn">Chat</a>
+       </div>
        <br>
 
      @endforeach
   </div>  
   
     @else
-        <div class="sorry">
+        <div class="sorry"><br><br>
           <p>Sorry....<br>You don't have any match</p>
         </div>
      </div>
