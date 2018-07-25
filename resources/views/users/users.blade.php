@@ -1,9 +1,11 @@
 <div class="follow-list">
-    <div class="list-title1 clearfix">
-        Movie name           
-    </div>
-    <div class="list-title2 clearfix">
-        Username
+    <div class="clearfix">
+        <div class="list-title1 clearfix">
+            Movie name           
+        </div>
+        <div class="list-title2 clearfix">
+            Username
+        </div>
     </div>
     @if (count($users) > 0)
         <div class="media-list">
@@ -20,4 +22,4 @@
         </div>
     {!! $users->render() !!}
     @endif
-    </div>
+</div>
