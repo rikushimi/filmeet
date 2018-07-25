@@ -18,6 +18,6 @@
            
             @endforeach
         </div>
-    {!! $users->render() !!}
+        {!! $friends->render() !!}
     @endif
-    </div>
+</div>
