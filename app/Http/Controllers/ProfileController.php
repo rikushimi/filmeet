@@ -129,13 +129,13 @@ class ProfileController extends Controller
     {
         
         $user = User::find($id);
-        $followings = $user->followings()->paginate(10);
+        $followings = $user->followings();
         
         $followlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.follow_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
         ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code') 
-        ->where('user_follow.user_id', $id)->get();
+        ->where('user_follow.user_id', $id)->paginate(10);
   
        $url = \DB::table('users')->where('id',$id)->select('image_url')->first();
        $url = $url->image_url;
@@ -155,13 +155,13 @@ class ProfileController extends Controller
     public function followers($id)
     {
         $user = User::find($id);
-        $followers = $user->followers()->paginate(10);
+        $followers = $user->followers();
         
         $followerlist=\DB::table('user_follow')
         ->join('users', 'users.id', '=' , 'user_follow.user_id')
         ->join('movies', 'movies.code', '=' , 'user_follow.code')
         ->select('users.name','users.id', 'movies.name as moviename', 'movies.image', 'movies.code' ) 
-        ->where('user_follow.follow_id', $id)->get();
+        ->where('user_follow.follow_id', $id)->paginate(10);
 
 
         $data = [
